@@ -731,10 +731,19 @@
                 <div class="toggle-block">
                     <span class="toggle-label">Chunk by</span>
                     <div class="segmented" data-group="chunkBy">
-                        <button type="button" class="seg-btn active" data-val="time">Time (by month)</button>
-                        <button type="button" class="seg-btn" data-val="topic">Topic (by focus area)</button>
+                        <button type="button" class="seg-btn active" data-val="time">Time</button>
+                        <button type="button" class="seg-btn" data-val="topic">Topic</button>
                     </div>
-                    <p class="toggle-explain" id="explain-chunk">One card per month across your leave, oldest first. Best when you are not sure what you missed.</p>
+                    <p class="toggle-explain" id="explain-chunk">One card per period across your leave, oldest first. Best when you are not sure what you missed.</p>
+                </div>
+                <div class="toggle-block" id="size-block">
+                    <span class="toggle-label">Chunk size</span>
+                    <div class="segmented" data-group="chunkSize">
+                        <button type="button" class="seg-btn active" data-val="month">Month</button>
+                        <button type="button" class="seg-btn" data-val="week">Week</button>
+                        <button type="button" class="seg-btn" data-val="day">Day</button>
+                    </div>
+                    <p class="toggle-explain">Start monthly. If a period was very busy, drop to week, or day, for sharper results.</p>
                 </div>
                 <div class="toggle-block">
                     <span class="toggle-label">How thorough</span>
@@ -748,47 +757,30 @@
             <p class="safe-default"><strong>Not sure?</strong> Leave it on <strong>Time</strong> and <strong>Run twice + merge</strong>. That is the safe default: thorough, and it double-checks itself.</p>
         </section>
 
-        <!-- PICK YOUR MODE -->
-        <section class="section-card">
-            <div class="section-header">
-                <div>
-                    <div class="eyebrow">Step 2</div>
-                    <h2>Pick your mode</h2>
-                    <p>Copilot lets you choose how hard it thinks. Match the mode to the job.</p>
-                </div>
-            </div>
-            <div class="inner-grid">
-                <div class="inner-card">
-                    <span class="inner-card-icon">🔎</span>
-                    <strong>Extract with the deep thinker</strong>
-                    <p>For the month-by-month searches, pick the deepest thinking mode (in Copilot this is GPT-5.4 Think Deeper). It is slower, but it actually reads what it finds, so it misses less.</p>
-                </div>
-                <div class="inner-card">
-                    <span class="inner-card-icon">⚡</span>
-                    <strong>Merge with the fast one</strong>
-                    <p>For merging two tables you already have, switch to a fast Instant mode. The data is in front of it, so speed beats depth.</p>
-                </div>
-                <div class="inner-card">
-                    <span class="inner-card-icon">🧼</span>
-                    <strong>Fresh chat every run</strong>
-                    <p>Start a New Chat for each run and each month. Copilot's memory can carry parts of one answer into the next, which quietly muddles a careful catch-up.</p>
-                </div>
-            </div>
-            <p class="caveat">Model names change often. If you do not see these exact names, the rule still holds: deepest mode to dig, fastest mode to merge.</p>
-        </section>
-
         <!-- RUN IT / EXTRACT -->
         <section id="run" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Step 3</div>
+                    <div class="eyebrow">Step 2</div>
                     <h2>Extract, one chunk at a time</h2>
-                    <p>Each card below is a ready-to-copy prompt for a single chunk. Work through them in order.</p>
+                    <p>Start with the urgent handful, then work through the rest one chunk at a time. Every prompt is ready to copy.</p>
                 </div>
             </div>
+
+            <div class="exercise-note" style="margin-bottom:14px;">
+                <strong>Start here.</strong> Before the methodical sweep, get the genuinely urgent handful off your plate: the things that cannot wait for you to work through everything in order. This one prompt gives you a short, prioritised list.
+            </div>
+            <div class="prompt-box" id="triage-box"><!-- filled by JS --></div>
+            <button class="btn-copy" onclick="copyToClipboard('triage-box')">Copy prompt</button>
+            <p class="step-body" style="margin:18px 0 6px;">Done the urgent bit? Now work through everything properly, one chunk at a time.</p>
+
             <div class="callout">
                 <strong>Order matters</strong>
                 <div class="callout-body" id="order-note">Start with your oldest month and work forwards. If your organisation deletes old data on a schedule, the earliest month is the first to disappear.</div>
+            </div>
+            <div class="callout">
+                <strong>Match the chunk to the volume</strong>
+                <div class="callout-body">A month is a good starting size, but not a rule. If a month was very busy, or you get a lot of email, its results can come back thin or cut short. When that happens, change <strong>Chunk size</strong> in Set up to week, or even day for the busiest spells (or narrow the dates in a prompt by hand). Smaller chunk, sharper answer. It is worth trying a couple of sizes to find what your inbox needs.</div>
             </div>
             <div id="chunk-list"><!-- generated by JS --></div>
         </section>
@@ -797,12 +789,12 @@
         <section id="merge" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Step 4</div>
+                    <div class="eyebrow">Step 3</div>
                     <h2>Merge and verify</h2>
                     <p>You ran each chunk twice. Now let Copilot combine the two tables into one you can trust.</p>
                 </div>
             </div>
-            <p class="step-body">Open a fresh chat and switch to the fast Instant mode. Paste both tables into the prompt below where shown. Because the tables are already there, this step is quick.</p>
+            <p class="step-body">Open a fresh chat and paste both tables into the prompt below where shown. Because the tables are already there, this step is quick.</p>
             <div class="prompt-box" id="merge-box"><!-- filled by JS --></div>
             <button class="btn-copy" onclick="copyToClipboard('merge-box')">Copy prompt</button>
         </section>
@@ -811,7 +803,7 @@
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Step 5</div>
+                    <div class="eyebrow">Step 4</div>
                     <h2>Build your catch-up Notebook</h2>
                     <p>Gather everything you have checked into one Copilot Notebook, so the last steps work from that clean set instead of your whole network.</p>
                 </div>
@@ -869,7 +861,7 @@
         <section id="brainstorm" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Step 6</div>
+                    <div class="eyebrow">Step 5</div>
                     <h2>Brainstorm your first weeks back</h2>
                     <p>Now you have a checked picture of what you missed, turn it into a plan for the days ahead.</p>
                 </div>
@@ -883,7 +875,7 @@
         <section class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Step 7</div>
+                    <div class="eyebrow">Step 6</div>
                     <h2>Turn it into something you can use</h2>
                     <p>Your notebook is now a private, checked workspace. Ask it to reshape that into whatever helps you most.</p>
                 </div>
@@ -999,7 +991,7 @@
             var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
                 'July', 'August', 'September', 'October', 'November', 'December'];
             var YEARS = [2024, 2025, 2026, 2027];
-            var state = { chunkBy: 'time', rigour: 'dual' };
+            var state = { chunkBy: 'time', chunkSize: 'month', rigour: 'dual' };
 
             function esc(s) {
                 return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -1032,29 +1024,52 @@
 
             function roleCtx(s) { return s.role ? ' (I work as ' + s.role + ')' : ''; }
 
-            function monthSpan(s) {
-                var start = s.sy * 12 + s.sm, end = s.ey * 12 + s.em, list = [];
-                if (end < start) { return list; }
-                for (var m = start; m <= end && list.length < 24; m++) {
-                    list.push({ y: Math.floor(m / 12), mi: m % 12 });
-                }
-                return list;
-            }
-
             function lastDay(y, mi) { return new Date(y, mi + 1, 0).getDate(); }
 
-            function buildExtractTime(s, mo) {
-                var label = MONTHS[mo.mi] + ' ' + mo.y;
-                var startD = '1 ' + label;
-                var endD = lastDay(mo.y, mo.mi) + ' ' + label;
+            var MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            function fmt(d) { return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); }
+            function fmtShort(d) { return d.getDate() + ' ' + MONTHS_SHORT[d.getMonth()] + ' ' + d.getFullYear(); }
+
+            function windows(s) {
+                var out = [];
+                var start = new Date(s.sy, s.sm, 1);
+                var end = new Date(s.ey, s.em, lastDay(s.ey, s.em));
+                if (end < start) { return out; }
+                if (state.chunkSize === 'month') {
+                    var endKey = s.ey * 12 + s.em;
+                    for (var k = s.sy * 12 + s.sm; k <= endKey; k++) {
+                        var yy = Math.floor(k / 12), mm = k % 12;
+                        out.push({ start: new Date(yy, mm, 1), end: new Date(yy, mm, lastDay(yy, mm)), label: MONTHS[mm] + ' ' + yy });
+                    }
+                } else if (state.chunkSize === 'week') {
+                    var cur = new Date(start);
+                    while (cur <= end) {
+                        var wend = new Date(cur); wend.setDate(wend.getDate() + 6);
+                        if (wend > end) { wend = new Date(end); }
+                        out.push({ start: new Date(cur), end: wend, label: 'Week of ' + fmtShort(cur) });
+                        cur.setDate(cur.getDate() + 7);
+                    }
+                } else {
+                    var d = new Date(start);
+                    while (d <= end) {
+                        out.push({ start: new Date(d), end: new Date(d), label: fmt(d) });
+                        d.setDate(d.getDate() + 1);
+                    }
+                }
+                return out;
+            }
+
+            function buildExtractWindow(s, w) {
+                var same = w.start.getTime() === w.end.getTime();
+                var phrase = same ? ('for ' + fmt(w.start)) : ('from ' + fmt(w.start) + ' to ' + fmt(w.end));
                 var focus = s.topics.length
                     ? '\n4. Focus areas: give extra attention to anything touching ' + s.topics.join(', ') + '.'
                     : '';
                 return 'Act as my Chief of Staff. I am returning from an extended leave' + roleCtx(s) +
-                    ', and I am triaging my backlog one month at a time. From my Microsoft 365 work data (emails, Teams messages, meeting transcripts and shared documents), analyse only the period from ' + startD + ' to ' + endD + '.\n\n' +
+                    ', and I am triaging my backlog one piece at a time. From my Microsoft 365 work data (emails, Teams messages, meeting transcripts and shared documents), analyse only the period ' + phrase + '.\n\n' +
                     'Focus only on these outcomes, so I can see the impact of my absence and find gaps in what got done:\n' +
                     '1. Open decisions and missed tasks: any tasks, approvals or action items assigned to me or my projects that were left unfinished or unresolved.\n' +
-                    '2. Project impact and gaps: the main developments, changes of direction or blockers in my main projects during this month.\n' +
+                    '2. Project impact and gaps: the main developments, changes of direction or blockers in my main work during this period.\n' +
                     '3. Stakeholder alignment: important messages or requests from my manager, project leads or clients.' + focus + '\n\n' +
                     'Do not give a chatty summary. Reply only as a table with these columns: Date | Category (Task, Impact or Stakeholder) | Summary | Key people | Recommended next step | Source link. Cite every source so I can check it.';
             }
@@ -1070,7 +1085,7 @@
             }
 
             function buildMerge(s) {
-                var noun = state.chunkBy === 'time' ? 'a single month of my leave' : 'one focus area';
+                var noun = state.chunkBy === 'time' ? 'a single chunk of my leave' : 'one focus area';
                 return 'I am giving you two AI-generated tables (Run A and Run B) covering my Microsoft 365 work data for ' + noun + '. Both used the same instructions to find open tasks, project impacts and stakeholder updates, but because the AI is not perfectly repeatable they may differ, miss things or disagree.\n\n' +
                     '[Paste Run A table here]\n\n' +
                     '[Paste Run B table here]\n\n' +
@@ -1089,6 +1104,12 @@
             function buildFileTopic(s) {
                 var topic = s.topics.length ? s.topics.join(' / ') : '[your project or topic]';
                 return 'Find all files, documents and attachments about ' + topic + ' that were shared or updated between ' + s.leaveStart + ' and ' + s.leaveEnd + '. Give me a bulleted list of the most important ones, each with a short note on what the document is for and a direct source link to open it.';
+            }
+
+            function buildTriage(s) {
+                var focus = s.topics.length ? ' Give extra weight to anything about ' + s.topics.join(', ') + '.' : '';
+                return 'Act as my Chief of Staff. I am just back from leave and, before I work through everything in order, I need the genuinely urgent items first. Look across my Microsoft 365 email and Teams messages from ' + s.leaveStart + ' to ' + s.leaveEnd + ' and pull out only what still needs me: time-sensitive requests, decisions waiting on me, approaching or missed deadlines, and anything from my manager or key people. Ignore newsletters, notifications, automated alerts and anything already resolved.' + focus + '\n\n' +
+                    'Show the top 15, most urgent first, as a table with these columns: Priority (High or Medium) | Date | From | What it is (one line) | What I need to do | Deadline | Source link. In the Priority column, add a few words on why it matters. If nothing is genuinely urgent, say so plainly rather than padding the list.';
             }
 
             function buildBrainstorm(s) {
@@ -1119,15 +1140,20 @@
                 var host = document.getElementById('chunk-list');
                 var html = '';
                 if (state.chunkBy === 'time') {
-                    var months = monthSpan(s);
-                    if (!months.length) {
+                    var wins = windows(s);
+                    if (!wins.length) {
                         host.innerHTML = '<p class="chunk-empty">Check your dates: the return month is before the leave start.</p>';
                         return;
                     }
-                    months.forEach(function (mo, i) {
-                        var label = MONTHS[mo.mi] + ' ' + mo.y + (i === 0 ? ' · do this one first' : '');
-                        html += cardHtml('chunk-' + i, 'Chunk ' + (i + 1) + ' of ' + months.length, label, buildExtractTime(s, mo));
+                    var MAX = 40;
+                    var shown = wins.length > MAX ? wins.slice(0, MAX) : wins;
+                    shown.forEach(function (w, i) {
+                        var label = w.label + (i === 0 ? ' · do this one first' : '');
+                        html += cardHtml('chunk-' + i, 'Chunk ' + (i + 1) + ' of ' + wins.length, label, buildExtractWindow(s, w));
                     });
+                    if (wins.length > MAX) {
+                        html += '<p class="chunk-empty">That is ' + wins.length + ' chunks at this size. Showing the first ' + MAX + '. Weekly and daily chunks work best for one short, busy stretch, so narrow your leave dates above, or switch back to a larger size.</p>';
+                    }
                 } else {
                     if (!s.topics.length) {
                         html += '<p class="chunk-empty">Add one or more focus topics in Set up (separated by commas) to get a card per topic. Here is the shape of one:</p>';
@@ -1143,20 +1169,22 @@
 
             function applyToggleVisibility() {
                 document.getElementById('merge').classList.toggle('is-hidden', state.rigour !== 'dual');
+                document.getElementById('size-block').classList.toggle('is-hidden', state.chunkBy !== 'time');
                 document.getElementById('explain-chunk').textContent = state.chunkBy === 'time'
-                    ? 'One card per month across your leave, oldest first. Best when you are not sure what you missed.'
+                    ? 'One card per period across your leave, oldest first. Best when you are not sure what you missed.'
                     : 'One card per focus topic you name above. Faster and targeted, best when you know the few things that matter.';
                 document.getElementById('explain-rigour').textContent = state.rigour === 'dual'
                     ? 'Run each chunk twice in fresh chats, then merge the two tables. Slower, but it catches what one pass drops.'
                     : 'Run each chunk once. Quicker, fine for a short leave or a first look, but more likely to miss something.';
                 document.getElementById('order-note').textContent = state.chunkBy === 'time'
-                    ? 'Start with your oldest month and work forwards. If your organisation deletes old data on a schedule, the earliest month is the first to disappear.'
+                    ? 'Start with your oldest chunk and work forwards. If your organisation deletes old data on a schedule, the earliest period is the first to disappear.'
                     : 'Work through your focus areas in priority order. Do the one with the most at stake first.';
             }
 
             function render() {
                 var s = readState();
                 renderChunks(s);
+                document.getElementById('triage-box').innerText = buildTriage(s);
                 document.getElementById('merge-box').innerText = buildMerge(s);
                 document.getElementById('brainstorm-box').innerText = buildBrainstorm(s);
                 document.getElementById('filesearch-general').innerText = buildFileGeneral(s);

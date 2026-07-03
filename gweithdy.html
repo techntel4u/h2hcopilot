@@ -95,7 +95,8 @@
         .copilot-url { font-size: 14px; font-weight: 600; font-family: 'Segoe UI', 'Inter Tight', sans-serif; color: #0078D4; margin-top: 2px; }
         .instruction-text { font-size: 15px; color: var(--apple-text-primary); line-height: 1.5; }
         .instruction-text strong { color: var(--apple-text-primary); }
-        .tab-bar { display: flex; gap: 28px; background: transparent; padding: 8px 0 0; margin: 8px 0 28px; border-bottom: 1px solid var(--border-soft); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .tab-bar { display: flex; gap: 28px; background: transparent; padding: 8px 0 0; margin: 8px 0 28px; border-bottom: 1px solid var(--border-soft); overflow-x: auto;
+            overflow-y: hidden; -webkit-overflow-scrolling: touch; }
         .tab-btn { position: relative; min-width: 0; padding: 14px 0; border: none; background: transparent; font-family: inherit; font-size: 14px; font-weight: 500; color: var(--apple-text-secondary); cursor: pointer; transition: color 0.2s ease; white-space: nowrap; display: inline-flex; align-items: baseline; gap: 4px; }
         .tab-label-short { display: none; }
         @media (max-width: 640px) { .tab-bar { gap: 18px; } .tab-btn { padding: 12px 0; font-size: 13px; } .tab-label-full { display: none; } .tab-label-short { display: inline; } }

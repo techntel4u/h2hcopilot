@@ -757,6 +757,7 @@
         .part-3 { background: #fef7e0; color: #b06000; }
         .part-4 { background: #fce8e6; color: #c5221f; }
         .pill-academic { background: #f3e8fd; color: #8430ce; }
+        .pill-profservices { background: #e4f7fb; color: #007b83; }
 
         summary::after {
             content: 'View prompt →';
@@ -1242,7 +1243,7 @@
                         </div>
                         <div class="prompt-box" id="ex3-sources">Which of your answers came from which document? List each finding with the source it is based on, and flag anything you could not trace back to a specific document.</div>
                         <button onclick="copyToClipboard('ex3-sources')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>NotebookLM only answers from what you gave it, and cites it. That is why it wins for this kind of job.</em></p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>NotebookLM only answers from the sources you gave it, and cites them.</em></p>
                     </div>
                 </details>
 
@@ -1287,9 +1288,21 @@
             <!-- ============ TAB 2: PROMPT RECIPES ============ -->
             <div id="tab-recipes" class="tab-panel" role="tabpanel">
 
-                <p style="margin:14px 0 4px; font-size:13px; color:var(--apple-text-secondary);">These prompts are for every member of staff, whatever your role. The most broadly useful come first; the ones tagged Academic are grouped at the end.</p>
+                <p style="margin:14px 0 4px; font-size:13px; color:var(--apple-text-secondary);">The prompts you are likely to use most often, whatever your role, come first. More role-specific ones are tagged and grouped below them: Professional services, then Academic.</p>
 
                 <details open>
+                    <summary><span style="flex:1;">Devil's advocate (blind spots)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
+                        </div>
+                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
+                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
+                    </div>
+                </details>
+
+                <details>
                     <summary><span style="flex:1;">Filter a document to your role</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
@@ -1368,23 +1381,6 @@ If the feedback doesn't fit these, label it 'Other'."</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Analyse free-text survey comments</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: read hundreds of open survey comments at once and surface the concerns that come up most.
-                        </div>
-                        <div class="prompt-box" id="survey-freetext-analysis">You are a student support officer reviewing the annual wellbeing survey.
-
-Read all the free-text comments below (over 400 responses) and find the concerns students raise most often. Be empathetic and data-driven, focused on student welfare.
-
-Give me a bulleted list of the top five concerns. For each one, suggest which policy or support area should review it.
-
-[PASTE THE FREE-TEXT COMMENTS]</div>
-                        <button onclick="copyToClipboard('survey-freetext-analysis')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
                     <summary><span style="flex:1;">Roleplay for difficult conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
@@ -1392,18 +1388,6 @@ Give me a bulleted list of the top five concerns. For each one, suggest which po
                         </div>
                         <div class="prompt-box" id="roleplay-conversation">"Roleplay: You're Mrs. Grudge, my grumpy neighbour knocking at 2 a.m. to complain about my noisy cats (Knox, Missy, Phoebe). I'm a witty cat owner trying to calm you down and win you over. Stay in character and wait for my replies."</div>
                         <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Devil's advocate (blind spots)</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
-                        </div>
-                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
-                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
                     </div>
                 </details>
 
@@ -1454,7 +1438,24 @@ Output only the reusable prompt, nothing else.</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Summarise a regulator document for your board</span></summary>
+                    <summary><span style="flex:1;">Analyse free-text survey comments</span><span class="part-pill pill-profservices">Professional services</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: read hundreds of open survey comments at once and surface the concerns that come up most.
+                        </div>
+                        <div class="prompt-box" id="survey-freetext-analysis">You are a student support officer reviewing the annual wellbeing survey.
+
+Read all the free-text comments below (over 400 responses) and find the concerns students raise most often. Be empathetic and data-driven, focused on student welfare.
+
+Give me a bulleted list of the top five concerns. For each one, suggest which policy or support area should review it.
+
+[PASTE THE FREE-TEXT COMMENTS]</div>
+                        <button onclick="copyToClipboard('survey-freetext-analysis')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Summarise a regulator document for your board</span><span class="part-pill pill-profservices">Professional services</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: turn a dense regulator or compliance document into a board-ready summary with questions worth discussing. Attach the document, and swap in any policy paper.
@@ -1468,7 +1469,7 @@ Format: A bulleted summary followed by a numbered list of the 3 strategic questi
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Redesign a process around its users</span></summary>
+                    <summary><span style="flex:1;">Redesign a process around its users</span><span class="part-pill pill-profservices">Professional services</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: rethink any process from the point of view of the people who actually use it. Swap in your own process and profiles.
@@ -1482,7 +1483,7 @@ Format: A structured breakdown with a clear heading for each staff profile, usin
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Plan a new starter's first three days</span></summary>
+                    <summary><span style="flex:1;">Plan a new starter's first three days</span><span class="part-pill pill-profservices">Professional services</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: a ready-to-adapt onboarding schedule so each new colleague gets the same good start.

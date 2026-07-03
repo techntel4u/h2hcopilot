@@ -1183,8 +1183,8 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Ymarferion Gemini</span><span class="tab-label-short">Ymarferion</span><span class="tab-count">7</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Anogiadau Gweithle</span><span class="tab-label-short">Anogiadau</span><span class="tab-count">14</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Enghreifftiau i'w Dilyn</span><span class="tab-label-short">Enghreifftiau</span><span class="tab-count">6</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Anogiadau Gweithle</span><span class="tab-label-short">Anogiadau</span><span class="tab-count">16</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Cysyniadau a Chyfeirnod</span><span class="tab-label-short">Cysyniadau</span><span class="tab-count">8</span></button>
             </div>
 
@@ -1197,92 +1197,69 @@
                         <div class="exercise-note">
                             Defnydd: Deall pynciau cymhleth yn gyflym neu baratoi esboniadau syml.
                         </div>
-                        <div class="prompt-box" id="progressive-learning">"Esbonia [PWNC] i mi fel petawn i'n 5 oed (ELI5)"</div>
-                        <button onclick="copyToClipboard('progressive-learning')" class="btn-copy">Copïo'r Anogiad</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Rhowch [PWNC] yn lle'r bwlch: "cyfrifiadura cwmwl", "DNA", "ffiseg cwantwm", "rheol camsefyll mewn pêl-droed" ac ati.</em></p>
+                        <div class="prompt-box" id="ex1-eli5">"Esbonia [PWNC] i mi fel petawn i'n 5 oed (ELI5)"</div>
+                        <button onclick="copyToClipboard('ex1-eli5')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Rhowch [PWNC] yn lle'r bwlch: "cyfrifiadura cwmwl", "DNA", "ffiseg cwantwm", "rheol camsefyll mewn pêl-droed" ac ati. Neu yn lle pwnc, uwchlwythwch ddogfen fel eich polisi teithio a gofynnwch iddo esbonio honno.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">02</span><span style="flex:1;">Chwarae Rôl ar gyfer Sgyrsiau Anodd</span></summary>
+                    <summary><span class="ex-num">02</span><span style="flex:1;">Uwchlwytho ac adolygu cynigion grant</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Defnydd: Ymarfer adolygiadau perfformiad neu ddatrys gwrthdaro mewn lle diogel.
+                            Defnydd: casglwch ychydig o hen gynigion: un a ariannwyd, un aflwyddiannus, sylwadau adolygwyr. Uwchlwythwch nhw i Gemini gyda'r anogiad hwn. Dim cynigion wrth law? Fe wnaiff unrhyw ddogfennau gwaith hir y tro.
                         </div>
-                        <div class="prompt-box" id="roleplay-conversation">"Chwarae rôl: Ti yw Musus Cwyn, fy nghymdoges biwis sy'n curo'r drws am 2 y bore i gwyno am fy nghathod swnllyd (Knox, Missy a Phoebe). Dwi'n berchennog cathod ffraeth sy'n ceisio dy dawelu di a dy ennill drosodd. Aros yn dy gymeriad ac aros am fy atebion."</div>
-                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copïo'r Anogiad</button>
+                        <div class="prompt-box" id="ex2-grant-review">Adolyga'r cynnig/cynigion a uwchlwythwyd a nodi'r adrannau sydd fwyaf tebygol o fod wedi peri pryder neu siom i adolygydd. Chwilia am: honiadau effaith annelwig, haeriadau heb eu cefnogi, disgrifiad methodoleg wan, eitemau cyllideb heb gyfiawnhad, neu ddiffyg aliniad â blaenoriaethau tebygol y cyllidwr. Rhestra pob gwendid ac awgryma beth fyddai fersiwn gryfach yn ei gynnwys.</div>
+                        <button onclick="copyToClipboard('ex2-grant-review')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae pedwar anogiad adolygu arall (testun ailddefnyddiadwy, beth weithiodd, ymadroddion allweddol, strwythur) yn adran NotebookLM ymhellach i lawr y dudalen.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Eiriolwr y Diafol (Mannau Dall)</span></summary>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Yr un ffeiliau, nawr yn NotebookLM</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Defnydd: Profi eich heriau, syniadau newydd neu benderfyniadau cyn eu cwblhau.
+                            Defnydd: teimlwch y gwahaniaeth rhwng sgwrs gyffredinol ac atebion wedi'u seilio yn eich ffynonellau. Crëwch lyfr nodiadau yn notebooklm.google.com, ychwanegwch yr un ffeiliau, a rhedwch yr un anogiad ag yn Enghraifft 02. Yna gofynnwch y cwestiwn dilynol hwn.
                         </div>
-                        <div class="prompt-box" id="devils-advocate">"Bydd yn eiriolwr y diafol adeiladol. Yn gyntaf, nodi'r gwendidau neu'r mannau dall posibl, yna awgryma safbwyntiau eraill. Bydd yn benodol ac yn heriol ond yn adeiladol. Dyma fy senario: [senario yma]"</div>
-                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copïo'r Anogiad</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Ychwanegwch eich senario eich hun: "Dwi eisiau symud o werthu i rôl arwain", "delio â chleient anodd", a rhowch gyd-destun defnyddiol hefyd. Gallwch chi uwchlwytho dogfen yn lle teipio senario, e.e. uwchlwytho eich polisi teithio newydd. Yna arbrofwch gyda thrawsgrifiad cyfarfod, ffeil Excel neu hyd yn oed gyflwyniad PowerPoint.</em></p>
-
-
+                        <div class="prompt-box" id="ex3-sources">Pa rai o'th atebion ddaeth o ba ddogfen? Rhestra pob canfyddiad gyda'r ffynhonnell y mae'n seiliedig arni, a thynna sylw at unrhyw beth na elli ei olrhain yn ôl i ddogfen benodol.</div>
+                        <button onclick="copyToClipboard('ex3-sources')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Dim ond o'r hyn a roesoch iddo y mae NotebookLM yn ateb, ac mae'n ei ddyfynnu. Dyna pam mae'n ennill ar gyfer y math hwn o waith.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Persona Proffesiynol (Anogiad Rôl)</span></summary>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Rhoi Ymchwil Ddofn ar waith</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Defnydd: Teilwra naws cyfathrebu ar gyfer cynulleidfaoedd penodol.
+                            Defnydd: rhowch swydd ymchwil i Gemini a chael adroddiad â ffynonellau yn ôl. Trowch Ymchwil Ddofn (Deep Research) ymlaen yn y ddewislen offer o dan y blwch anogiadau, gludwch hwn, a gwiriwch y cynllun y mae'n ei ddangos cyn iddo ddechrau. Gallwch olygu'r cynllun hwnnw.
                         </div>
-                        <div class="prompt-box" id="role-prompt-medical">"Ar gyfer sgript: Ti yw gweithiwr meddygol proffesiynol. Ateba'r datganiad 'Mae clwy'r marchogion yn fy mhoeni'."</div>
-                        <button onclick="copyToClipboard('role-prompt-medical')" class="btn-copy">Copïo'r Anogiad</button>
-
-                        <div class="prompt-box" id="role-prompt-comedian" style="margin-top:14px;">"Ar gyfer sgript: Ti yw comedïwr. Ateba'r datganiad 'Mae clwy'r marchogion yn fy mhoeni'."</div>
-                        <button onclick="copyToClipboard('role-prompt-comedian')" class="btn-copy">Copïo'r Anogiad</button>
+                        <div class="prompt-box" id="ex4-deep-research">Rwy'n gweithio mewn prifysgol. Ymchwilia i sut mae prifysgolion y DU yn defnyddio AI cynhyrchiol i gefnogi staff ar draws addysgu, ymchwil a gwasanaethau proffesiynol, a chynhyrcha friff byr â ffynonellau sy'n cwmpasu: y pum datblygiad pwysicaf o'r 12 mis diwethaf; beth sy'n newid ar hyn o bryd; a thri pheth ymarferol y dylai tîm fel fy un i ystyried rhoi cynnig arnynt. Dyfynna dy ffynonellau drwyddi draw fel y gallaf eu gwirio.</div>
+                        <button onclick="copyToClipboard('ex4-deep-research')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae dau anogiad llawnach yn ôl rôl (academaidd a gwasanaethau proffesiynol) yn adran Ymchwil Ddofn ymhellach i lawr y dudalen.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Fformat a Strwythur</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Troi dogfen yn ddelwedd</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            <strong>Defnydd:</strong> Gorfodi'r AI i gynhyrchu'n union yr hyn sydd ei angen arnoch (Tabl, SOP, Testun Creadigol) mewn un cais.
+                            Defnydd: cael delwedd barod i sleid o ddeunydd sydd gennych eisoes. Dewiswch Creu delwedd (Create image) yn y ddewislen offer, uwchlwythwch ddogfen (neu arhoswch yn eich sgwrs grantiau), a gofynnwch.
                         </div>
-                        <div class="prompt-box" id="format-prompt-merged">"Rwyt ti'n rhedeg 'Pizza Marchogion y Ford Gron' - gwasanaeth dosbarthu pizza ar thema chwedlau Arthur. Cynhyrcha'r tri pheth canlynol:
-
-1. Ysgrifenna jingl bachog ar gyfer hysbysebion dosbarthu pizza ar gefn ceffyl.
-2. Drafftia SOP i hyfforddi marchogion dosbarthu ar gyfer cludo pizza ar gefn ceffyl a chynnal arfwisg.
-3. Crea dabl Excel â thair colofn: enwau pizza canoloesol, cynhwysion, ac amseroedd dosbarthu i wahanol deyrnasoedd Cymru (Gwynedd, Powys, Dyfed, Morgannwg)."</div>
-                        <button onclick="copyToClipboard('format-prompt-merged')" class="btn-copy">Copïo'r Anogiad</button>
+                        <div class="prompt-box" id="ex5-visual">Gan ddefnyddio'r ddogfen sydd ynghlwm, crea ffeithlun glân, syml sy'n esbonio [DEWISWCH ADRAN NEU BWNC] i gynulleidfa gyffredinol. Cefndir gwyn, un lliw acen, labeli mawr darllenadwy, dim annibendod.</div>
+                        <button onclick="copyToClipboard('ex5-visual')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae rhagor o syniadau delweddau (golygu lluniau sydd gennych eisoes, posteri dwyieithog) yn adran Y Tu Hwnt i Sgwrsio ymhellach i lawr y dudalen.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Hunanasesu (Marcio Dy Waith Dy Hun)</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Adeiladu teclyn bach yn Canvas</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Defnydd: Cael yr AI i feirniadu ei waith ei hun er mwyn gwella'r ansawdd cyn i chi ei adolygu.
+                            Defnydd: gorffennwch gyda'r waw: teclyn gwe sy'n gweithio o un anogiad. Dewiswch Canvas o'r ddewislen offer, atodwch ddogfen bolisi neu ganllaw, a gludwch hwn.
                         </div>
-                        <div class="prompt-box" id="evaluation-prompt">"Dwi angen enw ar gyfer ap dêtio newydd i bensiynwyr, rho bum enghraifft os gweli'n dda.
-Ar gyfer pob enw, cyfiawnha pam dewisaist ti ef a sicrha nad yw'n nawddoglyd nac yn sarhaus i'r farchnad darged, er paid ag ofni bod yn ddoniol.
-Sgoria pob enghraifft ar raddfa 1-10 ar gyfer Cofiadwyedd, Gwahaniaethedd a Photensial Byd-eang. Rho reswm dros bob sgôr."</div>
-                        <button onclick="copyToClipboard('evaluation-prompt')" class="btn-copy">Copïo'r Anogiad</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span class="ex-num">07</span><span style="flex:1;">Cadwyno Anogiadau</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: Cyfuno Rôl, Naws, Cyfyngiadau a Fformat mewn un cais.
-                        </div>
-                        <div class="prompt-box" id="prompt-chain">"Tasg: Awgryma enwau diodydd pop deniadol.
-Rôl: Defnyddwyr ifanc (15-25).
-Naws: Doniol, ond nid yn blentynnaidd.
-Cyfyngiad: Osgoi enwau cynnyrch sy'n bodoli eisoes yn y DU.
-Fformat: Rho 10 enw mewn tabl tair colofn: Enw, Sgôr (1-10), Rhesymeg.
-Enghreifftiau: SudynSitrws, SwigDŵr, PopyrHaul."</div>
-                        <button onclick="copyToClipboard('prompt-chain')" class="btn-copy">Copïo'r Anogiad</button>
+                        <div class="prompt-box" id="ex6-canvas">Crea ap gwe cwis rhyngweithiol un dudalen sy'n profi staff ar bwyntiau allweddol y ddogfen sydd ynghlwm. Pum cwestiwn amlddewis, adborth cyfeillgar ar ôl pob ateb, a sgôr ar y diwedd. Defnyddia Tailwind CSS a JavaScript plaen mewn un ffeil HTML.</div>
+                        <button onclick="copyToClipboard('ex6-canvas')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae dau adeiladwaith Canvas arall (amcangyfrifwr treuliau a delweddwr cysyniadau rhyngweithiol) yn adran Y Tu Hwnt i Sgwrsio ymhellach i lawr y dudalen.</em></p>
                     </div>
                 </details>
 
@@ -1442,6 +1419,29 @@ Pan fyddaf yn rhannu dau ddarn o destun, dogfen galwad cyllidwr ac adran o gynni
 
 Bydd yn fanwl gywir. Cyfeiria at union eiriau'r ddwy ddogfen.</div>
                         <button onclick="copyToClipboard('funder-alignment-checker')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Chwarae rôl ar gyfer sgyrsiau anodd</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: Defnyddiol ar gyfer dysgu, neu i baratoi at gyfarfod sydd ar y gweill. Ymarfer adolygiadau perfformiad neu ddatrys gwrthdaro mewn lle diogel.
+                        </div>
+                        <div class="prompt-box" id="roleplay-conversation">"Chwarae rôl: Ti yw Musus Cwyn, fy nghymdoges biwis sy'n curo'r drws am 2 y bore i gwyno am fy nghathod swnllyd (Knox, Missy a Phoebe). Dwi'n berchennog cathod ffraeth sy'n ceisio dy dawelu di a dy ennill drosodd. Aros yn dy gymeriad ac aros am fy atebion."</div>
+                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Eiriolwr y diafol (mannau dall)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: Profi eich heriau, syniadau newydd neu benderfyniadau cyn eu cwblhau.
+                        </div>
+                        <div class="prompt-box" id="devils-advocate">"Bydd yn eiriolwr y diafol adeiladol. Yn gyntaf, nodi'r gwendidau neu'r mannau dall posibl, yna awgryma safbwyntiau eraill. Bydd yn benodol ac yn heriol ond yn adeiladol. Dyma fy senario: [senario yma]"</div>
+                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Ychwanegwch eich senario eich hun: "Dwi eisiau symud o werthu i rôl arwain", "delio â chleient anodd", a rhowch gyd-destun defnyddiol hefyd. Gallwch chi uwchlwytho dogfen yn lle teipio senario, e.e. uwchlwytho eich polisi teithio newydd. Yna arbrofwch gyda thrawsgrifiad cyfarfod, ffeil Excel neu hyd yn oed gyflwyniad PowerPoint.</em></p>
                     </div>
                 </details>
 

@@ -1183,8 +1183,8 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Gemini Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">7</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">17</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Follow-Along Examples</span><span class="tab-label-short">Examples</span><span class="tab-count">6</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">19</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">9</span></button>
             </div>
 
@@ -1197,92 +1197,69 @@
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
                         </div>
-                        <div class="prompt-box" id="progressive-learning">"Explain [TOPIC] to me like I am 5 (ELI5)"</div>
-                        <button onclick="copyToClipboard('progressive-learning')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="ex1-eli5">"Explain [TOPIC] to me like I am 5 (ELI5)"</div>
+                        <button onclick="copyToClipboard('ex1-eli5')" class="btn-copy">Copy Prompt</button>
                         <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Replace [TOPIC] with: "cloud computing", "DNA", "quantum physics", "offside rule in football" etc. Or instead of a topic, upload a document such as your travel policy and ask it to explain that.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">02</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">02</span><span style="flex:1;">Upload and review grant proposals</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
+                            Application: gather a few past proposals: a funded one, an unsuccessful one, reviewer comments. Upload them to Gemini along with this prompt. No proposals to hand? Any long work documents will do.
                         </div>
-                        <div class="prompt-box" id="roleplay-conversation">"Roleplay: You're Mrs. Grudge, my grumpy neighbour knocking at 2 a.m. to complain about my noisy cats (Knox, Missy, Phoebe). I'm a witty cat owner trying to calm you down and win you over. Stay in character and wait for my replies."</div>
-                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="ex2-grant-review">Review the uploaded proposal(s) and identify the sections most likely to have concerned or disappointed a reviewer. Look for: vague impact claims, unsubstantiated assertions, weak methodology description, budget items with no justification, or misalignment with likely funder priorities. List each weakness and suggest what a stronger version would include.</div>
+                        <button onclick="copyToClipboard('ex2-grant-review')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Four more review prompts (reusable text, what worked, key phrases, structure) live in the NotebookLM section further down the page.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Same files, now in NotebookLM</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
+                            Application: feel the difference between broad chat and answers grounded in your sources. Create a notebook at notebooklm.google.com, add the same files, and run the same prompt from Example 02. Then ask this follow-up.
                         </div>
-                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
-                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
-
-                     
+                        <div class="prompt-box" id="ex3-sources">Which of your answers came from which document? List each finding with the source it is based on, and flag anything you could not trace back to a specific document.</div>
+                        <button onclick="copyToClipboard('ex3-sources')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>NotebookLM only answers from what you gave it, and cites it. That is why it wins for this kind of job.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Set Deep Research going</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: Tailor communication tone for specific audiences.
+                            Application: hand Gemini a research job and get back a sourced report. Switch on Deep Research in the tools menu under the prompt box, paste this, and check the plan it shows you before it starts. You can edit that plan.
                         </div>
-                        <div class="prompt-box" id="role-prompt-medical">"For a script: You are a medical professional. Reply to the statement 'My haemorrhoids are bothering me'."</div>
-                        <button onclick="copyToClipboard('role-prompt-medical')" class="btn-copy">Copy Prompt</button>
-
-                        <div class="prompt-box" id="role-prompt-comedian" style="margin-top:14px;">"For a script: You are a comedian. Reply to the statement 'My haemorrhoids are bothering me'."</div>
-                        <button onclick="copyToClipboard('role-prompt-comedian')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="ex4-deep-research">I work at a university. Research how UK universities are using generative AI to support staff across teaching, research and professional services, and produce a short, sourced briefing that covers: the five most important developments from the last 12 months; what is changing right now; and three practical things a team like mine should consider trying. Cite your sources throughout so I can verify them.</div>
+                        <button onclick="copyToClipboard('ex4-deep-research')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Two fuller role-based prompts (academic and professional services) are in the Deep Research section further down the page.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Turn a document into a visual</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
+                            Application: get a slide-ready image from material you already have. Pick Create image in the tools menu, upload a document (or stay in your grant chat), and ask.
                         </div>
-                        <div class="prompt-box" id="format-prompt-merged">"You run 'Knights of the Round Table Pizza' - a medieval-themed pizza delivery service. Please generate the following three items:
-
-1. Write a catchy jingle for your horse-drawn pizza delivery adverts.
-2. Draft an SOP for training delivery knights on horseback pizza transport and armour maintenance.
-3. Create an Excel table with three columns: Medieval pizza names, ingredients, and delivery times to different kingdoms."</div>
-                        <button onclick="copyToClipboard('format-prompt-merged')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="ex5-visual">Using the attached document, create a clean, simple infographic that explains [PICK A SECTION OR TOPIC] to a general audience. White background, one accent colour, large readable labels, no clutter.</div>
+                        <button onclick="copyToClipboard('ex5-visual')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>More image ideas (editing photos you already have, bilingual posters) are in the Beyond Chat section further down the page.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Build a small tool in Canvas</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: Get AI to critique its own work to improve quality before you review it.
+                            Application: finish with the wow: a working web tool from one prompt. Pick Canvas from the tools menu, attach a policy or guidance document, and paste this.
                         </div>
-                        <div class="prompt-box" id="evaluation-prompt">"I need a name for a new pensioner dating app, provide five examples please.
-For each name justify its selection and ensure its not condescending or offensive to the target market, though don't be afraid to be humorous.
-Score each example on a 1-10 scale for Memorability, Distinctiveness and Global potential. Provide a reason for the score."</div>
-                        <button onclick="copyToClipboard('evaluation-prompt')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span class="ex-num">07</span><span style="flex:1;">Prompt Chaining</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: Combine Role, Tone, Constraints, and Format into one request.
-                        </div>
-                        <div class="prompt-box" id="prompt-chain">"Task: Suggest appealing fizzy drink names.
-Role: Young consumers (15-25).
-Tone: Humorous, but not childish.
-Constraint: Avoid existing UK product names.
-Format: Provide 10 names in a 3-column table: Name, Rating (1-10), Reasoning
-Examples: CitrusBurst, AquaFizz, SolarPop."</div>
-                        <button onclick="copyToClipboard('prompt-chain')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="ex6-canvas">Create an interactive one-page quiz web app that tests staff on the key points of the attached document. Five multiple-choice questions, friendly feedback after each answer, and a score at the end. Use Tailwind CSS and vanilla JavaScript in a single HTML file.</div>
+                        <button onclick="copyToClipboard('ex6-canvas')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Two more Canvas builds (an expense claim estimator and an interactive concept visualiser) are in the Beyond Chat section further down the page.</em></p>
                     </div>
                 </details>
 
@@ -1489,6 +1466,29 @@ When I share two pieces of text, a funder call document and a draft proposal sec
 
 Be precise. Reference the actual words of both documents.</div>
                         <button onclick="copyToClipboard('funder-alignment-checker')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Roleplay for difficult conversations</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
+                        </div>
+                        <div class="prompt-box" id="roleplay-conversation">"Roleplay: You're Mrs. Grudge, my grumpy neighbour knocking at 2 a.m. to complain about my noisy cats (Knox, Missy, Phoebe). I'm a witty cat owner trying to calm you down and win you over. Stay in character and wait for my replies."</div>
+                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Devil's advocate (blind spots)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
+                        </div>
+                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
+                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
                     </div>
                 </details>
 

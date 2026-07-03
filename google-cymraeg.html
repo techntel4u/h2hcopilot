@@ -756,6 +756,8 @@
         .part-2 { background: #e6f4ea; color: #188038; }
         .part-3 { background: #fef7e0; color: #b06000; }
         .part-4 { background: #fce8e6; color: #c5221f; }
+        .pill-academic { background: #f3e8fd; color: #8430ce; }
+        .pill-profservices { background: #e4f7fb; color: #007b83; }
 
         summary::after {
             content: 'Gweld yr anogiad →';
@@ -1200,8 +1202,8 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Enghreifftiau i'w Dilyn</span><span class="tab-label-short">Enghreifftiau</span><span class="tab-count">6</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Anogiadau Gweithle</span><span class="tab-label-short">Anogiadau</span><span class="tab-count">16</span></button>
-                <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Cysyniadau a Chyfeirnod</span><span class="tab-label-short">Cysyniadau</span><span class="tab-count">8</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Anogiadau Gweithle</span><span class="tab-label-short">Anogiadau</span><span class="tab-count">19</span></button>
+                <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Cysyniadau a Chyfeirnod</span><span class="tab-label-short">Cysyniadau</span><span class="tab-count">9</span></button>
             </div>
 
             <!-- ============ TAB 1: EXERCISES ============ -->
@@ -1241,7 +1243,7 @@
                         </div>
                         <div class="prompt-box" id="ex3-sources">Pa rai o'th atebion ddaeth o ba ddogfen? Rhestra pob canfyddiad gyda'r ffynhonnell y mae'n seiliedig arni, a thynna sylw at unrhyw beth na elli ei olrhain yn ôl i ddogfen benodol.</div>
                         <button onclick="copyToClipboard('ex3-sources')" class="btn-copy">Copïo'r Anogiad</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Dim ond o'r hyn a roesoch iddo y mae NotebookLM yn ateb, ac mae'n ei ddyfynnu. Dyna pam mae'n ennill ar gyfer y math hwn o waith.</em></p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Dim ond o'r ffynonellau a roesoch iddo y mae NotebookLM yn ateb, ac mae'n eu dyfynnu.</em></p>
                     </div>
                 </details>
 
@@ -1286,7 +1288,21 @@
             <!-- ============ TAB 2: PROMPT RECIPES ============ -->
             <div id="tab-recipes" class="tab-panel" role="tabpanel">
 
+                <p style="margin:14px 0 4px; font-size:13px; color:var(--apple-text-secondary);">Yr anogiadau y byddwch yn debygol o'u defnyddio amlaf, beth bynnag fo'ch rôl, sy'n dod gyntaf. Mae'r rhai mwy penodol i rôl wedi'u tagio a'u grwpio oddi tanynt: Gwasanaethau proffesiynol, yna Academaidd.</p>
+
                 <details open>
+                    <summary><span style="flex:1;">Eiriolwr y diafol (mannau dall)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: Profi eich heriau, syniadau newydd neu benderfyniadau cyn eu cwblhau.
+                        </div>
+                        <div class="prompt-box" id="devils-advocate">"Bydd yn eiriolwr y diafol adeiladol. Yn gyntaf, nodi'r gwendidau neu'r mannau dall posibl, yna awgryma safbwyntiau eraill. Bydd yn benodol ac yn heriol ond yn adeiladol. Dyma fy senario: [senario yma]"</div>
+                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copïo'r Anogiad</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Ychwanegwch eich senario eich hun: "Dwi eisiau symud o werthu i rôl arwain", "delio â chleient anodd", a rhowch gyd-destun defnyddiol hefyd. Gallwch chi uwchlwytho dogfen yn lle teipio senario, e.e. uwchlwytho eich polisi teithio newydd. Yna arbrofwch gyda thrawsgrifiad cyfarfod, ffeil Excel neu hyd yn oed gyflwyniad PowerPoint.</em></p>
+                    </div>
+                </details>
+
+                <details>
                     <summary><span style="flex:1;">Hidlo dogfen yn ôl eich rôl</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
@@ -1304,6 +1320,21 @@
                         <div class="prompt-box" id="meeting-notes-prompt">"Crynhoa'r trawsgrifiad cyfarfod canlynol os gweli'n dda. Canolbwyntia ar y prif bwyntiau, y penderfyniadau a wnaed, y camau gweithredu ac unrhyw ddyddiadau cau pwysig. Sicrha fod y crynodeb yn glir ac wedi'i drefnu. Dylai'r crynodeb fod dim hwy na 200 gair:
 [GLUDWCH Y TRAWSGRIFIAD YMA]"</div>
                         <button onclick="copyToClipboard('meeting-notes-prompt')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Ailysgrifennu unrhyw beth mewn Saesneg clir</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: gludwch bolisi, papur ymchwil, adroddiad neu drawsgrifiad cyfarfod a chael fersiwn y gall unrhyw un ei deall mewn un darlleniad.
+                        </div>
+                        <div class="prompt-box" id="plain-english-editor">Rwyt ti'n gyfathrebwr arbenigol sy'n ailysgrifennu testun arbenigol ar gyfer cynulleidfa gyffredinol.
+
+Pan fyddaf yn rhannu unrhyw destun, dogfen bolisi, papur ymchwil, adroddiad neu drawsgrifiad cyfarfod, ailysgrifenna ef fel y gall darllenydd heb unrhyw gefndir yn y pwnc ei ddeall mewn un darlleniad. Tynna allan neu eglura'n fyr bob jargon. Byrhau brawddegau. Rho'r arwyddocâd yn y byd go iawn yn gyntaf. Tynna allan ymadroddion gochelgar a'r llais goddefol.
+
+Ar ôl ailysgrifennu, nodi: y tri newid mwyaf arwyddocaol a wnaethost a pham; ac unrhyw dermau technegol y dewisaist eu cadw a pham. Paid â newid yr ystyr na hepgor cynnwys pwysig.</div>
+                        <button onclick="copyToClipboard('plain-english-editor')" class="btn-copy">Copïo'r Anogiad</button>
                     </div>
                 </details>
 
@@ -1350,17 +1381,13 @@ Os nad yw'r adborth yn ffitio'r rhain, labela ef yn 'Arall'."</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Ailysgrifennu unrhyw beth mewn Saesneg clir</span></summary>
+                    <summary><span style="flex:1;">Chwarae rôl ar gyfer sgyrsiau anodd</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Defnydd: gludwch bolisi, papur ymchwil, adroddiad neu drawsgrifiad cyfarfod a chael fersiwn y gall unrhyw un ei deall mewn un darlleniad.
+                            Defnydd: Defnyddiol ar gyfer dysgu, neu i baratoi at gyfarfod sydd ar y gweill. Ymarfer adolygiadau perfformiad neu ddatrys gwrthdaro mewn lle diogel.
                         </div>
-                        <div class="prompt-box" id="plain-english-editor">Rwyt ti'n gyfathrebwr arbenigol sy'n ailysgrifennu testun arbenigol ar gyfer cynulleidfa gyffredinol.
-
-Pan fyddaf yn rhannu unrhyw destun, dogfen bolisi, papur ymchwil, adroddiad neu drawsgrifiad cyfarfod, ailysgrifenna ef fel y gall darllenydd heb unrhyw gefndir yn y pwnc ei ddeall mewn un darlleniad. Tynna allan neu eglura'n fyr bob jargon. Byrhau brawddegau. Rho'r arwyddocâd yn y byd go iawn yn gyntaf. Tynna allan ymadroddion gochelgar a'r llais goddefol.
-
-Ar ôl ailysgrifennu, nodi: y tri newid mwyaf arwyddocaol a wnaethost a pham; ac unrhyw dermau technegol y dewisaist eu cadw a pham. Paid â newid yr ystyr na hepgor cynnwys pwysig.</div>
-                        <button onclick="copyToClipboard('plain-english-editor')" class="btn-copy">Copïo'r Anogiad</button>
+                        <div class="prompt-box" id="roleplay-conversation">"Chwarae rôl: Ti yw Musus Cwyn, fy nghymdoges biwis sy'n curo'r drws am 2 y bore i gwyno am fy nghathod swnllyd (Knox, Missy a Phoebe). Dwi'n berchennog cathod ffraeth sy'n ceisio dy dawelu di a dy ennill drosodd. Aros yn dy gymeriad ac aros am fy atebion."</div>
+                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copïo'r Anogiad</button>
                     </div>
                 </details>
 
@@ -1411,7 +1438,110 @@ Allbynna'r anogiad ailddefnyddiadwy yn unig, dim byd arall.</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Sgorio cynnig grant (panel UKRI)</span></summary>
+                    <summary><span style="flex:1;">Dadansoddi sylwadau arolwg testun rhydd</span><span class="part-pill pill-profservices">Gwasanaethau proffesiynol</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: darllen cannoedd o sylwadau arolwg agored ar unwaith a gweld pa bryderon sy'n codi amlaf.
+                        </div>
+                        <div class="prompt-box" id="survey-freetext-analysis">Rwyt ti'n swyddog cymorth myfyrwyr sy'n adolygu'r arolwg lles blynyddol.
+
+Darllena'r holl sylwadau testun rhydd isod (dros 400 o ymatebion) a nodi'r pryderon y mae myfyrwyr yn eu codi amlaf. Bydd yn empathetig ac yn seiliedig ar ddata, gan ganolbwyntio ar les myfyrwyr.
+
+Rho restr pwyntiau bwled i mi o'r pum pryder pennaf. Ar gyfer pob un, awgryma pa bolisi neu faes cymorth ddylai ei adolygu.
+
+[GLUDWCH Y SYLWADAU TESTUN RHYDD]</div>
+                        <button onclick="copyToClipboard('survey-freetext-analysis')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Crynhoi dogfen reoleiddiwr i'ch bwrdd</span><span class="part-pill pill-profservices">Gwasanaethau proffesiynol</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: troi dogfen reoleiddiwr neu gydymffurfio drwchus yn grynodeb parod i fwrdd, gyda chwestiynau gwerth eu trafod. Atodwch y ddogfen, a newidiwch hi am unrhyw bapur polisi.
+                        </div>
+                        <div class="prompt-box" id="ptcf-regulator">Persona: Dadansoddwr polisi arbenigol.
+Tasg: Dadansodda'r [ddogfen reoleiddio newydd gan Medr] sydd ynghlwm a chrynhoa ei phrif themâu a'r risgiau sefydliadol allweddol. Yna cynhyrcha 3 chwestiwn strategol i annog meddwl beirniadol.
+Cyd-destun: Bydd y crynodeb a'r cwestiynau'n cael eu defnyddio gan [Fwrdd Gweithredol y Brifysgol] i ddeall y cyd-destun ehangach a pharatoi ar gyfer newidiadau sydd i ddod.
+Fformat: Crynodeb pwyntiau bwled ac yna rhestr wedi'i rhifo o'r 3 chwestiwn strategol.</div>
+                        <button onclick="copyToClipboard('ptcf-regulator')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Ailgynllunio proses o amgylch ei defnyddwyr</span><span class="part-pill pill-profservices">Gwasanaethau proffesiynol</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: ailfeddwl unrhyw broses o safbwynt y bobl sy'n ei defnyddio go iawn. Rhowch eich proses a'ch proffiliau eich hun i mewn.
+                        </div>
+                        <div class="prompt-box" id="ptcf-expenses">Persona: [Cyfarwyddwr Cyllid].
+Tasg: Adolyga'r broses hawlio treuliau bresennol, gan awgrymu newidiadau i'r llif cymeradwyo, y gofynion dogfennaeth a'r dulliau cyflwyno.
+Cyd-destun: Mae angen i'r broses gefnogi tri phroffil staff penodol: [gweithiwr newydd, ymchwilydd sy'n hawlio teithio rhyngwladol, a chontractwr dros dro].
+Fformat: Dadansoddiad strwythuredig gyda phennawd clir ar gyfer pob proffil staff, gan ddefnyddio pwyntiau bwled ar gyfer y newidiadau gofynnol.</div>
+                        <button onclick="copyToClipboard('ptcf-expenses')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Cynllunio dyddiau cyntaf aelod staff newydd</span><span class="part-pill pill-profservices">Gwasanaethau proffesiynol</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: amserlen groesawu barod i'w haddasu, fel bod pob cydweithiwr newydd yn cael yr un dechrau da.
+                        </div>
+                        <div class="prompt-box" id="ptcf-onboarding">Persona: Cydlynydd croesawu staff newydd.
+Tasg: Drafftia amserlen 3 diwrnod fanwl a rhestr wirio gysylltiedig ar gyfer croesawu aelod staff newydd, gan integreiddio sesiynau Adnoddau Dynol, TG ac adrannol.
+Cyd-destun: Mae angen dechrau di-dor, cynhwysfawr ar [academyddion] sy'n ymuno â'r sefydliad y semester hwn.
+Fformat: Amserlen ddyddiol wedi'i rhifo gyda slotiau amser, yr adnoddau gofynnol, a chyswllt yr adran gyfrifol ar gyfer pob eitem.</div>
+                        <button onclick="copyToClipboard('ptcf-onboarding')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Dadansoddi trawsgrifiad grŵp ffocws</span><span class="part-pill pill-academic">Academaidd</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: troi recordiad grŵp ffocws hir yn themâu a naws y mae arweinwyr cyrsiau eu hangen.
+                        </div>
+                        <div class="prompt-box" id="focus-group-transcript">Rwyt ti'n gynorthwyydd marchnata sy'n ysgrifennu adroddiad ar grŵp ffocws myfyrwyr ar gyfer arweinwyr cyrsiau.
+
+Darllena'r trawsgrifiad sydd ynghlwm o grŵp ffocws 60 munud am y cwrs newydd. Nodi'r prif themâu a'r naws gyffredinol tuag at y cwrs. Aros yn wrthrychol a dadansoddol, fel mewn ymchwil marchnad.
+
+Rho grynodeb pwyntiau bwled i mi:
+- Y tair thema gadarnhaol amlycaf
+- Y tair thema negyddol amlycaf
+
+[ATODWCH NEU GLUDWCH Y TRAWSGRIFIAD]</div>
+                        <button onclick="copyToClipboard('focus-group-transcript')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Newidiadau modiwl ar sail tystiolaeth</span><span class="part-pill pill-academic">Academaidd</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: troi adroddiad adborth myfyrwyr yn newidiadau penodol y dylai darlithydd eu gwneud y tro nesaf.
+                        </div>
+                        <div class="prompt-box" id="module-revisions">Ar sail yr [adroddiad adborth myfyrwyr], beth yw'r tri newid pwysicaf y dylai'r darlithydd hwn eu gwneud cyn cynnal y modiwl hwn eto? Bydd yn benodol ynglŷn â beth yn union sydd angen ei newid a pham.</div>
+                        <button onclick="copyToClipboard('module-revisions')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Cymharu dulliau marcio a graddio</span><span class="part-pill pill-academic">Academaidd</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: cymhariaeth ar sail tystiolaeth i lywio ailgynllunio asesu neu fodiwl.
+                        </div>
+                        <div class="prompt-box" id="ptcf-grading">Persona: [Darlithydd prifysgol] ac ymchwilydd addysgol.
+Tasg: Cymhara systemau graddio amgen mewn addysg uwch, gan ganolbwyntio ar [ddi-raddio (ungrading), graddio meistrolaeth, a graddio contract]. Amlyga ymchwil ar ganlyniadau, ymgysylltiad myfyrwyr a llwyth gwaith staff.
+Cyd-destun: Rwy'n ailgynllunio fy modiwl ar gyfer y flwyddyn academaidd nesaf ac mae angen arfer sy'n seiliedig ar dystiolaeth arnaf i lywio fy strategaeth asesu.
+Fformat: Tabl cymharol ac yna crynodeb byr o'r ymchwil.</div>
+                        <button onclick="copyToClipboard('ptcf-grading')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Sgorio cynnig grant (panel UKRI)</span><span class="part-pill pill-academic">Academaidd</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: asesu drafft grant yn erbyn meini prawf y cyllidwr, gyda sgoriau a'r mannau gwan mwyaf tebygol o achosi gwrthodiad.
@@ -1426,7 +1556,7 @@ Ar ôl sgorio, darpara: (1) y ddwy neu dair elfen gryfaf y byddai panel yn debyg
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Gwirio cynnig yn erbyn galwad cyllidwr</span></summary>
+                    <summary><span style="flex:1;">Gwirio cynnig yn erbyn galwad cyllidwr</span><span class="part-pill pill-academic">Academaidd</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: gludwch ddogfen galwad cyllidwr a'ch drafft, a gweld lle mae'r cynnig yn cyfateb a lle nad yw'n cyfateb i'r hyn y mae'r cyllidwr yn gofyn amdano.
@@ -1440,90 +1570,57 @@ Bydd yn fanwl gywir. Cyfeiria at union eiriau'r ddwy ddogfen.</div>
                     </div>
                 </details>
 
-                <details>
-                    <summary><span style="flex:1;">Chwarae rôl ar gyfer sgyrsiau anodd</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: Defnyddiol ar gyfer dysgu, neu i baratoi at gyfarfod sydd ar y gweill. Ymarfer adolygiadau perfformiad neu ddatrys gwrthdaro mewn lle diogel.
-                        </div>
-                        <div class="prompt-box" id="roleplay-conversation">"Chwarae rôl: Ti yw Musus Cwyn, fy nghymdoges biwis sy'n curo'r drws am 2 y bore i gwyno am fy nghathod swnllyd (Knox, Missy a Phoebe). Dwi'n berchennog cathod ffraeth sy'n ceisio dy dawelu di a dy ennill drosodd. Aros yn dy gymeriad ac aros am fy atebion."</div>
-                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copïo'r Anogiad</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Eiriolwr y diafol (mannau dall)</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: Profi eich heriau, syniadau newydd neu benderfyniadau cyn eu cwblhau.
-                        </div>
-                        <div class="prompt-box" id="devils-advocate">"Bydd yn eiriolwr y diafol adeiladol. Yn gyntaf, nodi'r gwendidau neu'r mannau dall posibl, yna awgryma safbwyntiau eraill. Bydd yn benodol ac yn heriol ond yn adeiladol. Dyma fy senario: [senario yma]"</div>
-                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copïo'r Anogiad</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Ychwanegwch eich senario eich hun: "Dwi eisiau symud o werthu i rôl arwain", "delio â chleient anodd", a rhowch gyd-destun defnyddiol hefyd. Gallwch chi uwchlwytho dogfen yn lle teipio senario, e.e. uwchlwytho eich polisi teithio newydd. Yna arbrofwch gyda thrawsgrifiad cyfarfod, ffeil Excel neu hyd yn oed gyflwyniad PowerPoint.</em></p>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Crynhoi dogfen reoleiddiwr i'ch bwrdd</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: troi dogfen reoleiddiwr neu gydymffurfio drwchus yn grynodeb parod i fwrdd, gyda chwestiynau gwerth eu trafod. Atodwch y ddogfen, a newidiwch hi am unrhyw bapur polisi.
-                        </div>
-                        <div class="prompt-box" id="ptcf-regulator">Persona: Dadansoddwr polisi arbenigol.
-Tasg: Dadansodda'r [ddogfen reoleiddio newydd gan Medr] sydd ynghlwm a chrynhoa ei phrif themâu a'r risgiau sefydliadol allweddol. Yna cynhyrcha 3 chwestiwn strategol i annog meddwl beirniadol.
-Cyd-destun: Bydd y crynodeb a'r cwestiynau'n cael eu defnyddio gan [Fwrdd Gweithredol y Brifysgol] i ddeall y cyd-destun ehangach a pharatoi ar gyfer newidiadau sydd i ddod.
-Fformat: Crynodeb pwyntiau bwled ac yna rhestr wedi'i rhifo o'r 3 chwestiwn strategol.</div>
-                        <button onclick="copyToClipboard('ptcf-regulator')" class="btn-copy">Copïo'r Anogiad</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Ailgynllunio proses o amgylch ei defnyddwyr</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: ailfeddwl unrhyw broses o safbwynt y bobl sy'n ei defnyddio go iawn. Rhowch eich proses a'ch proffiliau eich hun i mewn.
-                        </div>
-                        <div class="prompt-box" id="ptcf-expenses">Persona: [Cyfarwyddwr Cyllid].
-Tasg: Adolyga'r broses hawlio treuliau bresennol, gan awgrymu newidiadau i'r llif cymeradwyo, y gofynion dogfennaeth a'r dulliau cyflwyno.
-Cyd-destun: Mae angen i'r broses gefnogi tri phroffil staff penodol: [gweithiwr newydd, ymchwilydd sy'n hawlio teithio rhyngwladol, a chontractwr dros dro].
-Fformat: Dadansoddiad strwythuredig gyda phennawd clir ar gyfer pob proffil staff, gan ddefnyddio pwyntiau bwled ar gyfer y newidiadau gofynnol.</div>
-                        <button onclick="copyToClipboard('ptcf-expenses')" class="btn-copy">Copïo'r Anogiad</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Cynllunio dyddiau cyntaf aelod staff newydd</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: amserlen groesawu barod i'w haddasu, fel bod pob cydweithiwr newydd yn cael yr un dechrau da.
-                        </div>
-                        <div class="prompt-box" id="ptcf-onboarding">Persona: Cydlynydd croesawu staff newydd.
-Tasg: Drafftia amserlen 3 diwrnod fanwl a rhestr wirio gysylltiedig ar gyfer croesawu aelod staff newydd, gan integreiddio sesiynau Adnoddau Dynol, TG ac adrannol.
-Cyd-destun: Mae angen dechrau di-dor, cynhwysfawr ar [academyddion] sy'n ymuno â'r sefydliad y semester hwn.
-Fformat: Amserlen ddyddiol wedi'i rhifo gyda slotiau amser, yr adnoddau gofynnol, a chyswllt yr adran gyfrifol ar gyfer pob eitem.</div>
-                        <button onclick="copyToClipboard('ptcf-onboarding')" class="btn-copy">Copïo'r Anogiad</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Cymharu dulliau marcio a graddio</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Defnydd: cymhariaeth ar sail tystiolaeth i lywio ailgynllunio asesu neu fodiwl.
-                        </div>
-                        <div class="prompt-box" id="ptcf-grading">Persona: [Darlithydd prifysgol] ac ymchwilydd addysgol.
-Tasg: Cymhara systemau graddio amgen mewn addysg uwch, gan ganolbwyntio ar [ddi-raddio (ungrading), graddio meistrolaeth, a graddio contract]. Amlyga ymchwil ar ganlyniadau, ymgysylltiad myfyrwyr a llwyth gwaith staff.
-Cyd-destun: Rwy'n ailgynllunio fy modiwl ar gyfer y flwyddyn academaidd nesaf ac mae angen arfer sy'n seiliedig ar dystiolaeth arnaf i lywio fy strategaeth asesu.
-Fformat: Tabl cymharol ac yna crynodeb byr o'r ymchwil.</div>
-                        <button onclick="copyToClipboard('ptcf-grading')" class="btn-copy">Copïo'r Anogiad</button>
-                    </div>
-                </details>
-
             </div>
 
             <div id="tab-concepts" class="tab-panel" role="tabpanel">
 
                 <details open>
+                    <summary><span style="flex:1;">Ysgrifennwch anogiadau gwell: y dull 1-2-3</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            <strong>Y Rheol Aur:</strong> Mae mewnbynnau gwell yn rhoi allbynnau gwell. Dilynwch y llif 3-cam hwn ar gyfer pob anogiad i gael y canlyniadau gorau.
+                        </div>
+
+                        <div class="inner-grid">
+                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">1.</div>
+                                    <strong style="font-size:15px;">Rhoi Cyd-destun</strong>
+                                    <p style="margin-top:6px; margin-bottom: 12px;">Rhowch wybodaeth gefndir berthnasol (Rôl, Data, Adroddiadau).</p>
+                                </div>
+                                <div style="background: white; padding: 10px; border-radius: 10px; font-size: 20px; display: flex; justify-content: space-around; color: #555;">
+                                    <span title="Rôl a Chefndir">👤</span>
+                                    <span title="Data Taenlen">📊</span>
+                                    <span title="Gwefan/Ymchwil">🌐</span>
+                                    <span title="Dogfen Word/Adroddiad">📄</span>
+                                </div>
+                            </div>
+                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">2.</div>
+                                    <strong style="font-size:15px;">Gwneud Cais</strong>
+                                    <p style="margin-top:6px;">Byddwch yn benodol am yn union beth rydych chi eisiau i'r AI ei wneud.</p>
+                                </div>
+                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
+                                    "Adolyga fy e-bost am eglurder..."
+                                </div>
+                            </div>
+                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">3.</div>
+                                    <strong style="font-size:15px;">Esbonio Pwrpas</strong>
+                                    <p style="margin-top:6px;">Rhannwch <em>pam</em> rydych chi angen hyn (Y "Fel Bod").</p>
+                                </div>
+                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
+                                    "...er mwyn cynyddu'r siawns o gael ymateb cyflym."
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Efallai y clywch hyn hefyd fel <strong>PTCF: Persona, Tasg, Cyd-destun, Fformat</strong>. Yr un syniad ydyw gyda labeli gwahanol: Persona a Chyd-destun yw cam 1 (rhoi cyd-destun), Tasg yw cam 2 (gwneud y cais), ac mae Fformat yn dweud pa siâp ddylai'r ateb ei gymryd. Mae pedwar o'r Anogiadau Gweithle wedi'u hysgrifennu yn union yn y siâp hwnnw (maent yn dechrau gyda Persona:), i chi gael ei weld ar waith.</p>
+                    </div>
+                </details>
+
+                <details>
                     <summary><span style="flex:1;">Triniwch AI fel cydweithiwr, nid fel peiriant gwerthu</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
@@ -1645,48 +1742,31 @@ Fformat: Tabl cymharol ac yna crynodeb byr o'r ymchwil.</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Ysgrifennwch anogiadau gwell: y dull 1-2-3</span></summary>
+                    <summary><span style="flex:1;">Cadwynwch eich offer at ei gilydd</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            <strong>Y Rheol Aur:</strong> Mae mewnbynnau gwell yn rhoi allbynnau gwell. Dilynwch y llif 3-cam hwn ar gyfer pob anogiad i gael y canlyniadau gorau.
+                            <strong>Y syniad:</strong> mae allbwn un teclyn yn dod yn fewnbwn i'r nesaf. Mae pob teclyn yn gwneud y rhan y mae orau am ei gwneud, a chi sy'n cario'r gwaith ar eu traws. Arbrofwch, oherwydd mae cadwyn fer yn aml yn curo un teclyn sy'n ceisio gwneud popeth.
                         </div>
 
                         <div class="inner-grid">
-                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-                                <div>
-                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">1.</div>
-                                    <strong style="font-size:15px;">Rhoi Cyd-destun</strong>
-                                    <p style="margin-top:6px; margin-bottom: 12px;">Rhowch wybodaeth gefndir berthnasol (Rôl, Data, Adroddiadau).</p>
-                                </div>
-                                <div style="background: white; padding: 10px; border-radius: 10px; font-size: 20px; display: flex; justify-content: space-around; color: #555;">
-                                    <span title="Rôl a Chefndir">👤</span>
-                                    <span title="Data Taenlen">📊</span>
-                                    <span title="Gwefan/Ymchwil">🌐</span>
-                                    <span title="Dogfen Word/Adroddiad">📄</span>
-                                </div>
+                            <div class="inner-card">
+                                <span class="inner-card-icon">1&#65039;&#8419;</span>
+                                <strong>Ymchwiliwch iddo</strong>
+                                <p style="margin-top: 8px;">Rhedwch yr anogiad Ymchwil Ddofn yn Gemini i gasglu'r dystiolaeth a'i hysgrifennu fel adroddiad.</p>
                             </div>
-                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-                                <div>
-                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">2.</div>
-                                    <strong style="font-size:15px;">Gwneud Cais</strong>
-                                    <p style="margin-top:6px;">Byddwch yn benodol am yn union beth rydych chi eisiau i'r AI ei wneud.</p>
-                                </div>
-                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
-                                    "Adolyga fy e-bost am eglurder..."
-                                </div>
+                            <div class="inner-card">
+                                <span class="inner-card-icon">2&#65039;&#8419;</span>
+                                <strong>Seiliwch ef</strong>
+                                <p style="margin-top: 8px;">Ychwanegwch yr adroddiad hwnnw at NotebookLM fel ffynhonnell, fel bod y cam nesaf wedi'i angori yn eich deunydd chi, nid dyfalu.</p>
                             </div>
-                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-                                <div>
-                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">3.</div>
-                                    <strong style="font-size:15px;">Esbonio Pwrpas</strong>
-                                    <p style="margin-top:6px;">Rhannwch <em>pam</em> rydych chi angen hyn (Y "Fel Bod").</p>
-                                </div>
-                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
-                                    "...er mwyn cynyddu'r siawns o gael ymateb cyflym."
-                                </div>
+                            <div class="inner-card">
+                                <span class="inner-card-icon">3&#65039;&#8419;</span>
+                                <strong>Siapiwch ef</strong>
+                                <p style="margin-top: 8px;">Gofynnwch i NotebookLM ei droi'n set o sleidiau. Mae un anogiad ymchwil wedi troi'n gyflwyniad gorffenedig.</p>
                             </div>
                         </div>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Efallai y clywch hyn hefyd fel <strong>PTCF: Persona, Tasg, Cyd-destun, Fformat</strong>. Yr un syniad ydyw gyda labeli gwahanol: Persona a Chyd-destun yw cam 1 (rhoi cyd-destun), Tasg yw cam 2 (gwneud y cais), ac mae Fformat yn dweud pa siâp ddylai'r ateb ei gymryd. Mae pedwar Anogiad Gweithle olaf y llyfrgell wedi'u hysgrifennu yn union yn y siâp hwnnw, i chi gael ei weld ar waith.</p>
+
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Pam mae'n gweithio: nid oes un teclyn sy'n orau am bopeth. Mae pasio'r gwaith ymlaen yn gadael i bob un wneud ei waith cryfaf, a chi sy'n cadw rheolaeth ar bob cam. Cadwyn arall i roi cynnig arni: rhedwch Ymchwil Ddofn, yna gludwch yr adroddiad i mewn i Canvas a'i siapio'n friff staff neu'n gwis.</p>
                     </div>
                 </details>
 

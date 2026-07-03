@@ -1574,31 +1574,48 @@ Be precise. Reference the actual words of both documents.</div>
             <div id="tab-concepts" class="tab-panel" role="tabpanel">
 
                 <details open>
-                    <summary><span style="flex:1;">Chain your tools together</span></summary>
+                    <summary><span style="flex:1;">Write better prompts: the 1-2-3 method</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            <strong>The idea:</strong> the output of one tool becomes the input to the next. Each tool does the part it is best at, and you carry the work across them. Experiment, because a short chain often beats one tool trying to do everything.
+                            <strong>The Golden Rule:</strong> Better inputs equal better outputs. Follow this 3-step flow for every prompt to get the best results.
                         </div>
 
                         <div class="inner-grid">
-                            <div class="inner-card">
-                                <span class="inner-card-icon">1&#65039;&#8419;</span>
-                                <strong>Research it</strong>
-                                <p style="margin-top: 8px;">Run the Deep Research prompt in Gemini to gather the evidence and write it up as a report.</p>
+                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">1.</div>
+                                    <strong style="font-size:15px;">Give Context</strong>
+                                    <p style="margin-top:6px; margin-bottom: 12px;">Provide relevant background information (Role, Data, Reports).</p>
+                                </div>
+                                <div style="background: white; padding: 10px; border-radius: 10px; font-size: 20px; display: flex; justify-content: space-around; color: #555;">
+                                    <span title="Role &amp; Background">👤</span>
+                                    <span title="Spreadsheet Data">📊</span>
+                                    <span title="Website/Research">🌐</span>
+                                    <span title="Word Doc/Report">📄</span>
+                                </div>
                             </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">2&#65039;&#8419;</span>
-                                <strong>Ground it</strong>
-                                <p style="margin-top: 8px;">Add that report to NotebookLM as a source, so the next step is anchored to your material, not guesswork.</p>
+                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">2.</div>
+                                    <strong style="font-size:15px;">Make Request</strong>
+                                    <p style="margin-top:6px;">Be specific about exactly what you want the AI to do.</p>
+                                </div>
+                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
+                                    "Review my email for clarity..."
+                                </div>
                             </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">3&#65039;&#8419;</span>
-                                <strong>Shape it</strong>
-                                <p style="margin-top: 8px;">Ask NotebookLM to turn it into a slide deck. One research prompt has become a finished presentation.</p>
+                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+                                <div>
+                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">3.</div>
+                                    <strong style="font-size:15px;">Explain Purpose</strong>
+                                    <p style="margin-top:6px;">Share <em>why</em> you need this (The "So That").</p>
+                                </div>
+                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
+                                    "...to maximize the chances of a quick response."
+                                </div>
                             </div>
                         </div>
-
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Why it works: no single tool is best at everything. Passing the work along lets each do its strongest job, and you stay in control at every step. Another chain to try: run Deep Research, then paste the report into Canvas and shape it into a staff briefing or a quiz.</p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">You may also hear this taught as <strong>PTCF: Persona, Task, Context, Format</strong>. It is the same idea with different labels: Persona and Context are step 1 (give context), Task is step 2 (make the request), and Format says what shape the answer should take. Four of the Workplace Prompts are written in exactly that shape (they start with Persona:), so you can see it in action.</p>
                     </div>
                 </details>
 
@@ -1724,48 +1741,31 @@ Be precise. Reference the actual words of both documents.</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Write better prompts: the 1-2-3 method</span></summary>
+                    <summary><span style="flex:1;">Chain your tools together</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            <strong>The Golden Rule:</strong> Better inputs equal better outputs. Follow this 3-step flow for every prompt to get the best results.
+                            <strong>The idea:</strong> the output of one tool becomes the input to the next. Each tool does the part it is best at, and you carry the work across them. Experiment, because a short chain often beats one tool trying to do everything.
                         </div>
 
                         <div class="inner-grid">
-                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-                                <div>
-                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">1.</div>
-                                    <strong style="font-size:15px;">Give Context</strong>
-                                    <p style="margin-top:6px; margin-bottom: 12px;">Provide relevant background information (Role, Data, Reports).</p>
-                                </div>
-                                <div style="background: white; padding: 10px; border-radius: 10px; font-size: 20px; display: flex; justify-content: space-around; color: #555;">
-                                    <span title="Role &amp; Background">👤</span>
-                                    <span title="Spreadsheet Data">📊</span>
-                                    <span title="Website/Research">🌐</span>
-                                    <span title="Word Doc/Report">📄</span>
-                                </div>
+                            <div class="inner-card">
+                                <span class="inner-card-icon">1&#65039;&#8419;</span>
+                                <strong>Research it</strong>
+                                <p style="margin-top: 8px;">Run the Deep Research prompt in Gemini to gather the evidence and write it up as a report.</p>
                             </div>
-                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-                                <div>
-                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">2.</div>
-                                    <strong style="font-size:15px;">Make Request</strong>
-                                    <p style="margin-top:6px;">Be specific about exactly what you want the AI to do.</p>
-                                </div>
-                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
-                                    "Review my email for clarity..."
-                                </div>
+                            <div class="inner-card">
+                                <span class="inner-card-icon">2&#65039;&#8419;</span>
+                                <strong>Ground it</strong>
+                                <p style="margin-top: 8px;">Add that report to NotebookLM as a source, so the next step is anchored to your material, not guesswork.</p>
                             </div>
-                            <div class="inner-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-                                <div>
-                                    <div style="font-size: 30px; font-weight: 800; color: var(--apple-text-primary); margin-bottom: 4px;">3.</div>
-                                    <strong style="font-size:15px;">Explain Purpose</strong>
-                                    <p style="margin-top:6px;">Share <em>why</em> you need this (The "So That").</p>
-                                </div>
-                                <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
-                                    "...to maximize the chances of a quick response."
-                                </div>
+                            <div class="inner-card">
+                                <span class="inner-card-icon">3&#65039;&#8419;</span>
+                                <strong>Shape it</strong>
+                                <p style="margin-top: 8px;">Ask NotebookLM to turn it into a slide deck. One research prompt has become a finished presentation.</p>
                             </div>
                         </div>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">You may also hear this taught as <strong>PTCF: Persona, Task, Context, Format</strong>. It is the same idea with different labels: Persona and Context are step 1 (give context), Task is step 2 (make the request), and Format says what shape the answer should take. Four of the Workplace Prompts are written in exactly that shape (they start with Persona:), so you can see it in action.</p>
+
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Why it works: no single tool is best at everything. Passing the work along lets each do its strongest job, and you stay in control at every step. Another chain to try: run Deep Research, then paste the report into Canvas and shape it into a staff briefing or a quiz.</p>
                     </div>
                 </details>
 

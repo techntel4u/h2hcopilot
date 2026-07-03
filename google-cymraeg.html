@@ -1109,12 +1109,9 @@
     <nav class="global-nav">
         <div class="nav-content">
             <span class="nav-brand">The Matts</span>
-            <a href="#activities">Sbrint</a>
             <a href="#library">Ymarferion Gemini</a>
-            <a href="#deep-research">Ymchwil Ddofn</a>
             <a href="#notebooklm">NotebookLM</a>
-            <a href="#essentials">Hanfodion</a>
-            <a href="#take-home">Mynd Adref</a>
+            <a href="#deep-research">Ymchwil Ddofn</a>
         </div>
     </nav>
 
@@ -1187,7 +1184,7 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Ymarferion Gemini</span><span class="tab-label-short">Ymarferion</span><span class="tab-count">7</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Anogiadau Gweithle</span><span class="tab-label-short">Anogiadau</span><span class="tab-count">10</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Anogiadau Gweithle</span><span class="tab-label-short">Anogiadau</span><span class="tab-count">14</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Cysyniadau a Chyfeirnod</span><span class="tab-label-short">Cysyniadau</span><span class="tab-count">8</span></button>
             </div>
 
@@ -1448,6 +1445,62 @@ Bydd yn fanwl gywir. Cyfeiria at union eiriau'r ddwy ddogfen.</div>
                     </div>
                 </details>
 
+                <details>
+                    <summary><span style="flex:1;">Crynhoi dogfen reoleiddiwr i'ch bwrdd</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: troi dogfen reoleiddiwr neu gydymffurfio drwchus yn grynodeb parod i fwrdd, gyda chwestiynau gwerth eu trafod. Atodwch y ddogfen, a newidiwch hi am unrhyw bapur polisi.
+                        </div>
+                        <div class="prompt-box" id="ptcf-regulator">Persona: Dadansoddwr polisi arbenigol.
+Tasg: Dadansodda'r [ddogfen reoleiddio newydd gan Medr] sydd ynghlwm a chrynhoa ei phrif themâu a'r risgiau sefydliadol allweddol. Yna cynhyrcha 3 chwestiwn strategol i annog meddwl beirniadol.
+Cyd-destun: Bydd y crynodeb a'r cwestiynau'n cael eu defnyddio gan [Fwrdd Gweithredol y Brifysgol] i ddeall y cyd-destun ehangach a pharatoi ar gyfer newidiadau sydd i ddod.
+Fformat: Crynodeb pwyntiau bwled ac yna rhestr wedi'i rhifo o'r 3 chwestiwn strategol.</div>
+                        <button onclick="copyToClipboard('ptcf-regulator')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Ailgynllunio proses o amgylch ei defnyddwyr</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: ailfeddwl unrhyw broses o safbwynt y bobl sy'n ei defnyddio go iawn. Rhowch eich proses a'ch proffiliau eich hun i mewn.
+                        </div>
+                        <div class="prompt-box" id="ptcf-expenses">Persona: [Cyfarwyddwr Cyllid].
+Tasg: Adolyga'r broses hawlio treuliau bresennol, gan awgrymu newidiadau i'r llif cymeradwyo, y gofynion dogfennaeth a'r dulliau cyflwyno.
+Cyd-destun: Mae angen i'r broses gefnogi tri phroffil staff penodol: [gweithiwr newydd, ymchwilydd sy'n hawlio teithio rhyngwladol, a chontractwr dros dro].
+Fformat: Dadansoddiad strwythuredig gyda phennawd clir ar gyfer pob proffil staff, gan ddefnyddio pwyntiau bwled ar gyfer y newidiadau gofynnol.</div>
+                        <button onclick="copyToClipboard('ptcf-expenses')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Cynllunio dyddiau cyntaf aelod staff newydd</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: amserlen groesawu barod i'w haddasu, fel bod pob cydweithiwr newydd yn cael yr un dechrau da.
+                        </div>
+                        <div class="prompt-box" id="ptcf-onboarding">Persona: Cydlynydd croesawu staff newydd.
+Tasg: Drafftia amserlen 3 diwrnod fanwl a rhestr wirio gysylltiedig ar gyfer croesawu aelod staff newydd, gan integreiddio sesiynau Adnoddau Dynol, TG ac adrannol.
+Cyd-destun: Mae angen dechrau di-dor, cynhwysfawr ar [academyddion] sy'n ymuno â'r sefydliad y semester hwn.
+Fformat: Amserlen ddyddiol wedi'i rhifo gyda slotiau amser, yr adnoddau gofynnol, a chyswllt yr adran gyfrifol ar gyfer pob eitem.</div>
+                        <button onclick="copyToClipboard('ptcf-onboarding')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Cymharu dulliau marcio a graddio</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Defnydd: cymhariaeth ar sail tystiolaeth i lywio ailgynllunio asesu neu fodiwl.
+                        </div>
+                        <div class="prompt-box" id="ptcf-grading">Persona: [Darlithydd prifysgol] ac ymchwilydd addysgol.
+Tasg: Cymhara systemau graddio amgen mewn addysg uwch, gan ganolbwyntio ar [ddi-raddio (ungrading), graddio meistrolaeth, a graddio contract]. Amlyga ymchwil ar ganlyniadau, ymgysylltiad myfyrwyr a llwyth gwaith staff.
+Cyd-destun: Rwy'n ailgynllunio fy modiwl ar gyfer y flwyddyn academaidd nesaf ac mae angen arfer sy'n seiliedig ar dystiolaeth arnaf i lywio fy strategaeth asesu.
+Fformat: Tabl cymharol ac yna crynodeb byr o'r ymchwil.</div>
+                        <button onclick="copyToClipboard('ptcf-grading')" class="btn-copy">Copïo'r Anogiad</button>
+                    </div>
+                </details>
+
             </div>
 
             <div id="tab-concepts" class="tab-panel" role="tabpanel">
@@ -1615,6 +1668,7 @@ Bydd yn fanwl gywir. Cyfeiria at union eiriau'r ddwy ddogfen.</div>
                                 </div>
                             </div>
                         </div>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Efallai y clywch hyn hefyd fel <strong>PTCF: Persona, Tasg, Cyd-destun, Fformat</strong>. Yr un syniad ydyw gyda labeli gwahanol: Persona a Chyd-destun yw cam 1 (rhoi cyd-destun), Tasg yw cam 2 (gwneud y cais), ac mae Fformat yn dweud pa siâp ddylai'r ateb ei gymryd. Mae pedwar Anogiad Gweithle olaf y llyfrgell wedi'u hysgrifennu yn union yn y siâp hwnnw, i chi gael ei weld ar waith.</p>
                     </div>
                 </details>
 
@@ -1751,6 +1805,99 @@ Yn seiliedig ar y cyd-destun hwn, drafftia e-bost diweddaru i'r tîm am [Eich Pw
 
         </section>
 
+        <!-- ============ NOTEBOOKLM ============ -->
+        <section id="notebooklm" class="section-card">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">NotebookLM</div>
+                    <h2>Deall unrhyw beth gyda NotebookLM</h2>
+                </div>
+            </div>
+
+            <div class="library-instructions">
+                <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="copilot-card">
+                    <img src="notebooklm-logo.png" alt="" class="copilot-logo">
+                    <span class="copilot-card-text">
+                        <span class="copilot-label">Cliciwch i agor NotebookLM</span>
+                        <span class="copilot-url">notebooklm.google.com&nbsp;↗</span>
+                    </span>
+                </a>
+                <div class="instruction-text">
+                    Mewngofnodwch â'ch cyfrif Google, yna crëwch lyfr nodiadau ac ychwanegwch eich ffynonellau. Defnyddiwch eich <strong>cyfrif Prifysgol Caerdydd</strong> ar gyfer data gwaith.
+                </div>
+            </div>
+
+            <div class="quick-start" style="margin-top:18px;">
+                <div class="quick-step"><span class="step-badge">1</span> Uwchlwythwch eich ffynonellau</div>
+                <div class="quick-step"><span class="step-badge">2</span> Dyfnhewch eich dealltwriaeth</div>
+                <div class="quick-step"><span class="step-badge">3</span> Holwch a chrëwch</div>
+            </div>
+
+            <div class="inner-grid">
+                <div class="inner-card">
+                    <span class="inner-card-icon">🎧</span>
+                    <strong>Trosolygon Sain</strong>
+                    <p>Troi adroddiadau sych yn bodlediadau "Deep Dive" difyr.</p>
+                </div>
+                <div class="inner-card">
+                    <span class="inner-card-icon">🕵️</span>
+                    <strong>Dadansoddiad Beirniadol</strong>
+                    <p>Nodi mannau dall, gwrthddywediadau a data coll.</p>
+                </div>
+                <div class="inner-card">
+                    <span class="inner-card-icon">🏗️</span>
+                    <strong>Allbwn Strwythuredig</strong>
+                    <p>Trosi nodiadau'n Setiau Sleidiau, Briffiau ac SOPau.</p>
+                </div>
+            </div>
+
+            <details style="margin-top:8px;">
+                <summary><span style="flex:1;">Ymarfer ymarferol: adolygu cynigion grant (uwchlwytho a chymharu)</span></summary>
+                <div class="details-content">
+                    <div class="exercise-note">
+                        <strong>Yr ymarfer:</strong> casglwch ychydig o hen gynigion: un a ariannwyd, un aflwyddiannus, sylwadau adolygwyr, a galwad y cyllidwr os yw gennych. Uwchlwythwch nhw i <strong>Gemini</strong> a rhedwch yr anogiadau isod. Yna crëwch lyfr nodiadau yn <strong>NotebookLM</strong>, ychwanegwch yr un ffeiliau, a rhedwch nhw eto. Cymharwch y ddau: mae NotebookLM yn glynu'n gaeth at eich dogfennau ac yn eu dyfynnu, sef yn union beth sydd ei angen ar gyfer y gwaith hwn. Dim cynigion wrth law? Fe wnaiff unrhyw ddogfennau gwaith hir y tro.
+                    </div>
+
+                    <div class="exercise-note" style="margin-top:14px;"><strong>1. Tynnu'r testun ailddefnyddiadwy</strong>: codi'r testun parod y gallwch ei ddefnyddio yn eich cais nesaf.</div>
+                    <div class="prompt-box" id="grant-boilerplate">Rwyf wedi uwchlwytho un neu fwy o gynigion grant blaenorol. Nodi pob adran sy'n cynnwys testun sefydliadol y gellir ei ailddefnyddio (boilerplate): er enghraifft, disgrifiadau o amgylchedd ymchwil y brifysgol, datganiadau cyfleusterau, datganiadau cydraddoldeb, amrywiaeth a chynhwysiant, neu ddisgrifiadau methodoleg safonol. Ar gyfer pob adran, copïa'r testun a labela o ba ran o gynnig y daeth.</div>
+                    <button onclick="copyToClipboard('grant-boilerplate')" class="btn-copy">Copïo'r Anogiad</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>2. Canfod beth weithiodd</strong>: y darnau sydd fwyaf tebygol o fod wedi creu argraff ar adolygydd.</div>
+                    <div class="prompt-box" id="grant-worked">Gan edrych ar y cynnig/cynigion a uwchlwythwyd, nodi'r ysgrifennu sydd fwyaf tebygol o fod wedi creu argraff ar adolygydd. Chwilia am: achos clir a chryf dros yr angen, fframio effaith gadarn, methodoleg wedi'i chyfiawnhau'n dda, a hanes tîm hyderus. Tynna allan y paragraff neu'r darn cryfaf o bob un o'r meysydd hyn ac esbonia'n fyr pam ei fod yn effeithiol.</div>
+                    <button onclick="copyToClipboard('grant-worked')" class="btn-copy">Copïo'r Anogiad</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>3. Canfod y gwendidau</strong>: beth fyddai adolygydd wedi'i farcio i lawr.</div>
+                    <div class="prompt-box" id="grant-weaknesses">Adolyga'r cynnig/cynigion a uwchlwythwyd a nodi'r adrannau sydd fwyaf tebygol o fod wedi peri pryder neu siom i adolygydd. Chwilia am: honiadau effaith annelwig, haeriadau heb eu cefnogi, disgrifiad methodoleg wan, eitemau cyllideb heb gyfiawnhad, neu ddiffyg aliniad â blaenoriaethau tebygol y cyllidwr. Rhestra pob gwendid ac awgryma beth fyddai fersiwn gryfach yn ei gynnwys.</div>
+                    <button onclick="copyToClipboard('grant-weaknesses')" class="btn-copy">Copïo'r Anogiad</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>4. Tynnu'r ymadroddion allweddol</strong>: adeiladu banc cyfeirio ar gyfer ceisiadau'r dyfodol.</div>
+                    <div class="prompt-box" id="grant-phrases">O'r cynnig/cynigion a uwchlwythwyd, tynna allan yr ymadroddion allweddol, y derminoleg a'r iaith fframio a ddefnyddiwyd. Grwpia nhw o dan: arwyddocâd ymchwil, methodoleg, effaith, gallu'r tîm, a chyfiawnhad cyllideb. Rwyf am eu defnyddio fel cyfeirnod wrth ysgrifennu ceisiadau yn y dyfodol.</div>
+                    <button onclick="copyToClipboard('grant-phrases')" class="btn-copy">Copïo'r Anogiad</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>5. Crynhoi'r strwythur</strong>: gweld y sgerbwd a chanfod y bylchau.</div>
+                    <div class="prompt-box" id="grant-structure">Crynhoa strwythur y cynnig/cynigion a uwchlwythwyd. Ar gyfer pob adran, nodi: y pennawd a ddefnyddiwyd, y nifer geiriau bras, y brif ddadl sy'n cael ei gwneud, a pha mor dda y mae'n cysylltu â'r adran o'i blaen ac ar ei hôl. Tynna sylw at unrhyw fylchau strwythurol neu adrannau sy'n teimlo'n danddatblygedig.</div>
+                    <button onclick="copyToClipboard('grant-structure')" class="btn-copy">Copïo'r Anogiad</button>
+                </div>
+            </details>
+
+            <h4>Rhowch gynnig ar y ddau anogiad hyn</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Uwchlwythwch eich ffynonellau i lyfr nodiadau yn gyntaf, yna gludwch anogiad i mewn i'r blwch sgwrs.</em></p>
+
+            <div class="exercise-note" style="margin-top:14px;"><strong>1. Briff Gweithredol</strong>: troi pentwr o ddogfennau'n grynodeb parod i reolwr.</div>
+            <div class="prompt-box" id="nblm-briefing">"Bydd yn ddadansoddwr uwch. Darllena bob un o fy ffynonellau a uwchlwythais a chynhyrcha friff gweithredol ar gyfer rheolwr prysur. Cynhwysa: crynodeb sefyllfa tair brawddeg; pum canfyddiad allweddol wedi'u graddio yn ôl pwysigrwydd, pob un â chyfeiriad at ei ffynhonnell; y prif opsiynau a'u cyfaddawdau; a dau gam gweithredu argymelledig nesaf. Tynna sylw at unrhyw gwestiynau pwysig nad yw'r ffynonellau'n eu hateb."</div>
+            <button onclick="copyToClipboard('nblm-briefing')" class="btn-copy">Copïo'r Anogiad</button>
+
+            <div class="exercise-note" style="margin-top:20px;"><strong>2. Adolygydd Beirniadol</strong>: amlygu gwrthddywediadau, bylchau a honiadau heb eu cefnogi ar draws eich ffynonellau.</div>
+            <div class="prompt-box" id="nblm-critique">"Adolyga bob un o fy ffynonellau a uwchlwythais gyda'i gilydd a bydd yn adolygydd beirniadol. Nodi unrhyw wrthddywediadau neu anghytundebau rhwng y ffynonellau, nodi bylchau pwysig neu dystiolaeth goll, a rhestra'r tybiaethau nad ydynt yn cael eu cefnogi gan y dogfennau. Cyfeiria at y ffynhonnell benodol ar gyfer pob pwynt."</div>
+            <button onclick="copyToClipboard('nblm-critique')" class="btn-copy">Copïo'r Anogiad</button>
+
+            <div style="text-align: center; margin-top: 24px;">
+                <a href="https://wmgmm.github.io/notebooklm/" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--apple-blue); color: white; padding: 11px 22px; border-radius: 980px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                    Agor Llyfrgell Anogiadau NotebookLM ↗
+                </a>
+            </div>
+        </section>
+
         <!-- ============ GEMINI DEEP RESEARCH ============ -->
         <section id="deep-research" class="section-card">
             <div class="section-header">
@@ -1767,6 +1914,8 @@ Yn seiliedig ar y cyd-destun hwn, drafftia e-bost diweddaru i'r tîm am [Eich Pw
                 <div class="quick-step"><span class="step-badge">2</span> Mae'n darllen cannoedd o dudalennau</div>
                 <div class="quick-step"><span class="step-badge">3</span> Cewch un adroddiad â ffynonellau</div>
             </div>
+
+            <p style="margin:14px 0 0; font-size:14px; color:var(--apple-text-secondary);"><strong style="color:var(--apple-text-primary);">Chi sydd wrth y llyw:</strong> cyn iddo ddechrau, mae Ymchwil Ddofn yn dangos ei gynllun ymchwil i chi, ac mae modd golygu'r cynllun hwnnw. Torrwch y pynciau nad ydynt o bwys i chi, ychwanegwch fanylion, yna gadewch iddo fynd.</p>
 
             <h4>I staff academaidd: pennu cwmpas maes cyn cais am grant neu adolygiad cwricwlwm</h4>
             <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Agorwch Gemini, trowch Ymchwil Ddofn ymlaen, a gludwch hyn. Rhowch eich maes a'ch sefydliad eich hun yn lle'r rhai sydd yma.</em></p>
@@ -1826,68 +1975,91 @@ Nodwch eich ffynonellau drwyddi draw fel y gallaf wirio a dilyn y rhai mwyaf per
             </div>
         </section>
 
-        <!-- ============ NOTEBOOKLM ============ -->
-        <section id="notebooklm" class="section-card">
+        <!-- ============ BEYOND CHAT: CANVAS & NANO BANANA ============ -->
+        <section id="beyond-chat" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">NotebookLM</div>
-                    <h2>Deall unrhyw beth gyda NotebookLM</h2>
+                    <div class="eyebrow">Y Tu Hwnt i Sgwrsio</div>
+                    <h2>Gall Gemini adeiladu pethau, nid dim ond siarad</h2>
                 </div>
             </div>
 
-            <div class="library-instructions">
-                <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="copilot-card">
-                    <img src="notebooklm-logo.png" alt="" class="copilot-logo">
-                    <span class="copilot-card-text">
-                        <span class="copilot-label">Cliciwch i agor NotebookLM</span>
-                        <span class="copilot-url">notebooklm.google.com&nbsp;↗</span>
-                    </span>
-                </a>
-                <div class="instruction-text">
-                    Mewngofnodwch â'ch cyfrif Google, yna crëwch lyfr nodiadau ac ychwanegwch eich ffynonellau. Defnyddiwch eich <strong>cyfrif Prifysgol Caerdydd</strong> ar gyfer data gwaith.
-                </div>
+            <p style="margin:0 0 4px; max-width:720px;">Y drws ffrynt yn unig yw'r sgwrs. Mae dau declyn y tu mewn i Gemini yn troi sgwrs yn waith gorffenedig: mae <strong>Canvas</strong> yn drafftio dogfennau, cwisiau a hyd yn oed apiau bach wrth eich ochr, ac mae <strong>Nano Banana</strong> (ie, dyna'r enw go iawn) yn creu ac yn golygu delweddau.</p>
+
+            <h4>Canvas: drafftio, yna siapio</h4>
+            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Agorwch <strong>Canvas</strong> o'r ddewislen offer o dan flwch anogiadau Gemini. Yn lle ateb yn sgrolio heibio mewn sgwrs, mae eich drafft yn agor mewn gweithle wrth ymyl y sgwrs. Amlygwch unrhyw frawddeg a dywedwch wrth Gemini beth i'w newid: dim ond y rhan honno sy'n cael ei hailysgrifennu, ac mae'r gweddill yn aros yn ei le. Perffaith ar gyfer dogfennau y byddwch yn eu hanfon go iawn.</p>
+
+            <div class="quick-start" style="margin-top:14px;">
+                <div class="quick-step"><span class="step-badge">1</span> Agorwch Canvas, gludwch eich nodiadau</div>
+                <div class="quick-step"><span class="step-badge">2</span> Cewch ddrafft cyntaf llawn</div>
+                <div class="quick-step"><span class="step-badge">3</span> Amlygu a mireinio, linell wrth linell</div>
             </div>
 
-            <div class="quick-start" style="margin-top:18px;">
-                <div class="quick-step"><span class="step-badge">1</span> Uwchlwythwch eich ffynonellau</div>
-                <div class="quick-step"><span class="step-badge">2</span> Dyfnhewch eich dealltwriaeth</div>
-                <div class="quick-step"><span class="step-badge">3</span> Holwch a chrëwch</div>
-            </div>
+            <div class="prompt-box" id="canvas-briefing">Tro fy nodiadau bras isod yn friff un dudalen i staff. Iaith glir, teitl eglur, tair adran fer gyda phenawdau, a rhestr "beth sydd angen i chi ei wneud" ar y diwedd.
+
+[GLUDWCH EICH NODIADAU NEU DDOGFEN BOLISI YMA]</div>
+            <button onclick="copyToClipboard('canvas-briefing')" class="btn-copy">Copïo'r Anogiad</button>
+            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Yna triwch y darn hud: amlygwch un paragraff a theipiwch "gwna hwn yn fwy cyfeillgar". Pan fydd y drafft yn iawn, gofynnwch am droi'r cyfan yn gwis pum cwestiwn i brofi eich tîm, a gwyliwch Gemini yn ei adeiladu.</em></p>
+
+            <h4 style="margin-top:24px;">Gall Canvas hefyd adeiladu teclynnau bach sy'n gweithio</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Disgrifiwch y teclyn sydd ei angen ac mae Canvas yn ei ysgrifennu ac yn dangos rhagolwg byw. Nid oes angen i chi ddarllen y cod o gwbl. Dau i roi cynnig arnynt:</em></p>
+
+            <div class="exercise-note" style="margin-top:14px;"><strong>I wasanaethau proffesiynol:</strong> amcangyfrifwr hawliadau treuliau.</div>
+            <div class="prompt-box" id="canvas-expense-app">Bydd yn ddatblygwr gwe arbenigol. Mae arnaf angen cymhwysiad HTML un dudalen gan ddefnyddio Tailwind CSS a JavaScript plaen.
+
+Adeilada 'Amcangyfrifwr Hawliadau Treuliau' ar gyfer staff prifysgol. Dylai gael mewnbynnau ar gyfer parthau teithio (e.e. y DU, Ewrop, Rhyngwladol), nifer y nosweithiau, a thogl ar gyfer 'gyda derbynebau' vs 'cyfradd unffurf y dydd'.
+
+Dylai gyfrifo cyfanswm amcangyfrifedig yr hawliad yn ddeinamig, ar sail cyfraddau prifysgol ffug safonol, wrth i'r mewnbynnau newid. Cynhwysa fotwm 'Cynhyrchu Crynodeb i'r Adran Gyllid'.
+
+Gofala fod yr holl JavaScript o fewn yr un ffeil HTML. Gwna iddo edrych yn lân ac yn fodern gyda chynllun lliw glas a gwyn proffesiynol.</div>
+            <button onclick="copyToClipboard('canvas-expense-app')" class="btn-copy">Copïo'r Anogiad</button>
+
+            <div class="exercise-note" style="margin-top:20px;"><strong>I ddysgu ac addysgu:</strong> delweddwr cysyniadau rhyngweithiol.</div>
+            <div class="prompt-box" id="canvas-concept-app">Bydd yn ddatblygwr gwe arbenigol ac yn ddylunydd addysgol. Crea ap gwe HTML un dudalen gan ddefnyddio Tailwind CSS a JavaScript plaen i ddysgu myfyrwyr seicoleg am y Dosraniad Normal (cromlin y gloch).
+
+Cynhwysa lithryddion rhyngweithiol sy'n caniatáu i'r defnyddiwr addasu'r 'Cymedr' a'r 'Gwyriad Safonol'. Cynhwysa elfen canvas sy'n ail-lunio cromlin y gloch yn ddeinamig ar sail y llithryddion hynny.
+
+Ychwanega ddisgrifiadau testun byr sy'n esbonio beth mae gwyriad safonol yn ei olygu go iawn mewn iaith glir, gan ddiweddaru'n ddeinamig os yn bosibl. Dylai'r dyluniad fod yn lân, yn ddeniadol ac yn hygyrch, heb fod angen unrhyw asedau allanol heblaw Tailwind drwy CDN.</div>
+            <button onclick="copyToClipboard('canvas-concept-app')" class="btn-copy">Copïo'r Anogiad</button>
+
+            <h4 style="margin-top:24px;">Nano Banana: delweddau gwaith sy'n gweithio go iawn</h4>
+            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Nano Banana yw'r teclyn delweddau sydd wedi'i ymgorffori yn Gemini. Mae'r enw'n wirion; nid felly'r canlyniadau. Mae'n datrys y ddau beth roedd teclynnau delweddau bob amser yn baglu drostynt: gall roi testun cywir, darllenadwy y tu mewn i ddelwedd, a gall olygu llun sydd gennych eisoes heb ddifetha'r gweddill.</p>
 
             <div class="inner-grid">
                 <div class="inner-card">
-                    <span class="inner-card-icon">🎧</span>
-                    <strong>Trosolygon Sain</strong>
-                    <p>Troi adroddiadau sych yn bodlediadau "Deep Dive" difyr.</p>
+                    <span class="inner-card-icon">📈</span>
+                    <strong>Nodiadau'n ddiagram</strong>
+                    <p>Gludwch bwyntiau bwled bras, a chewch ddelwedd lân ar gyfer sleid, poster neu adroddiad.</p>
                 </div>
                 <div class="inner-card">
-                    <span class="inner-card-icon">🕵️</span>
-                    <strong>Dadansoddiad Beirniadol</strong>
-                    <p>Nodi mannau dall, gwrthddywediadau a data coll.</p>
+                    <span class="inner-card-icon">✂️</span>
+                    <strong>Golygu'r hyn sydd gennych</strong>
+                    <p>Newid cefndir, tynnu annibendod, neu gywiro'r testun ar ddelwedd sy'n bodoli eisoes.</p>
                 </div>
                 <div class="inner-card">
-                    <span class="inner-card-icon">🏗️</span>
-                    <strong>Allbwn Strwythuredig</strong>
-                    <p>Trosi nodiadau'n Setiau Sleidiau, Briffiau ac SOPau.</p>
+                    <span class="inner-card-icon">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>
+                    <strong>Posteri dwyieithog</strong>
+                    <p>Gofynnwch am fersiwn Gymraeg o boster: mae'n cyfieithu'r testun y tu mewn i'r ddelwedd.</p>
+                </div>
+                <div class="inner-card">
+                    <span class="inner-card-icon">🖼️</span>
+                    <strong>Delweddau pwrpasol</strong>
+                    <p>Delwedd pennawd ar gyfer adroddiad neu dudalen fewnrwyd, heb hela lluniau stoc.</p>
                 </div>
             </div>
 
-            <h4>Rhowch gynnig ar y ddau anogiad hyn</h4>
-            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Uwchlwythwch eich ffynonellau i lyfr nodiadau yn gyntaf, yna gludwch anogiad i mewn i'r blwch sgwrs.</em></p>
+            <h4>Rhowch gynnig ar y ddau hyn</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Nid oes angen dim ond eich nodiadau ar gyfer y cyntaf. Ar gyfer yr ail, uwchlwythwch ddelwedd (poster, sleid, llun) gyda'r anogiad.</em></p>
 
-            <div class="exercise-note" style="margin-top:14px;"><strong>1. Briff Gweithredol</strong>: troi pentwr o ddogfennau'n grynodeb parod i reolwr.</div>
-            <div class="prompt-box" id="nblm-briefing">"Bydd yn ddadansoddwr uwch. Darllena bob un o fy ffynonellau a uwchlwythais a chynhyrcha friff gweithredol ar gyfer rheolwr prysur. Cynhwysa: crynodeb sefyllfa tair brawddeg; pum canfyddiad allweddol wedi'u graddio yn ôl pwysigrwydd, pob un â chyfeiriad at ei ffynhonnell; y prif opsiynau a'u cyfaddawdau; a dau gam gweithredu argymelledig nesaf. Tynna sylw at unrhyw gwestiynau pwysig nad yw'r ffynonellau'n eu hateb."</div>
-            <button onclick="copyToClipboard('nblm-briefing')" class="btn-copy">Copïo'r Anogiad</button>
+            <div class="prompt-box" id="nano-diagram">Crea ddiagram glân, syml y gallaf ei ollwng yn syth i sleid PowerPoint. Cefndir gwyn, un lliw acen, labeli mawr darllenadwy, dim annibendod. Dylai ddangos y broses hon:
 
-            <div class="exercise-note" style="margin-top:20px;"><strong>2. Adolygydd Beirniadol</strong>: amlygu gwrthddywediadau, bylchau a honiadau heb eu cefnogi ar draws eich ffynonellau.</div>
-            <div class="prompt-box" id="nblm-critique">"Adolyga bob un o fy ffynonellau a uwchlwythais gyda'i gilydd a bydd yn adolygydd beirniadol. Nodi unrhyw wrthddywediadau neu anghytundebau rhwng y ffynonellau, nodi bylchau pwysig neu dystiolaeth goll, a rhestra'r tybiaethau nad ydynt yn cael eu cefnogi gan y dogfennau. Cyfeiria at y ffynhonnell benodol ar gyfer pob pwynt."</div>
-            <button onclick="copyToClipboard('nblm-critique')" class="btn-copy">Copïo'r Anogiad</button>
+[GLUDWCH EICH PWYNTIAU BWLED BRAS YMA]</div>
+            <button onclick="copyToClipboard('nano-diagram')" class="btn-copy">Copïo'r Anogiad</button>
 
-            <div style="text-align: center; margin-top: 24px;">
-                <a href="https://wmgmm.github.io/notebooklm/" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--apple-blue); color: white; padding: 11px 22px; border-radius: 980px; text-decoration: none; font-weight: 600; font-size: 14px;">
-                    Agor Llyfrgell Anogiadau NotebookLM ↗
-                </a>
-            </div>
+            <div class="prompt-box" id="nano-edit-welsh" style="margin-top:14px;">Dyma boster ein digwyddiad. Cadwa'r cynllun, y delweddau a'r arddull yn union fel y maent, ond newidia'r dyddiad i [DYDDIAD NEWYDD] a chywira unrhyw gamgymeriadau sillafu. Yna crea ail fersiwn gyda'r holl destun wedi'i gyfieithu i'r Gymraeg.</div>
+            <button onclick="copyToClipboard('nano-edit-welsh')" class="btn-copy">Copïo'r Anogiad</button>
+
+            <p style="margin-top:14px; font-size:13px; color:var(--apple-text-secondary);"><em>Un arfer cyn i unrhyw beth fynd allan drwy'r drws: darllenwch bob gair mewn delwedd AI yn ofalus, a chymerwch ofal ychwanegol gyda lluniau o bobl a lleoedd go iawn.</em></p>
         </section>
 
         <!-- ============ ESSENTIALS (surfaced from Concepts) ============ -->

@@ -1110,8 +1110,8 @@
         <div class="nav-content">
             <span class="nav-brand">The Matts</span>
             <a href="#library">Gemini Exercises</a>
-            <a href="#deep-research">Deep Research</a>
             <a href="#notebooklm">NotebookLM</a>
+            <a href="#deep-research">Deep Research</a>
         </div>
     </nav>
 
@@ -1184,7 +1184,7 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Gemini Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">7</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">13</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">17</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">9</span></button>
             </div>
 
@@ -1492,6 +1492,62 @@ Be precise. Reference the actual words of both documents.</div>
                     </div>
                 </details>
 
+                <details>
+                    <summary><span style="flex:1;">Summarise a regulator document for your board</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: turn a dense regulator or compliance document into a board-ready summary with questions worth discussing. Attach the document, and swap in any policy paper.
+                        </div>
+                        <div class="prompt-box" id="ptcf-regulator">Persona: Expert policy analyst.
+Task: Analyse the attached [new regulatory document from Medr] and summarise its central themes and key institutional risks. Then generate 3 strategic questions to encourage critical thinking.
+Context: The summary and questions will be used by [the University Executive Board] to understand the wider context and prepare for upcoming changes.
+Format: A bulleted summary followed by a numbered list of the 3 strategic questions.</div>
+                        <button onclick="copyToClipboard('ptcf-regulator')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Redesign a process around its users</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: rethink any process from the point of view of the people who actually use it. Swap in your own process and profiles.
+                        </div>
+                        <div class="prompt-box" id="ptcf-expenses">Persona: [Director of Finance].
+Task: Revise the current expense claim process, suggesting changes to the approval workflow, documentation requirements and submission methods.
+Context: The process needs to support three specific staff profiles: [a new employee, a researcher claiming international travel, and a temporary contractor].
+Format: A structured breakdown with a clear heading for each staff profile, using bullet points for the required changes.</div>
+                        <button onclick="copyToClipboard('ptcf-expenses')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Plan a new starter's first three days</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: a ready-to-adapt onboarding schedule so each new colleague gets the same good start.
+                        </div>
+                        <div class="prompt-box" id="ptcf-onboarding">Persona: Employee onboarding coordinator.
+Task: Draft a detailed 3-day schedule and a companion checklist for onboarding a new member of staff, integrating HR, IT and departmental sessions.
+Context: We need a seamless, comprehensive start for [academics] joining the institution this semester.
+Format: A numbered daily schedule with time slots, required resources, and the responsible department contact for each item.</div>
+                        <button onclick="copyToClipboard('ptcf-onboarding')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Compare marking and grading approaches</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: an evidence-based comparison to inform an assessment or module redesign.
+                        </div>
+                        <div class="prompt-box" id="ptcf-grading">Persona: [University lecturer] and educational researcher.
+Task: Compare alternative grading systems in higher education, focusing on [ungrading, mastery-based grading, and contract grading]. Highlight research on outcomes, student engagement and staff workload.
+Context: I am redesigning my module for the upcoming academic year and need evidence-based practice to inform my assessment strategy.
+Format: A comparative table followed by a short summary of the research.</div>
+                        <button onclick="copyToClipboard('ptcf-grading')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
             </div>
 
             <div id="tab-concepts" class="tab-panel" role="tabpanel">
@@ -1521,7 +1577,7 @@ Be precise. Reference the actual words of both documents.</div>
                             </div>
                         </div>
 
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Why it works: no single tool is best at everything. Passing the work along lets each do its strongest job, and you stay in control at every step.</p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Why it works: no single tool is best at everything. Passing the work along lets each do its strongest job, and you stay in control at every step. Another chain to try: run Deep Research, then paste the report into Canvas and shape it into a staff briefing or a quiz.</p>
                     </div>
                 </details>
 
@@ -1688,6 +1744,7 @@ Be precise. Reference the actual words of both documents.</div>
                                 </div>
                             </div>
                         </div>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">You may also hear this taught as <strong>PTCF: Persona, Task, Context, Format</strong>. It is the same idea with different labels: Persona and Context are step 1 (give context), Task is step 2 (make the request), and Format says what shape the answer should take. The last four Workplace Prompts are written in exactly that shape, so you can see it in action.</p>
                     </div>
                 </details>
 
@@ -1824,6 +1881,99 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
 
         </section>
 
+        <!-- ============ NOTEBOOKLM ============ -->
+        <section id="notebooklm" class="section-card">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">NotebookLM</div>
+                    <h2>Understand anything with NotebookLM</h2>
+                </div>
+            </div>
+
+            <div class="library-instructions">
+                <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="copilot-card">
+                    <img src="notebooklm-logo.png" alt="" class="copilot-logo">
+                    <span class="copilot-card-text">
+                        <span class="copilot-label">Click to open NotebookLM</span>
+                        <span class="copilot-url">notebooklm.google.com&nbsp;↗</span>
+                    </span>
+                </a>
+                <div class="instruction-text">
+                    Sign in with your Google account, then create a notebook and add your sources. Use your <strong>Cardiff University account</strong> for work data.
+                </div>
+            </div>
+
+            <div class="quick-start" style="margin-top:18px;">
+                <div class="quick-step"><span class="step-badge">1</span> Upload your sources</div>
+                <div class="quick-step"><span class="step-badge">2</span> Deepen your understanding</div>
+                <div class="quick-step"><span class="step-badge">3</span> Ask and create</div>
+            </div>
+
+            <div class="inner-grid">
+                <div class="inner-card">
+                    <span class="inner-card-icon">🎧</span>
+                    <strong>Audio Overviews</strong>
+                    <p>Turn dry reports into engaging "Deep Dive" podcasts.</p>
+                </div>
+                <div class="inner-card">
+                    <span class="inner-card-icon">🕵️</span>
+                    <strong>Critical Analysis</strong>
+                    <p>Identify blind spots, contradictions, and missing data.</p>
+                </div>
+                <div class="inner-card">
+                    <span class="inner-card-icon">🏗️</span>
+                    <strong>Structured Output</strong>
+                    <p>Convert notes into Slide Decks, Briefs, and SOPs.</p>
+                </div>
+            </div>
+
+            <details style="margin-top:8px;">
+                <summary><span style="flex:1;">Hands-on: review grant proposals (upload and compare)</span></summary>
+                <div class="details-content">
+                    <div class="exercise-note">
+                        <strong>The exercise:</strong> gather a few past proposals: a funded one, an unsuccessful one, reviewer comments, and the funder call if you have it. Upload them to <strong>Gemini</strong> and run the prompts below. Then create a notebook in <strong>NotebookLM</strong>, add the same files, and run them again. Compare the two: NotebookLM sticks strictly to your documents and cites them, which is exactly what you want for this job. No proposals to hand? Any long work documents will do.
+                    </div>
+
+                    <div class="exercise-note" style="margin-top:14px;"><strong>1. Pull out the reusable text</strong>: find the boilerplate you can lift into your next bid.</div>
+                    <div class="prompt-box" id="grant-boilerplate">I have uploaded one or more previous grant proposals. Please identify all sections that contain reusable institutional boilerplate: for example, descriptions of the university's research environment, facilities statements, EDI statements, or standard methodology descriptions. For each section, copy the text and label which part of a proposal it came from.</div>
+                    <button onclick="copyToClipboard('grant-boilerplate')" class="btn-copy">Copy Prompt</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>2. Find what worked</strong>: the passages most likely to have impressed a reviewer.</div>
+                    <div class="prompt-box" id="grant-worked">Looking at the uploaded proposal(s), identify the writing that is most likely to have impressed a reviewer. Look for: a clear and compelling case for need, strong impact framing, well-justified methodology, and confident team track record. Pull out the strongest paragraph or passage from each of these areas and explain briefly why it is effective.</div>
+                    <button onclick="copyToClipboard('grant-worked')" class="btn-copy">Copy Prompt</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>3. Find the weaknesses</strong>: what a reviewer would have marked down.</div>
+                    <div class="prompt-box" id="grant-weaknesses">Review the uploaded proposal(s) and identify the sections most likely to have concerned or disappointed a reviewer. Look for: vague impact claims, unsubstantiated assertions, weak methodology description, budget items with no justification, or misalignment with likely funder priorities. List each weakness and suggest what a stronger version would include.</div>
+                    <button onclick="copyToClipboard('grant-weaknesses')" class="btn-copy">Copy Prompt</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>4. Extract the key phrases</strong>: build a reference bank for future bids.</div>
+                    <div class="prompt-box" id="grant-phrases">From the uploaded proposal(s), extract the key phrases, terminology, and framing language used. Group them under: research significance, methodology, impact, team capability, and budget justification. I want to use these as a reference when writing future bids.</div>
+                    <button onclick="copyToClipboard('grant-phrases')" class="btn-copy">Copy Prompt</button>
+
+                    <div class="exercise-note" style="margin-top:20px;"><strong>5. Summarise the structure</strong>: see the skeleton and spot the gaps.</div>
+                    <div class="prompt-box" id="grant-structure">Summarise the structure of the uploaded proposal(s). For each section, note: the heading used, the approximate word count, the main argument being made, and how well it connects to the section before and after it. Flag any structural gaps or sections that feel underdeveloped.</div>
+                    <button onclick="copyToClipboard('grant-structure')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
+
+            <h4>Try these two prompts</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Upload your sources to a notebook first, then paste a prompt into the chat box.</em></p>
+
+            <div class="exercise-note" style="margin-top:14px;"><strong>1. Executive Briefing</strong>: turn a pile of documents into a manager-ready summary.</div>
+            <div class="prompt-box" id="nblm-briefing">"Act as a senior analyst. Read all of my uploaded sources and produce an executive briefing for a busy manager. Include: a three-sentence situation summary; five key findings ranked by importance, each with a source citation; the main options with their trade-offs; and two recommended next actions. Flag any important questions the sources do not answer."</div>
+            <button onclick="copyToClipboard('nblm-briefing')" class="btn-copy">Copy Prompt</button>
+
+            <div class="exercise-note" style="margin-top:20px;"><strong>2. Critical Reviewer</strong>: surface contradictions, gaps and unsupported claims across your sources.</div>
+            <div class="prompt-box" id="nblm-critique">"Review all of my uploaded sources together and act as a critical reviewer. Identify any contradictions or disagreements between the sources, note important gaps or missing evidence, and list the assumptions that are not supported by the documents. Cite the specific source for each point."</div>
+            <button onclick="copyToClipboard('nblm-critique')" class="btn-copy">Copy Prompt</button>
+
+            <div style="text-align: center; margin-top: 24px;">
+                <a href="https://wmgmm.github.io/notebooklm/" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--apple-blue); color: white; padding: 11px 22px; border-radius: 980px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                    Open NotebookLM Prompt Library ↗
+                </a>
+            </div>
+        </section>
+
         <!-- ============ GEMINI DEEP RESEARCH ============ -->
         <section id="deep-research" class="section-card">
             <div class="section-header">
@@ -1840,6 +1990,8 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
                 <div class="quick-step"><span class="step-badge">2</span> It reads hundreds of pages</div>
                 <div class="quick-step"><span class="step-badge">3</span> Get one sourced report</div>
             </div>
+
+            <p style="margin:14px 0 0; font-size:14px; color:var(--apple-text-secondary);"><strong style="color:var(--apple-text-primary);">You stay in charge:</strong> before it starts, Deep Research shows you its research plan, and that plan is editable. Cut the topics you do not care about, add specifics, then set it going.</p>
 
             <h4>For academic staff: scope a field before a grant or curriculum review</h4>
             <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Open Gemini, switch on Deep Research, and paste this. Swap in your own field and institution.</em></p>
@@ -1901,68 +2053,91 @@ Cite your sources throughout so I can verify and follow up on the most relevant 
             </div>
         </section>
 
-        <!-- ============ NOTEBOOKLM ============ -->
-        <section id="notebooklm" class="section-card">
+        <!-- ============ BEYOND CHAT: CANVAS & NANO BANANA ============ -->
+        <section id="beyond-chat" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">NotebookLM</div>
-                    <h2>Understand anything with NotebookLM</h2>
+                    <div class="eyebrow">Beyond Chat</div>
+                    <h2>Gemini can build things, not just talk</h2>
                 </div>
             </div>
 
-            <div class="library-instructions">
-                <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="copilot-card">
-                    <img src="notebooklm-logo.png" alt="" class="copilot-logo">
-                    <span class="copilot-card-text">
-                        <span class="copilot-label">Click to open NotebookLM</span>
-                        <span class="copilot-url">notebooklm.google.com&nbsp;↗</span>
-                    </span>
-                </a>
-                <div class="instruction-text">
-                    Sign in with your Google account, then create a notebook and add your sources. Use your <strong>Cardiff University account</strong> for work data.
-                </div>
+            <p style="margin:0 0 4px; max-width:720px;">Chat is just the front door. Two tools inside Gemini turn a conversation into finished work: <strong>Canvas</strong> drafts documents, quizzes and even small apps alongside you, and <strong>Nano Banana</strong> (yes, that really is the name) creates and edits images.</p>
+
+            <h4>Canvas: draft it, then shape it</h4>
+            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Open <strong>Canvas</strong> from the tools menu under Gemini's prompt box. Instead of an answer scrolling past in chat, your draft opens in a workspace beside the conversation. Highlight any sentence and tell Gemini what to change: it rewrites only that part, and the rest stays put. Perfect for documents you will actually send.</p>
+
+            <div class="quick-start" style="margin-top:14px;">
+                <div class="quick-step"><span class="step-badge">1</span> Open Canvas, paste your notes</div>
+                <div class="quick-step"><span class="step-badge">2</span> Get a full first draft</div>
+                <div class="quick-step"><span class="step-badge">3</span> Highlight and refine, line by line</div>
             </div>
 
-            <div class="quick-start" style="margin-top:18px;">
-                <div class="quick-step"><span class="step-badge">1</span> Upload your sources</div>
-                <div class="quick-step"><span class="step-badge">2</span> Deepen your understanding</div>
-                <div class="quick-step"><span class="step-badge">3</span> Ask and create</div>
-            </div>
+            <div class="prompt-box" id="canvas-briefing">Turn my rough notes below into a one-page briefing for staff. Plain English, a clear title, three short sections with headings, and a "what you need to do" list at the end.
+
+[PASTE YOUR NOTES OR A POLICY DOCUMENT HERE]</div>
+            <button onclick="copyToClipboard('canvas-briefing')" class="btn-copy">Copy Prompt</button>
+            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then try the magic bit: highlight one paragraph and type "make this friendlier". When the draft is right, ask "turn this into a five-question quiz to test my team" and watch it build one.</em></p>
+
+            <h4 style="margin-top:24px;">Canvas can also build small working tools</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Describe the tool you want and Canvas writes it and previews it live. You never need to read the code. Two to try:</em></p>
+
+            <div class="exercise-note" style="margin-top:14px;"><strong>For professional services:</strong> an expense claim estimator.</div>
+            <div class="prompt-box" id="canvas-expense-app">Act as an expert web developer. I need a single-page HTML application using Tailwind CSS and vanilla JavaScript.
+
+Build an 'Expense Claim Estimator' for university staff. It should have inputs for travel zones (e.g. UK, Europe, International), number of nights, and a toggle for 'with receipts' vs 'flat rate per diem'.
+
+It should dynamically calculate the estimated total claim based on standard mock university rates as inputs change. Include a button to 'Generate Summary for Finance'.
+
+Ensure all JavaScript is contained within the single HTML file. Make it look clean and modern with a professional blue and white colour scheme.</div>
+            <button onclick="copyToClipboard('canvas-expense-app')" class="btn-copy">Copy Prompt</button>
+
+            <div class="exercise-note" style="margin-top:20px;"><strong>For teaching and learning:</strong> an interactive concept visualiser.</div>
+            <div class="prompt-box" id="canvas-concept-app">Act as an expert web developer and instructional designer. Create a single-page HTML web app using Tailwind CSS and vanilla JavaScript to teach psychology students about the Normal Distribution (bell curve).
+
+Include interactive sliders allowing the user to adjust the 'Mean' and 'Standard Deviation'. Include a canvas element that dynamically redraws the bell curve based on those slider inputs.
+
+Add short text descriptions explaining what standard deviation actually means in plain English, updating dynamically if possible. The design should be clean, engaging, accessible, and require no external assets other than Tailwind via CDN.</div>
+            <button onclick="copyToClipboard('canvas-concept-app')" class="btn-copy">Copy Prompt</button>
+
+            <h4 style="margin-top:24px;">Nano Banana: work images that actually work</h4>
+            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Nano Banana is the image tool built into Gemini. The name is silly; the results are not. It fixes the two things image tools always fumbled: it can put accurate, readable text inside an image, and it can edit a picture you already have without wrecking the rest of it.</p>
 
             <div class="inner-grid">
                 <div class="inner-card">
-                    <span class="inner-card-icon">🎧</span>
-                    <strong>Audio Overviews</strong>
-                    <p>Turn dry reports into engaging "Deep Dive" podcasts.</p>
+                    <span class="inner-card-icon">📈</span>
+                    <strong>Notes to diagram</strong>
+                    <p>Paste rough bullets, get a clean visual for a slide, poster or report.</p>
                 </div>
                 <div class="inner-card">
-                    <span class="inner-card-icon">🕵️</span>
-                    <strong>Critical Analysis</strong>
-                    <p>Identify blind spots, contradictions, and missing data.</p>
+                    <span class="inner-card-icon">✂️</span>
+                    <strong>Edit what you have</strong>
+                    <p>Swap a background, remove clutter, or correct the text on an existing image.</p>
                 </div>
                 <div class="inner-card">
-                    <span class="inner-card-icon">🏗️</span>
-                    <strong>Structured Output</strong>
-                    <p>Convert notes into Slide Decks, Briefs, and SOPs.</p>
+                    <span class="inner-card-icon">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>
+                    <strong>Bilingual posters</strong>
+                    <p>Ask for a Welsh version of a poster: it translates the text inside the image.</p>
+                </div>
+                <div class="inner-card">
+                    <span class="inner-card-icon">🖼️</span>
+                    <strong>Made-to-purpose images</strong>
+                    <p>A header image for a report or intranet page, without the stock photo hunt.</p>
                 </div>
             </div>
 
-            <h4>Try these two prompts</h4>
-            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Upload your sources to a notebook first, then paste a prompt into the chat box.</em></p>
+            <h4>Try these two</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>The first needs nothing but your notes. For the second, upload an image (a poster, a slide, a photo) along with the prompt.</em></p>
 
-            <div class="exercise-note" style="margin-top:14px;"><strong>1. Executive Briefing</strong>: turn a pile of documents into a manager-ready summary.</div>
-            <div class="prompt-box" id="nblm-briefing">"Act as a senior analyst. Read all of my uploaded sources and produce an executive briefing for a busy manager. Include: a three-sentence situation summary; five key findings ranked by importance, each with a source citation; the main options with their trade-offs; and two recommended next actions. Flag any important questions the sources do not answer."</div>
-            <button onclick="copyToClipboard('nblm-briefing')" class="btn-copy">Copy Prompt</button>
+            <div class="prompt-box" id="nano-diagram">Create a clean, simple diagram I can drop straight into a PowerPoint slide. White background, one accent colour, large readable labels, no clutter. It should show this process:
 
-            <div class="exercise-note" style="margin-top:20px;"><strong>2. Critical Reviewer</strong>: surface contradictions, gaps and unsupported claims across your sources.</div>
-            <div class="prompt-box" id="nblm-critique">"Review all of my uploaded sources together and act as a critical reviewer. Identify any contradictions or disagreements between the sources, note important gaps or missing evidence, and list the assumptions that are not supported by the documents. Cite the specific source for each point."</div>
-            <button onclick="copyToClipboard('nblm-critique')" class="btn-copy">Copy Prompt</button>
+[PASTE YOUR ROUGH BULLET POINTS HERE]</div>
+            <button onclick="copyToClipboard('nano-diagram')" class="btn-copy">Copy Prompt</button>
 
-            <div style="text-align: center; margin-top: 24px;">
-                <a href="https://wmgmm.github.io/notebooklm/" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--apple-blue); color: white; padding: 11px 22px; border-radius: 980px; text-decoration: none; font-weight: 600; font-size: 14px;">
-                    Open NotebookLM Prompt Library ↗
-                </a>
-            </div>
+            <div class="prompt-box" id="nano-edit-welsh" style="margin-top:14px;">Here is our event poster. Keep the layout, images and style exactly as they are, but change the date to [NEW DATE] and correct any spelling mistakes. Then create a second version with all the text translated into Welsh.</div>
+            <button onclick="copyToClipboard('nano-edit-welsh')" class="btn-copy">Copy Prompt</button>
+
+            <p style="margin-top:14px; font-size:13px; color:var(--apple-text-secondary);"><em>One habit before anything goes out the door: read every word in an AI image carefully, and take extra care with pictures of real people and places.</em></p>
         </section>
 
         <!-- ============ ESSENTIALS (surfaced from Concepts) ============ -->

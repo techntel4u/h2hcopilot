@@ -756,6 +756,7 @@
         .part-2 { background: #e6f4ea; color: #188038; }
         .part-3 { background: #fef7e0; color: #b06000; }
         .part-4 { background: #fce8e6; color: #c5221f; }
+        .pill-academic { background: #f3e8fd; color: #8430ce; }
 
         summary::after {
             content: 'View prompt →';
@@ -1286,6 +1287,8 @@
             <!-- ============ TAB 2: PROMPT RECIPES ============ -->
             <div id="tab-recipes" class="tab-panel" role="tabpanel">
 
+                <p style="margin:14px 0 4px; font-size:13px; color:var(--apple-text-secondary);">These prompts are for every member of staff, whatever your role. The most broadly useful come first; the ones tagged Academic are grouped at the end.</p>
+
                 <details open>
                     <summary><span style="flex:1;">Filter a document to your role</span></summary>
                     <div class="details-content">
@@ -1308,21 +1311,17 @@
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Analyse a focus group transcript</span></summary>
+                    <summary><span style="flex:1;">Rewrite anything in plain English</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: turn a long focus group recording into the themes and sentiment course leaders need.
+                            Application: paste a policy, a research paper, a report or a meeting transcript and get a version anyone can understand in one read.
                         </div>
-                        <div class="prompt-box" id="focus-group-transcript">You are a marketing assistant writing up a student focus group for course leaders.
+                        <div class="prompt-box" id="plain-english-editor">You are an expert communicator who rewrites specialist text for a general audience.
 
-Read the attached transcript of a 60-minute focus group about the new course. Identify the main themes and the overall sentiment towards the course. Stay objective and analytical, as in market research.
+When I share any text, a policy document, a research paper, a report or a meeting transcript, rewrite it so that a reader with no background in the subject can understand it in one reading. Remove or briefly explain all jargon. Shorten sentences. Put the real-world significance first. Cut hedging and passive voice.
 
-Give me a bulleted summary:
-- The top three positive themes
-- The top three negative themes
-
-[ATTACH OR PASTE THE TRANSCRIPT]</div>
-                        <button onclick="copyToClipboard('focus-group-transcript')" class="btn-copy">Copy Prompt</button>
+After rewriting, note: the three most significant changes you made and why; and any technical terms you chose to keep and why. Do not change the meaning or leave out important content.</div>
+                        <button onclick="copyToClipboard('plain-english-editor')" class="btn-copy">Copy Prompt</button>
                     </div>
                 </details>
 
@@ -1386,28 +1385,25 @@ Give me a bulleted list of the top five concerns. For each one, suggest which po
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Evidence-based module changes</span></summary>
+                    <summary><span style="flex:1;">Roleplay for difficult conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: turn a student feedback report into the specific changes a lecturer should make next time.
+                            Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
                         </div>
-                        <div class="prompt-box" id="module-revisions">Based on the [student feedback report] what are the three most important changes this lecturer should make before running this module again? Be specific about what exactly needs to change and why.</div>
-                        <button onclick="copyToClipboard('module-revisions')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="roleplay-conversation">"Roleplay: You're Mrs. Grudge, my grumpy neighbour knocking at 2 a.m. to complain about my noisy cats (Knox, Missy, Phoebe). I'm a witty cat owner trying to calm you down and win you over. Stay in character and wait for my replies."</div>
+                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Rewrite anything in plain English</span></summary>
+                    <summary><span style="flex:1;">Devil's advocate (blind spots)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: paste a policy, a research paper, a report or a meeting transcript and get a version anyone can understand in one read.
+                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
                         </div>
-                        <div class="prompt-box" id="plain-english-editor">You are an expert communicator who rewrites specialist text for a general audience.
-
-When I share any text, a policy document, a research paper, a report or a meeting transcript, rewrite it so that a reader with no background in the subject can understand it in one reading. Remove or briefly explain all jargon. Shorten sentences. Put the real-world significance first. Cut hedging and passive voice.
-
-After rewriting, note: the three most significant changes you made and why; and any technical terms you chose to keep and why. Do not change the meaning or leave out important content.</div>
-                        <button onclick="copyToClipboard('plain-english-editor')" class="btn-copy">Copy Prompt</button>
+                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
+                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
                     </div>
                 </details>
 
@@ -1458,59 +1454,6 @@ Output only the reusable prompt, nothing else.</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Score a grant proposal (UKRI panel)</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: assess a grant draft against funder criteria, with scores and the weak points most likely to cause rejection.
-                        </div>
-                        <div class="prompt-box" id="ukri-panel-reviewer">You are an experienced academic peer reviewer sitting on a UKRI funding panel. You have reviewed hundreds of grant proposals across research councils including ESRC, AHRC, EPSRC, and Innovate UK.
-
-When I share a grant proposal section or full draft with you, assess it as a panel reviewer would. Score each of the following criteria out of 5 and give a brief justification for each score: clarity and coherence of the case for support; quality and feasibility of the proposed methodology; strength of the impact and pathways to impact statement; evidence of the team's track record and capability; value for money and budget justification; fit with funder priorities.
-
-After scoring, provide: (1) the two or three strongest elements a panel would likely praise; (2) the two or three weakest elements most likely to cause rejection; (3) a suggested priority order for revision if time is limited. Be direct. Do not soften criticism.</div>
-                        <button onclick="copyToClipboard('ukri-panel-reviewer')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Check a proposal against a funder call</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: paste a funder call document and your draft, and see where the proposal does and does not match what the funder is asking for.
-                        </div>
-                        <div class="prompt-box" id="funder-alignment-checker">You are a research funding strategist with deep knowledge of UK and international research funders including UKRI councils, Innovate UK, Horizon Europe, Wellcome Trust, Leverhulme Trust, NIHR, and the Welsh funders Medr and Health and Care Research Wales.
-
-When I share two pieces of text, a funder call document and a draft proposal section, analyse how well the proposal aligns with what the funder is actually looking for. Provide: (1) a list of the funder's stated priorities and assessment criteria; (2) for each priority, a judgement on whether the proposal addresses it (clearly / partially / not at all) with a reference to the proposal text; (3) funder language and key phrases from the call document that do not appear in the proposal but should; (4) specific suggestions for where each gap could be addressed.
-
-Be precise. Reference the actual words of both documents.</div>
-                        <button onclick="copyToClipboard('funder-alignment-checker')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Roleplay for difficult conversations</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
-                        </div>
-                        <div class="prompt-box" id="roleplay-conversation">"Roleplay: You're Mrs. Grudge, my grumpy neighbour knocking at 2 a.m. to complain about my noisy cats (Knox, Missy, Phoebe). I'm a witty cat owner trying to calm you down and win you over. Stay in character and wait for my replies."</div>
-                        <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Devil's advocate (blind spots)</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
-                        </div>
-                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
-                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
-                    </div>
-                </details>
-
-                <details>
                     <summary><span style="flex:1;">Summarise a regulator document for your board</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
@@ -1553,7 +1496,37 @@ Format: A numbered daily schedule with time slots, required resources, and the r
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Compare marking and grading approaches</span></summary>
+                    <summary><span style="flex:1;">Analyse a focus group transcript</span><span class="part-pill pill-academic">Academic</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: turn a long focus group recording into the themes and sentiment course leaders need.
+                        </div>
+                        <div class="prompt-box" id="focus-group-transcript">You are a marketing assistant writing up a student focus group for course leaders.
+
+Read the attached transcript of a 60-minute focus group about the new course. Identify the main themes and the overall sentiment towards the course. Stay objective and analytical, as in market research.
+
+Give me a bulleted summary:
+- The top three positive themes
+- The top three negative themes
+
+[ATTACH OR PASTE THE TRANSCRIPT]</div>
+                        <button onclick="copyToClipboard('focus-group-transcript')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Evidence-based module changes</span><span class="part-pill pill-academic">Academic</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: turn a student feedback report into the specific changes a lecturer should make next time.
+                        </div>
+                        <div class="prompt-box" id="module-revisions">Based on the [student feedback report] what are the three most important changes this lecturer should make before running this module again? Be specific about what exactly needs to change and why.</div>
+                        <button onclick="copyToClipboard('module-revisions')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Compare marking and grading approaches</span><span class="part-pill pill-academic">Academic</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: an evidence-based comparison to inform an assessment or module redesign.
@@ -1563,6 +1536,36 @@ Task: Compare alternative grading systems in higher education, focusing on [ungr
 Context: I am redesigning my module for the upcoming academic year and need evidence-based practice to inform my assessment strategy.
 Format: A comparative table followed by a short summary of the research.</div>
                         <button onclick="copyToClipboard('ptcf-grading')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Score a grant proposal (UKRI panel)</span><span class="part-pill pill-academic">Academic</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: assess a grant draft against funder criteria, with scores and the weak points most likely to cause rejection.
+                        </div>
+                        <div class="prompt-box" id="ukri-panel-reviewer">You are an experienced academic peer reviewer sitting on a UKRI funding panel. You have reviewed hundreds of grant proposals across research councils including ESRC, AHRC, EPSRC, and Innovate UK.
+
+When I share a grant proposal section or full draft with you, assess it as a panel reviewer would. Score each of the following criteria out of 5 and give a brief justification for each score: clarity and coherence of the case for support; quality and feasibility of the proposed methodology; strength of the impact and pathways to impact statement; evidence of the team's track record and capability; value for money and budget justification; fit with funder priorities.
+
+After scoring, provide: (1) the two or three strongest elements a panel would likely praise; (2) the two or three weakest elements most likely to cause rejection; (3) a suggested priority order for revision if time is limited. Be direct. Do not soften criticism.</div>
+                        <button onclick="copyToClipboard('ukri-panel-reviewer')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Check a proposal against a funder call</span><span class="part-pill pill-academic">Academic</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: paste a funder call document and your draft, and see where the proposal does and does not match what the funder is asking for.
+                        </div>
+                        <div class="prompt-box" id="funder-alignment-checker">You are a research funding strategist with deep knowledge of UK and international research funders including UKRI councils, Innovate UK, Horizon Europe, Wellcome Trust, Leverhulme Trust, NIHR, and the Welsh funders Medr and Health and Care Research Wales.
+
+When I share two pieces of text, a funder call document and a draft proposal section, analyse how well the proposal aligns with what the funder is actually looking for. Provide: (1) a list of the funder's stated priorities and assessment criteria; (2) for each priority, a judgement on whether the proposal addresses it (clearly / partially / not at all) with a reference to the proposal text; (3) funder language and key phrases from the call document that do not appear in the proposal but should; (4) specific suggestions for where each gap could be addressed.
+
+Be precise. Reference the actual words of both documents.</div>
+                        <button onclick="copyToClipboard('funder-alignment-checker')" class="btn-copy">Copy Prompt</button>
                     </div>
                 </details>
 
@@ -1762,7 +1765,7 @@ Format: A comparative table followed by a short summary of the research.</div>
                                 </div>
                             </div>
                         </div>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">You may also hear this taught as <strong>PTCF: Persona, Task, Context, Format</strong>. It is the same idea with different labels: Persona and Context are step 1 (give context), Task is step 2 (make the request), and Format says what shape the answer should take. The last four Workplace Prompts are written in exactly that shape, so you can see it in action.</p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">You may also hear this taught as <strong>PTCF: Persona, Task, Context, Format</strong>. It is the same idea with different labels: Persona and Context are step 1 (give context), Task is step 2 (make the request), and Format says what shape the answer should take. Four of the Workplace Prompts are written in exactly that shape (they start with Persona:), so you can see it in action.</p>
                     </div>
                 </details>
 

@@ -741,6 +741,22 @@
             border-color: var(--apple-blue);
         }
 
+        /* --- Session part pills (match the slide corner markers) --- */
+        .part-pill {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 999px;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        .part-1 { background: #e8f0fe; color: #1a73e8; }
+        .part-2 { background: #e6f4ea; color: #188038; }
+        .part-3 { background: #fef7e0; color: #b06000; }
+        .part-4 { background: #fce8e6; color: #c5221f; }
+
         summary::after {
             content: 'View prompt →';
             font-size: 12px;
@@ -1191,8 +1207,10 @@
             <!-- ============ TAB 1: EXERCISES ============ -->
             <div id="tab-exercises" class="tab-panel active" role="tabpanel">
 
+                <p style="margin:14px 0 4px; font-size:13px; color:var(--apple-text-secondary);">The coloured tags below match the section markers in the corner of the slides, so you can always see where we are in the session.</p>
+
                 <details open>
-                    <summary><span class="ex-num">01</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <summary><span class="ex-num">01</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span><span class="part-pill part-1">Part 1</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
@@ -1204,7 +1222,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">02</span><span style="flex:1;">Upload and review grant proposals</span></summary>
+                    <summary><span class="ex-num">02</span><span style="flex:1;">Upload and review grant proposals</span><span class="part-pill part-2">Part 2</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: gather a few past proposals: a funded one, an unsuccessful one, reviewer comments. Upload them to Gemini along with this prompt. No proposals to hand? Any long work documents will do.
@@ -1216,7 +1234,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Same files, now in NotebookLM</span></summary>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Same files, now in NotebookLM</span><span class="part-pill part-2">Part 2</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: feel the difference between broad chat and answers grounded in your sources. Create a notebook at notebooklm.google.com, add the same files, and run the same prompt from Example 02. Then ask this follow-up.
@@ -1228,7 +1246,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Set Deep Research going</span></summary>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Set Deep Research going</span><span class="part-pill part-3">Part 3</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: hand Gemini a research job and get back a sourced report. Switch on Deep Research in the tools menu under the prompt box, paste this, and check the plan it shows you before it starts. You can edit that plan.
@@ -1240,26 +1258,26 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Turn a document into an image</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Turn a document into an image</span><span class="part-pill part-4">Part 4</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: get a slide-ready image from material you already have. Pick Create image in the tools menu, upload a document (or stay in your grant chat), and ask.
                         </div>
                         <div class="prompt-box" id="ex5-visual">Using the attached document, create a clean, simple infographic that explains [PICK A SECTION OR TOPIC] to a general audience. White background, one accent colour, large readable labels, no clutter.</div>
                         <button onclick="copyToClipboard('ex5-visual')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>More image ideas (editing photos you already have, bilingual posters) are in the Beyond Chat section further down the page.</em></p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>More image ideas (editing photos you already have, bilingual posters) are in the Nano Banana section further down the page.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Build a small tool in Canvas</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Build a small tool in Canvas</span><span class="part-pill part-4">Part 4</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: finish with the wow: a working web tool from one prompt. Pick Canvas from the tools menu, attach a policy or guidance document, and paste this.
                         </div>
                         <div class="prompt-box" id="ex6-canvas">Create an interactive one-page quiz web app that tests staff on the key points of the attached document. Five multiple-choice questions, friendly feedback after each answer, and a score at the end. Use Tailwind CSS and vanilla JavaScript in a single HTML file.</div>
                         <button onclick="copyToClipboard('ex6-canvas')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Two more Canvas builds (an expense claim estimator and an interactive concept visualiser) are in the Beyond Chat section further down the page.</em></p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Two more Canvas builds (an expense claim estimator and an interactive concept visualiser) are in the Canvas section further down the page.</em></p>
                     </div>
                 </details>
 
@@ -1931,7 +1949,7 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
                 <summary><span style="flex:1;">Hands-on: review grant proposals (upload and compare)</span></summary>
                 <div class="details-content">
                     <div class="exercise-note">
-                        <strong>The exercise:</strong> gather a few past proposals: a funded one, an unsuccessful one, reviewer comments, and the funder call if you have it. Upload them to <strong>Gemini</strong> and run the prompts below. Then create a notebook in <strong>NotebookLM</strong>, add the same files, and run them again. Compare the two: NotebookLM sticks strictly to your documents and cites them, which is exactly what you want for this job. No proposals to hand? Any long work documents will do.
+                        <strong>The exercise:</strong> gather a few past proposals: a funded one, an unsuccessful one, reviewer comments. Upload them to <strong>Gemini</strong> and run the prompts below. Then add the same files to a <strong>NotebookLM</strong> notebook and run them again. Compare: NotebookLM sticks to your documents and cites them. No proposals to hand? Any long work documents will do.
                     </div>
 
                     <div class="exercise-note" style="margin-top:14px;"><strong>1. Pull out the reusable text</strong>: find the boilerplate you can lift into your next bid.</div>
@@ -1983,7 +2001,7 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
                 </div>
             </div>
 
-            <p style="margin:0 0 4px; max-width:720px;">It does not glance at two or three links and guess. It works like a digital detective: planning a search, then autonomously opening and reading hundreds of pages (often 300 to 600+) while you get on with other work. It rejects outdated facts and hands you one organised report, with a direct link to every source.</p>
+            <p style="margin:0 0 4px; max-width:720px;">It does not skim a few links and guess. It reads hundreds of pages properly while you get on with other work, then hands you one organised report with a link to every source.</p>
 
             <div class="quick-start" style="margin-top:18px;">
                 <div class="quick-step"><span class="step-badge">1</span> Ask one clear question</div>
@@ -2053,55 +2071,16 @@ Cite your sources throughout so I can verify and follow up on the most relevant 
             </div>
         </section>
 
-        <!-- ============ BEYOND CHAT: CANVAS & NANO BANANA ============ -->
-        <section id="beyond-chat" class="section-card">
+        <!-- ============ NANO BANANA: WORK IMAGES ============ -->
+        <section id="nano-banana" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Beyond Chat</div>
-                    <h2>Gemini can build things, not just talk</h2>
+                    <div class="eyebrow">Nano Banana</div>
+                    <h2>Work images that actually work</h2>
                 </div>
             </div>
 
-            <p style="margin:0 0 4px; max-width:720px;">Chat is just the front door. Two tools inside Gemini turn a conversation into finished work: <strong>Canvas</strong> drafts documents, quizzes and even small apps alongside you, and <strong>Nano Banana</strong> (yes, that really is the name) creates and edits images.</p>
-
-            <h4>Canvas: draft it, then shape it</h4>
-            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Open <strong>Canvas</strong> from the tools menu under Gemini's prompt box. Instead of an answer scrolling past in chat, your draft opens in a workspace beside the conversation. Highlight any sentence and tell Gemini what to change: it rewrites only that part, and the rest stays put. Perfect for documents you will actually send.</p>
-
-            <div class="quick-start" style="margin-top:14px;">
-                <div class="quick-step"><span class="step-badge">1</span> Open Canvas, paste your notes</div>
-                <div class="quick-step"><span class="step-badge">2</span> Get a full first draft</div>
-                <div class="quick-step"><span class="step-badge">3</span> Highlight and refine, line by line</div>
-            </div>
-
-            <div class="prompt-box" id="canvas-briefing">Turn my rough notes below into a one-page briefing for staff. Plain English, a clear title, three short sections with headings, and a "what you need to do" list at the end.
-
-[PASTE YOUR NOTES OR A POLICY DOCUMENT HERE]</div>
-            <button onclick="copyToClipboard('canvas-briefing')" class="btn-copy">Copy Prompt</button>
-            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then try the magic bit: highlight one paragraph and type "make this friendlier". When the draft is right, ask "turn this into a five-question quiz to test my team" and watch it build one.</em></p>
-
-            <h4 style="margin-top:24px;">Canvas can also build small working tools</h4>
-            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Describe the tool you want and Canvas writes it and previews it live. You never need to read the code. Two to try:</em></p>
-
-            <div class="exercise-note" style="margin-top:14px;"><strong>For professional services:</strong> an expense claim estimator.</div>
-            <div class="prompt-box" id="canvas-expense-app">Act as an expert web developer. I need a single-page HTML application using Tailwind CSS and vanilla JavaScript.
-
-Build an 'Expense Claim Estimator' for university staff. It should have inputs for travel zones (e.g. UK, Europe, International), number of nights, and a toggle for 'with receipts' vs 'flat rate per diem'.
-
-It should dynamically calculate the estimated total claim based on standard mock university rates as inputs change. Include a button to 'Generate Summary for Finance'.
-
-Ensure all JavaScript is contained within the single HTML file. Make it look clean and modern with a professional blue and white colour scheme.</div>
-            <button onclick="copyToClipboard('canvas-expense-app')" class="btn-copy">Copy Prompt</button>
-
-            <div class="exercise-note" style="margin-top:20px;"><strong>For teaching and learning:</strong> an interactive concept visualiser.</div>
-            <div class="prompt-box" id="canvas-concept-app">Act as an expert web developer and instructional designer. Create a single-page HTML web app using Tailwind CSS and vanilla JavaScript to teach psychology students about the Normal Distribution (bell curve).
-
-Include interactive sliders allowing the user to adjust the 'Mean' and 'Standard Deviation'. Include a canvas element that dynamically redraws the bell curve based on those slider inputs.
-
-Add short text descriptions explaining what standard deviation actually means in plain English, updating dynamically if possible. The design should be clean, engaging, accessible, and require no external assets other than Tailwind via CDN.</div>
-            <button onclick="copyToClipboard('canvas-concept-app')" class="btn-copy">Copy Prompt</button>
-
-            <h4 style="margin-top:24px;">Nano Banana: work images that actually work</h4>
-            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Nano Banana is the image tool built into Gemini. The name is silly; the results are not. It fixes the two things image tools always fumbled: it can put accurate, readable text inside an image, and it can edit a picture you already have without wrecking the rest of it.</p>
+            <p style="margin:0 0 4px; max-width:720px;">Nano Banana (yes, that really is the name) is the image tool built into Gemini. It fixes the two things image tools always fumbled: it can put accurate, readable text inside an image, and it can edit a picture you already have without wrecking the rest of it.</p>
 
             <div class="inner-grid">
                 <div class="inner-card">
@@ -2138,6 +2117,52 @@ Add short text descriptions explaining what standard deviation actually means in
             <button onclick="copyToClipboard('nano-edit-welsh')" class="btn-copy">Copy Prompt</button>
 
             <p style="margin-top:14px; font-size:13px; color:var(--apple-text-secondary);"><em>One habit before anything goes out the door: read every word in an AI image carefully, and take extra care with pictures of real people and places.</em></p>
+        </section>
+
+        <!-- ============ GEMINI CANVAS ============ -->
+        <section id="canvas" class="section-card">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Gemini Canvas</div>
+                    <h2>Draft it, then shape it</h2>
+                </div>
+            </div>
+
+            <p style="margin:0 0 4px; max-width:720px;">Canvas turns a chat into a finished document, one you would actually send. Find it in the tools menu under the box where you type. Your draft opens beside the chat: highlight any sentence, say what to change, and only that part is rewritten.</p>
+
+            <div class="quick-start" style="margin-top:14px;">
+                <div class="quick-step"><span class="step-badge">1</span> Open Canvas, paste your notes</div>
+                <div class="quick-step"><span class="step-badge">2</span> Get a full first draft</div>
+                <div class="quick-step"><span class="step-badge">3</span> Highlight and refine, line by line</div>
+            </div>
+
+            <div class="prompt-box" id="canvas-briefing">Turn my rough notes below into a one-page briefing for staff. Plain English, a clear title, three short sections with headings, and a "what you need to do" list at the end.
+
+[PASTE YOUR NOTES OR A POLICY DOCUMENT HERE]</div>
+            <button onclick="copyToClipboard('canvas-briefing')" class="btn-copy">Copy Prompt</button>
+            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then try the magic bit: highlight one paragraph and type "make this friendlier". When the draft is right, ask "turn this into a five-question quiz to test my team" and watch it build one.</em></p>
+
+            <h4 style="margin-top:24px;">Canvas can also build small working tools</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Describe the tool you want and Canvas writes it and previews it live. You never need to read the code. Two to try:</em></p>
+
+            <div class="exercise-note" style="margin-top:14px;"><strong>For professional services:</strong> an expense claim estimator.</div>
+            <div class="prompt-box" id="canvas-expense-app">Act as an expert web developer. I need a single-page HTML application using Tailwind CSS and vanilla JavaScript.
+
+Build an 'Expense Claim Estimator' for university staff. It should have inputs for travel zones (e.g. UK, Europe, International), number of nights, and a toggle for 'with receipts' vs 'flat rate per diem'.
+
+It should dynamically calculate the estimated total claim based on standard mock university rates as inputs change. Include a button to 'Generate Summary for Finance'.
+
+Ensure all JavaScript is contained within the single HTML file. Make it look clean and modern with a professional blue and white colour scheme.</div>
+            <button onclick="copyToClipboard('canvas-expense-app')" class="btn-copy">Copy Prompt</button>
+
+            <div class="exercise-note" style="margin-top:20px;"><strong>For teaching and learning:</strong> an interactive concept visualiser.</div>
+            <div class="prompt-box" id="canvas-concept-app">Act as an expert web developer and instructional designer. Create a single-page HTML web app using Tailwind CSS and vanilla JavaScript to teach psychology students about the Normal Distribution (bell curve).
+
+Include interactive sliders allowing the user to adjust the 'Mean' and 'Standard Deviation'. Include a canvas element that dynamically redraws the bell curve based on those slider inputs.
+
+Add short text descriptions explaining what standard deviation actually means in plain English, updating dynamically if possible. The design should be clean, engaging, accessible, and require no external assets other than Tailwind via CDN.</div>
+            <button onclick="copyToClipboard('canvas-concept-app')" class="btn-copy">Copy Prompt</button>
+
         </section>
 
         <!-- ============ ESSENTIALS (surfaced from Concepts) ============ -->

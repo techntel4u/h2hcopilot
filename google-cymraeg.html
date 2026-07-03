@@ -741,6 +741,22 @@
             border-color: var(--apple-blue);
         }
 
+        /* --- Session part pills (match the slide corner markers) --- */
+        .part-pill {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 999px;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        .part-1 { background: #e8f0fe; color: #1a73e8; }
+        .part-2 { background: #e6f4ea; color: #188038; }
+        .part-3 { background: #fef7e0; color: #b06000; }
+        .part-4 { background: #fce8e6; color: #c5221f; }
+
         summary::after {
             content: 'Gweld yr anogiad →';
             font-size: 12px;
@@ -1191,8 +1207,10 @@
             <!-- ============ TAB 1: EXERCISES ============ -->
             <div id="tab-exercises" class="tab-panel active" role="tabpanel">
 
+                <p style="margin:14px 0 4px; font-size:13px; color:var(--apple-text-secondary);">Mae'r tagiau lliw isod yn cyfateb i farcwyr yr adrannau yng nghornel y sleidiau, fel y gallwch weld bob amser ble rydym yn y sesiwn.</p>
+
                 <details open>
-                    <summary><span class="ex-num">01</span><span style="flex:1;">Esbonia Fe Fel Petawn i'n 5 Oed (ELI5)</span></summary>
+                    <summary><span class="ex-num">01</span><span style="flex:1;">Esbonia Fe Fel Petawn i'n 5 Oed (ELI5)</span><span class="part-pill part-1">Rhan 1</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: Deall pynciau cymhleth yn gyflym neu baratoi esboniadau syml.
@@ -1204,7 +1222,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">02</span><span style="flex:1;">Uwchlwytho ac adolygu cynigion grant</span></summary>
+                    <summary><span class="ex-num">02</span><span style="flex:1;">Uwchlwytho ac adolygu cynigion grant</span><span class="part-pill part-2">Rhan 2</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: casglwch ychydig o hen gynigion: un a ariannwyd, un aflwyddiannus, sylwadau adolygwyr. Uwchlwythwch nhw i Gemini gyda'r anogiad hwn. Dim cynigion wrth law? Fe wnaiff unrhyw ddogfennau gwaith hir y tro.
@@ -1216,7 +1234,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Yr un ffeiliau, nawr yn NotebookLM</span></summary>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Yr un ffeiliau, nawr yn NotebookLM</span><span class="part-pill part-2">Rhan 2</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: teimlwch y gwahaniaeth rhwng sgwrs gyffredinol ac atebion wedi'u seilio yn eich ffynonellau. Crëwch lyfr nodiadau yn notebooklm.google.com, ychwanegwch yr un ffeiliau, a rhedwch yr un anogiad ag yn Enghraifft 02. Yna gofynnwch y cwestiwn dilynol hwn.
@@ -1228,7 +1246,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Rhoi Ymchwil Ddofn ar waith</span></summary>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Rhoi Ymchwil Ddofn ar waith</span><span class="part-pill part-3">Rhan 3</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: rhowch swydd ymchwil i Gemini a chael adroddiad â ffynonellau yn ôl. Trowch Ymchwil Ddofn (Deep Research) ymlaen yn y ddewislen offer o dan y blwch anogiadau, gludwch hwn, a gwiriwch y cynllun y mae'n ei ddangos cyn iddo ddechrau. Gallwch olygu'r cynllun hwnnw.
@@ -1240,26 +1258,26 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Troi dogfen yn ddelwedd</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Troi dogfen yn ddelwedd</span><span class="part-pill part-4">Rhan 4</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: cael delwedd barod i sleid o ddeunydd sydd gennych eisoes. Dewiswch Creu delwedd (Create image) yn y ddewislen offer, uwchlwythwch ddogfen (neu arhoswch yn eich sgwrs grantiau), a gofynnwch.
                         </div>
                         <div class="prompt-box" id="ex5-visual">Gan ddefnyddio'r ddogfen sydd ynghlwm, crea ffeithlun glân, syml sy'n esbonio [DEWISWCH ADRAN NEU BWNC] i gynulleidfa gyffredinol. Cefndir gwyn, un lliw acen, labeli mawr darllenadwy, dim annibendod.</div>
                         <button onclick="copyToClipboard('ex5-visual')" class="btn-copy">Copïo'r Anogiad</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae rhagor o syniadau delweddau (golygu lluniau sydd gennych eisoes, posteri dwyieithog) yn adran Y Tu Hwnt i Sgwrsio ymhellach i lawr y dudalen.</em></p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae rhagor o syniadau delweddau (golygu lluniau sydd gennych eisoes, posteri dwyieithog) yn adran Nano Banana ymhellach i lawr y dudalen.</em></p>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Adeiladu teclyn bach yn Canvas</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Adeiladu teclyn bach yn Canvas</span><span class="part-pill part-4">Rhan 4</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Defnydd: gorffennwch gyda'r waw: teclyn gwe sy'n gweithio o un anogiad. Dewiswch Canvas o'r ddewislen offer, atodwch ddogfen bolisi neu ganllaw, a gludwch hwn.
                         </div>
                         <div class="prompt-box" id="ex6-canvas">Crea ap gwe cwis rhyngweithiol un dudalen sy'n profi staff ar bwyntiau allweddol y ddogfen sydd ynghlwm. Pum cwestiwn amlddewis, adborth cyfeillgar ar ôl pob ateb, a sgôr ar y diwedd. Defnyddia Tailwind CSS a JavaScript plaen mewn un ffeil HTML.</div>
                         <button onclick="copyToClipboard('ex6-canvas')" class="btn-copy">Copïo'r Anogiad</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae dau adeiladwaith Canvas arall (amcangyfrifwr treuliau a delweddwr cysyniadau rhyngweithiol) yn adran Y Tu Hwnt i Sgwrsio ymhellach i lawr y dudalen.</em></p>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Mae dau adeiladwaith Canvas arall (amcangyfrifwr treuliau a delweddwr cysyniadau rhyngweithiol) yn adran Canvas ymhellach i lawr y dudalen.</em></p>
                     </div>
                 </details>
 
@@ -1855,7 +1873,7 @@ Yn seiliedig ar y cyd-destun hwn, drafftia e-bost diweddaru i'r tîm am [Eich Pw
                 <summary><span style="flex:1;">Ymarfer ymarferol: adolygu cynigion grant (uwchlwytho a chymharu)</span></summary>
                 <div class="details-content">
                     <div class="exercise-note">
-                        <strong>Yr ymarfer:</strong> casglwch ychydig o hen gynigion: un a ariannwyd, un aflwyddiannus, sylwadau adolygwyr, a galwad y cyllidwr os yw gennych. Uwchlwythwch nhw i <strong>Gemini</strong> a rhedwch yr anogiadau isod. Yna crëwch lyfr nodiadau yn <strong>NotebookLM</strong>, ychwanegwch yr un ffeiliau, a rhedwch nhw eto. Cymharwch y ddau: mae NotebookLM yn glynu'n gaeth at eich dogfennau ac yn eu dyfynnu, sef yn union beth sydd ei angen ar gyfer y gwaith hwn. Dim cynigion wrth law? Fe wnaiff unrhyw ddogfennau gwaith hir y tro.
+                        <strong>Yr ymarfer:</strong> casglwch ychydig o hen gynigion: un a ariannwyd, un aflwyddiannus, sylwadau adolygwyr. Uwchlwythwch nhw i <strong>Gemini</strong> a rhedwch yr anogiadau isod. Yna ychwanegwch yr un ffeiliau at lyfr nodiadau <strong>NotebookLM</strong> a rhedwch nhw eto. Cymharwch: mae NotebookLM yn glynu at eich dogfennau ac yn eu dyfynnu. Dim cynigion wrth law? Fe wnaiff unrhyw ddogfennau gwaith hir y tro.
                     </div>
 
                     <div class="exercise-note" style="margin-top:14px;"><strong>1. Tynnu'r testun ailddefnyddiadwy</strong>: codi'r testun parod y gallwch ei ddefnyddio yn eich cais nesaf.</div>
@@ -1907,7 +1925,7 @@ Yn seiliedig ar y cyd-destun hwn, drafftia e-bost diweddaru i'r tîm am [Eich Pw
                 </div>
             </div>
 
-            <p style="margin:0 0 4px; max-width:720px;">Nid yw'n bwrw golwg dros ddau neu dri dolen ac yn dyfalu. Mae'n gweithio fel ditectif digidol: yn cynllunio chwiliad, ac yna'n agor a darllen cannoedd o dudalennau (yn aml 300 i 600+) ar ei ben ei hun tra byddwch chi'n bwrw ymlaen â gwaith arall. Mae'n gwrthod ffeithiau hen ffasiwn ac yn rhoi un adroddiad trefnus i chi, gyda dolen uniongyrchol i bob ffynhonnell.</p>
+            <p style="margin:0 0 4px; max-width:720px;">Nid yw'n bwrw golwg frysiog dros ambell ddolen ac yn dyfalu. Mae'n darllen cannoedd o dudalennau'n iawn tra byddwch chi'n bwrw ymlaen â gwaith arall, yna'n rhoi un adroddiad trefnus i chi gyda dolen i bob ffynhonnell.</p>
 
             <div class="quick-start" style="margin-top:18px;">
                 <div class="quick-step"><span class="step-badge">1</span> Gofynnwch un cwestiwn clir</div>
@@ -1975,55 +1993,16 @@ Nodwch eich ffynonellau drwyddi draw fel y gallaf wirio a dilyn y rhai mwyaf per
             </div>
         </section>
 
-        <!-- ============ BEYOND CHAT: CANVAS & NANO BANANA ============ -->
-        <section id="beyond-chat" class="section-card">
+        <!-- ============ NANO BANANA: WORK IMAGES ============ -->
+        <section id="nano-banana" class="section-card">
             <div class="section-header">
                 <div>
-                    <div class="eyebrow">Y Tu Hwnt i Sgwrsio</div>
-                    <h2>Gall Gemini adeiladu pethau, nid dim ond siarad</h2>
+                    <div class="eyebrow">Nano Banana</div>
+                    <h2>Delweddau gwaith sy'n gweithio go iawn</h2>
                 </div>
             </div>
 
-            <p style="margin:0 0 4px; max-width:720px;">Y drws ffrynt yn unig yw'r sgwrs. Mae dau declyn y tu mewn i Gemini yn troi sgwrs yn waith gorffenedig: mae <strong>Canvas</strong> yn drafftio dogfennau, cwisiau a hyd yn oed apiau bach wrth eich ochr, ac mae <strong>Nano Banana</strong> (ie, dyna'r enw go iawn) yn creu ac yn golygu delweddau.</p>
-
-            <h4>Canvas: drafftio, yna siapio</h4>
-            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Agorwch <strong>Canvas</strong> o'r ddewislen offer o dan flwch anogiadau Gemini. Yn lle ateb yn sgrolio heibio mewn sgwrs, mae eich drafft yn agor mewn gweithle wrth ymyl y sgwrs. Amlygwch unrhyw frawddeg a dywedwch wrth Gemini beth i'w newid: dim ond y rhan honno sy'n cael ei hailysgrifennu, ac mae'r gweddill yn aros yn ei le. Perffaith ar gyfer dogfennau y byddwch yn eu hanfon go iawn.</p>
-
-            <div class="quick-start" style="margin-top:14px;">
-                <div class="quick-step"><span class="step-badge">1</span> Agorwch Canvas, gludwch eich nodiadau</div>
-                <div class="quick-step"><span class="step-badge">2</span> Cewch ddrafft cyntaf llawn</div>
-                <div class="quick-step"><span class="step-badge">3</span> Amlygu a mireinio, linell wrth linell</div>
-            </div>
-
-            <div class="prompt-box" id="canvas-briefing">Tro fy nodiadau bras isod yn friff un dudalen i staff. Iaith glir, teitl eglur, tair adran fer gyda phenawdau, a rhestr "beth sydd angen i chi ei wneud" ar y diwedd.
-
-[GLUDWCH EICH NODIADAU NEU DDOGFEN BOLISI YMA]</div>
-            <button onclick="copyToClipboard('canvas-briefing')" class="btn-copy">Copïo'r Anogiad</button>
-            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Yna triwch y darn hud: amlygwch un paragraff a theipiwch "gwna hwn yn fwy cyfeillgar". Pan fydd y drafft yn iawn, gofynnwch am droi'r cyfan yn gwis pum cwestiwn i brofi eich tîm, a gwyliwch Gemini yn ei adeiladu.</em></p>
-
-            <h4 style="margin-top:24px;">Gall Canvas hefyd adeiladu teclynnau bach sy'n gweithio</h4>
-            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Disgrifiwch y teclyn sydd ei angen ac mae Canvas yn ei ysgrifennu ac yn dangos rhagolwg byw. Nid oes angen i chi ddarllen y cod o gwbl. Dau i roi cynnig arnynt:</em></p>
-
-            <div class="exercise-note" style="margin-top:14px;"><strong>I wasanaethau proffesiynol:</strong> amcangyfrifwr hawliadau treuliau.</div>
-            <div class="prompt-box" id="canvas-expense-app">Bydd yn ddatblygwr gwe arbenigol. Mae arnaf angen cymhwysiad HTML un dudalen gan ddefnyddio Tailwind CSS a JavaScript plaen.
-
-Adeilada 'Amcangyfrifwr Hawliadau Treuliau' ar gyfer staff prifysgol. Dylai gael mewnbynnau ar gyfer parthau teithio (e.e. y DU, Ewrop, Rhyngwladol), nifer y nosweithiau, a thogl ar gyfer 'gyda derbynebau' vs 'cyfradd unffurf y dydd'.
-
-Dylai gyfrifo cyfanswm amcangyfrifedig yr hawliad yn ddeinamig, ar sail cyfraddau prifysgol ffug safonol, wrth i'r mewnbynnau newid. Cynhwysa fotwm 'Cynhyrchu Crynodeb i'r Adran Gyllid'.
-
-Gofala fod yr holl JavaScript o fewn yr un ffeil HTML. Gwna iddo edrych yn lân ac yn fodern gyda chynllun lliw glas a gwyn proffesiynol.</div>
-            <button onclick="copyToClipboard('canvas-expense-app')" class="btn-copy">Copïo'r Anogiad</button>
-
-            <div class="exercise-note" style="margin-top:20px;"><strong>I ddysgu ac addysgu:</strong> delweddwr cysyniadau rhyngweithiol.</div>
-            <div class="prompt-box" id="canvas-concept-app">Bydd yn ddatblygwr gwe arbenigol ac yn ddylunydd addysgol. Crea ap gwe HTML un dudalen gan ddefnyddio Tailwind CSS a JavaScript plaen i ddysgu myfyrwyr seicoleg am y Dosraniad Normal (cromlin y gloch).
-
-Cynhwysa lithryddion rhyngweithiol sy'n caniatáu i'r defnyddiwr addasu'r 'Cymedr' a'r 'Gwyriad Safonol'. Cynhwysa elfen canvas sy'n ail-lunio cromlin y gloch yn ddeinamig ar sail y llithryddion hynny.
-
-Ychwanega ddisgrifiadau testun byr sy'n esbonio beth mae gwyriad safonol yn ei olygu go iawn mewn iaith glir, gan ddiweddaru'n ddeinamig os yn bosibl. Dylai'r dyluniad fod yn lân, yn ddeniadol ac yn hygyrch, heb fod angen unrhyw asedau allanol heblaw Tailwind drwy CDN.</div>
-            <button onclick="copyToClipboard('canvas-concept-app')" class="btn-copy">Copïo'r Anogiad</button>
-
-            <h4 style="margin-top:24px;">Nano Banana: delweddau gwaith sy'n gweithio go iawn</h4>
-            <p style="margin:0 0 6px; font-size:14px; color:var(--apple-text-secondary);">Nano Banana yw'r teclyn delweddau sydd wedi'i ymgorffori yn Gemini. Mae'r enw'n wirion; nid felly'r canlyniadau. Mae'n datrys y ddau beth roedd teclynnau delweddau bob amser yn baglu drostynt: gall roi testun cywir, darllenadwy y tu mewn i ddelwedd, a gall olygu llun sydd gennych eisoes heb ddifetha'r gweddill.</p>
+            <p style="margin:0 0 4px; max-width:720px;">Nano Banana (ie, dyna'r enw go iawn) yw'r teclyn delweddau sydd wedi'i ymgorffori yn Gemini. Mae'n datrys y ddau beth roedd teclynnau delweddau bob amser yn baglu drostynt: gall roi testun cywir, darllenadwy y tu mewn i ddelwedd, a gall olygu llun sydd gennych eisoes heb ddifetha'r gweddill.</p>
 
             <div class="inner-grid">
                 <div class="inner-card">
@@ -2060,6 +2039,52 @@ Ychwanega ddisgrifiadau testun byr sy'n esbonio beth mae gwyriad safonol yn ei o
             <button onclick="copyToClipboard('nano-edit-welsh')" class="btn-copy">Copïo'r Anogiad</button>
 
             <p style="margin-top:14px; font-size:13px; color:var(--apple-text-secondary);"><em>Un arfer cyn i unrhyw beth fynd allan drwy'r drws: darllenwch bob gair mewn delwedd AI yn ofalus, a chymerwch ofal ychwanegol gyda lluniau o bobl a lleoedd go iawn.</em></p>
+        </section>
+
+        <!-- ============ GEMINI CANVAS ============ -->
+        <section id="canvas" class="section-card">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Gemini Canvas</div>
+                    <h2>Drafftio, yna siapio</h2>
+                </div>
+            </div>
+
+            <p style="margin:0 0 4px; max-width:720px;">Mae Canvas yn troi sgwrs yn ddogfen orffenedig, un y byddech yn ei hanfon go iawn. Fe'i cewch yn y ddewislen offer o dan y blwch lle rydych yn teipio. Mae eich drafft yn agor wrth ymyl y sgwrs: amlygwch unrhyw frawddeg, dywedwch beth i'w newid, a dim ond y rhan honno sy'n cael ei hailysgrifennu.</p>
+
+            <div class="quick-start" style="margin-top:14px;">
+                <div class="quick-step"><span class="step-badge">1</span> Agorwch Canvas, gludwch eich nodiadau</div>
+                <div class="quick-step"><span class="step-badge">2</span> Cewch ddrafft cyntaf llawn</div>
+                <div class="quick-step"><span class="step-badge">3</span> Amlygu a mireinio, linell wrth linell</div>
+            </div>
+
+            <div class="prompt-box" id="canvas-briefing">Tro fy nodiadau bras isod yn friff un dudalen i staff. Iaith glir, teitl eglur, tair adran fer gyda phenawdau, a rhestr "beth sydd angen i chi ei wneud" ar y diwedd.
+
+[GLUDWCH EICH NODIADAU NEU DDOGFEN BOLISI YMA]</div>
+            <button onclick="copyToClipboard('canvas-briefing')" class="btn-copy">Copïo'r Anogiad</button>
+            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Yna triwch y darn hud: amlygwch un paragraff a theipiwch "gwna hwn yn fwy cyfeillgar". Pan fydd y drafft yn iawn, gofynnwch am droi'r cyfan yn gwis pum cwestiwn i brofi eich tîm, a gwyliwch Gemini yn ei adeiladu.</em></p>
+
+            <h4 style="margin-top:24px;">Gall Canvas hefyd adeiladu teclynnau bach sy'n gweithio</h4>
+            <p style="margin:0 0 6px; font-size:13px; color:var(--apple-text-secondary);"><em>Disgrifiwch y teclyn sydd ei angen ac mae Canvas yn ei ysgrifennu ac yn dangos rhagolwg byw. Nid oes angen i chi ddarllen y cod o gwbl. Dau i roi cynnig arnynt:</em></p>
+
+            <div class="exercise-note" style="margin-top:14px;"><strong>I wasanaethau proffesiynol:</strong> amcangyfrifwr hawliadau treuliau.</div>
+            <div class="prompt-box" id="canvas-expense-app">Bydd yn ddatblygwr gwe arbenigol. Mae arnaf angen cymhwysiad HTML un dudalen gan ddefnyddio Tailwind CSS a JavaScript plaen.
+
+Adeilada 'Amcangyfrifwr Hawliadau Treuliau' ar gyfer staff prifysgol. Dylai gael mewnbynnau ar gyfer parthau teithio (e.e. y DU, Ewrop, Rhyngwladol), nifer y nosweithiau, a thogl ar gyfer 'gyda derbynebau' vs 'cyfradd unffurf y dydd'.
+
+Dylai gyfrifo cyfanswm amcangyfrifedig yr hawliad yn ddeinamig, ar sail cyfraddau prifysgol ffug safonol, wrth i'r mewnbynnau newid. Cynhwysa fotwm 'Cynhyrchu Crynodeb i'r Adran Gyllid'.
+
+Gofala fod yr holl JavaScript o fewn yr un ffeil HTML. Gwna iddo edrych yn lân ac yn fodern gyda chynllun lliw glas a gwyn proffesiynol.</div>
+            <button onclick="copyToClipboard('canvas-expense-app')" class="btn-copy">Copïo'r Anogiad</button>
+
+            <div class="exercise-note" style="margin-top:20px;"><strong>I ddysgu ac addysgu:</strong> delweddwr cysyniadau rhyngweithiol.</div>
+            <div class="prompt-box" id="canvas-concept-app">Bydd yn ddatblygwr gwe arbenigol ac yn ddylunydd addysgol. Crea ap gwe HTML un dudalen gan ddefnyddio Tailwind CSS a JavaScript plaen i ddysgu myfyrwyr seicoleg am y Dosraniad Normal (cromlin y gloch).
+
+Cynhwysa lithryddion rhyngweithiol sy'n caniatáu i'r defnyddiwr addasu'r 'Cymedr' a'r 'Gwyriad Safonol'. Cynhwysa elfen canvas sy'n ail-lunio cromlin y gloch yn ddeinamig ar sail y llithryddion hynny.
+
+Ychwanega ddisgrifiadau testun byr sy'n esbonio beth mae gwyriad safonol yn ei olygu go iawn mewn iaith glir, gan ddiweddaru'n ddeinamig os yn bosibl. Dylai'r dyluniad fod yn lân, yn ddeniadol ac yn hygyrch, heb fod angen unrhyw asedau allanol heblaw Tailwind drwy CDN.</div>
+            <button onclick="copyToClipboard('canvas-concept-app')" class="btn-copy">Copïo'r Anogiad</button>
+
         </section>
 
         <!-- ============ ESSENTIALS (surfaced from Concepts) ============ -->

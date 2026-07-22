@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Matts - M365 Copilot Trial Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Apple Design System (Modern) --- */
+        /* --- Apple-inspired Design System (matches workshop.html) --- */
         :root {
             --apple-blue: #0071e3;
             --apple-blue-hover: #0077ed;
             --apple-text-primary: #1d1d1f;
-            --apple-text-secondary: #86868b;
+            --apple-text-secondary: #6e6e73;
+            --apple-text-tertiary: #86868b;
             --apple-bg-page: #f5f5f7;
             --apple-bg-card: #ffffff;
+            --apple-bg-subtle: #fbfbfd;
+            --apple-border: #e5e5ea;
+            --apple-border-light: rgba(0, 0, 0, 0.06);
+            --accent-green: #34c759;
             --radius-card: 22px;
+            --radius-medium: 14px;
             --radius-button: 980px;
-            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.04);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.08);
-            --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+            --shadow-hover: 0 4px 12px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.08);
+            --font-stack: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --border-soft: #e5e7eb;
+            --transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
             --copilot-purple: #6264a7;
+            --copilot-purple-hover: #52548f;
             --copilot-gradient: linear-gradient(135deg, #6264a7 0%, #464775 100%);
         }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: var(--font-stack);
@@ -31,122 +46,161 @@
             padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            line-height: 1.47059;
+            line-height: 1.47;
             letter-spacing: -0.022em;
         }
 
         .container {
-            max-width: 980px;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 40px 22px;
+            padding: 24px 22px 40px;
         }
 
-        /* --- Navigation --- */
+        /* --- Sticky Navigation --- */
         .global-nav {
             position: sticky;
             top: 0;
             z-index: 9999;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.85);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            height: 48px;
+            border-bottom: 1px solid var(--apple-border-light);
+            height: 52px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background-color 0.5s;
         }
 
         .nav-content {
             display: flex;
-            gap: 30px;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--apple-text-primary);
+            letter-spacing: -0.01em;
         }
 
         .global-nav a {
             color: var(--apple-text-primary);
             text-decoration: none;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 400;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
+            opacity: 0.75;
+            transition: opacity 0.2s ease, color 0.2s ease;
         }
 
         .global-nav a:hover {
             opacity: 1;
-            color: var(--apple-blue);
+            color: var(--copilot-purple);
         }
 
-        /* --- Typography --- */
-        header {
+        @media (max-width: 600px) {
+            .nav-content { gap: 18px; }
+            .nav-brand { display: none; }
+            .global-nav a { font-size: 12px; }
+        }
+
+        /* --- Hero --- */
+        header.hero {
             text-align: center;
-            padding: 80px 0 50px;
-            animation: fadeIn 0.8s ease-out;
+            padding: 64px 0 40px;
         }
 
         h1 {
-            font-size: 56px;
-            line-height: 1.07143;
+            font-size: 48px;
+            line-height: 1.05;
             font-weight: 700;
-            letter-spacing: -0.005em;
-            margin-bottom: 10px;
+            letter-spacing: -0.025em;
+            margin: 0 0 14px;
         }
 
         .subtitle {
-            font-size: 24px;
-            line-height: 1.16667;
-            font-weight: 400;
-            letter-spacing: 0.009em;
-            color: var(--apple-text-secondary);
+            font-size: 12px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: var(--apple-text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin: 0;
         }
 
-        .trial-badge {
-            display: inline-block;
-            background: var(--copilot-gradient);
-            color: white;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-top: 15px;
-            letter-spacing: 0.02em;
+        .hero-intro {
+            color: var(--apple-text-secondary);
+            max-width: 650px;
+            margin: 18px auto 26px;
+            font-size: 17px;
+            line-height: 1.5;
         }
 
         h2 {
-            font-size: 40px;
-            line-height: 1.1;
+            font-size: 30px;
+            line-height: 1.15;
             font-weight: 700;
-            letter-spacing: 0;
-            margin-bottom: 15px;
+            letter-spacing: -0.01em;
+            margin: 0 0 8px;
         }
 
         h3 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
-        }
-        
-        h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--copilot-purple);
-            margin: 25px 0 10px 0;
+            margin: 0 0 12px;
         }
 
-        /* --- Cards --- */
+        h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--copilot-purple);
+            margin: 20px 0 8px 0;
+        }
+
+        /* --- Section Cards --- */
         .section-card {
             background: var(--apple-bg-card);
             border-radius: var(--radius-card);
-            padding: 60px;
-            margin-bottom: 40px;
+            padding: 36px 40px;
+            margin-bottom: 24px;
             box-shadow: var(--shadow-card);
         }
 
-        /* --- Getting Started --- */
+        @media (max-width: 734px) {
+            .section-card { padding: 24px 20px; }
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .section-header p {
+            margin: 0;
+            color: var(--apple-text-secondary);
+            font-size: 15px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--copilot-purple);
+            margin-bottom: 8px;
+        }
+
+        /* --- Quick Launch Buttons --- */
         .quick-launch {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             justify-content: center;
-            margin: 30px 0;
+            margin: 0 0 10px;
         }
 
         .launch-btn {
@@ -170,7 +224,7 @@
         }
 
         .launch-btn-secondary {
-            background: var(--apple-bg-page);
+            background: var(--apple-bg-card);
             color: var(--apple-text-primary);
             box-shadow: none;
             border: 1px solid rgba(0,0,0,0.1);
@@ -190,10 +244,10 @@
         }
 
         .integration-card {
-            background: #fbfbfd;
+            background: var(--apple-bg-subtle);
             border-radius: 18px;
             padding: 30px;
-            border: 1px solid rgba(0,0,0,0.02);
+            border: 1px solid var(--apple-border-light);
             transition: var(--transition);
         }
 
@@ -224,7 +278,7 @@
 
         .try-prompt {
             font-size: 13px;
-            font-family: "SF Mono", Menlo, monospace;
+            font-family: "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
             background: rgba(98, 100, 167, 0.08);
             color: var(--copilot-purple);
             padding: 10px 14px;
@@ -239,119 +293,129 @@
             background: rgba(98, 100, 167, 0.15);
         }
 
-        /* --- Activity Card --- */
-        .activity-card {
-            background: linear-gradient(135deg, #f8f8fa 0%, #fff 100%);
-            border-radius: 18px;
-            padding: 30px;
-            text-decoration: none;
-            color: var(--apple-text-primary);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            border: 2px solid rgba(98, 100, 167, 0.2);
-        }
-
-        .activity-card:hover {
-            transform: scale(1.02);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--copilot-purple);
-        }
-
-        .activity-number {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--copilot-purple);
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        /* --- Accordions --- */
+        /* --- Details / Accordions --- */
         details {
-            border-bottom: 1px solid #e5e5ea;
-            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--apple-border);
+            transition: background-color 0.2s ease;
         }
-        
+
         details:last-child { border-bottom: none; }
 
         summary {
-            padding: 24px 0;
+            padding: 16px 12px;
+            margin: 0 -12px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 19px;
+            font-size: 17px;
             font-weight: 600;
             color: var(--apple-text-primary);
             list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
             outline: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        summary:hover {
+            background-color: var(--apple-bg-page);
+            color: var(--copilot-purple);
         }
 
         summary::-webkit-details-marker { display: none; }
+        summary::-moz-list-bullet { list-style-type: none; }
 
         summary::after {
-            content: '+';
-            font-size: 24px;
-            font-weight: 300;
-            color: var(--copilot-purple);
-            transition: transform 0.3s ease;
+            content: 'View \2192';
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            background: #424245;
+            padding: 6px 14px;
+            border-radius: var(--radius-button);
+            transition: var(--transition);
+            margin-left: auto;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        details:hover summary::after {
+            background: var(--apple-text-primary);
+            transform: translateX(2px);
         }
 
         details[open] summary::after {
-            transform: rotate(45deg);
+            content: 'Hide';
+            background: #d2d2d7;
+            color: var(--apple-text-primary);
         }
 
-        details[open] summary {
-            color: var(--copilot-purple);
+        details[open]:hover summary::after {
+            background: #c7c7cc;
+            transform: none;
         }
+
+        details[open] summary { color: var(--copilot-purple); }
 
         .details-content {
-            padding-bottom: 30px;
-            animation: slideDown 0.3s ease-out;
+            padding: 0 0 24px 0;
+            animation: slideDown 0.25s ease-out;
         }
 
         @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
+            from { opacity: 0; transform: translateY(-6px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .exercise-note {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--apple-text-secondary);
-            margin-bottom: 15px;
-            font-weight: 500;
+            margin-bottom: 14px;
+            line-height: 1.5;
         }
+
+        .exercise-note strong { color: var(--apple-text-primary); }
 
         /* --- Prompt Box --- */
         .prompt-box {
-            background-color: #f5f5f7;
+            background-color: #ffffff;
             padding: 20px;
-            border-radius: 12px;
-            font-family: "SF Mono", Menlo, monospace;
+            border-radius: var(--radius-medium);
+            font-family: "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
             font-size: 13px;
             line-height: 1.6;
-            color: #333;
-            margin: 10px 0 15px 0;
+            color: #2c2c2e;
+            margin: 12px 0 14px 0;
             white-space: pre-wrap;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid var(--border-soft);
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
         }
 
         /* --- Buttons --- */
         .btn-copy {
-            background-color: #e8e8ed;
-            color: var(--apple-text-primary);
+            background-color: var(--copilot-purple);
+            color: white;
             font-size: 12px;
-            padding: 8px 16px;
+            padding: 9px 18px;
             border-radius: var(--radius-button);
             border: none;
             cursor: pointer;
             font-weight: 600;
-            transition: background-color 0.2s;
+            transition: var(--transition);
+            font-family: inherit;
+            box-shadow: 0 2px 6px rgba(98, 100, 167, 0.22);
         }
 
         .btn-copy:hover {
-            background-color: #d2d2d7;
+            background-color: var(--copilot-purple-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(98, 100, 167, 0.32);
+        }
+
+        .btn-copy.success {
+            background-color: var(--accent-green);
+            box-shadow: 0 2px 6px rgba(52, 199, 89, 0.28);
         }
 
         /* --- Info Cards Grid --- */
@@ -365,7 +429,7 @@
         .info-card {
             background: var(--apple-bg-page);
             padding: 20px;
-            border-radius: 12px;
+            border-radius: var(--radius-medium);
             text-align: center;
         }
 
@@ -377,61 +441,93 @@
         .info-title { font-size: 15px; display: block; margin-bottom: 5px; color: var(--apple-text-primary); font-weight: 600; }
         .info-desc { font-size: 13px; color: var(--apple-text-secondary); margin: 0; line-height: 1.4; }
 
-        /* --- Meeting Value Highlight --- */
-        .value-highlight {
-            background: linear-gradient(135deg, rgba(98, 100, 167, 0.08) 0%, rgba(98, 100, 167, 0.03) 100%);
-            border-left: 4px solid var(--copilot-purple);
-            padding: 20px 25px;
-            border-radius: 0 12px 12px 0;
-            margin: 20px 0;
+        /* --- Contact --- */
+        .contact-strip {
+            text-align: center;
+            padding: 28px 24px;
         }
 
-        .value-highlight strong {
-            color: var(--copilot-purple);
+        .contact-strip h3 { margin-bottom: 6px; }
+        .contact-strip p { color: var(--apple-text-secondary); margin: 0 0 14px; font-size: 14px; }
+
+        .contact-emails {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 14px;
         }
+
+        .contact-link { color: var(--apple-blue); text-decoration: none; font-weight: 600; }
+        .contact-link:hover { text-decoration: underline; }
 
         /* --- Footer --- */
         footer {
             text-align: center;
-            padding: 40px 0;
-            color: var(--apple-text-secondary);
+            padding: 32px 0 24px;
+            color: var(--apple-text-tertiary);
             font-size: 12px;
-            border-top: 1px solid #e5e5ea;
-            margin-top: 60px;
         }
-        
-        .contact-link { color: var(--apple-blue); text-decoration: none; }
-        .contact-link:hover { text-decoration: underline; }
+
+        footer a { color: var(--apple-text-secondary); }
 
         /* --- Utilities --- */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 734px) {
-            h1 { font-size: 40px; }
-            h2 { font-size: 32px; }
-            .section-card { padding: 30px 24px; }
-            .container { padding-top: 20px; }
+        @media (max-width: 600px) {
+            h1 { font-size: 32px; letter-spacing: -0.02em; }
+            h2 { font-size: 24px; }
+            header.hero { padding: 40px 0 28px; }
+            .subtitle { letter-spacing: 0.14em; }
             .quick-launch { flex-direction: column; align-items: center; }
+        }
+
+        /* Print-friendly */
+        @media print {
+            .global-nav, .integration-grid { break-inside: avoid; }
+            details { break-inside: avoid; }
+            details[open] summary::after { display: none; }
         }
     </style>
     <script>
         function copyToClipboard(id) {
-            const promptText = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(promptText).then(() => {
-                const button = document.querySelector(`button[onclick="copyToClipboard('${id}')"]`);
-                const originalText = button.innerText;
-                button.innerText = "Copied";
-                button.style.backgroundColor = "#34c759";
-                button.style.color = "white";
-                setTimeout(() => {
-                    button.innerText = originalText;
-                    button.style.backgroundColor = "#e8e8ed";
-                    button.style.color = "var(--apple-text-primary)";
-                }, 2000);
-            });
+            var el = document.getElementById(id);
+            if (!el) { return; }
+            var text = el.innerText;
+            var btn = document.querySelector("button[onclick=\"copyToClipboard('" + id + "')\"]");
+            var done = function () {
+                if (!btn) { return; }
+                var original = btn.innerText;
+                btn.innerText = 'Copied';
+                btn.classList.add('success');
+                setTimeout(function () {
+                    btn.innerText = original;
+                    btn.classList.remove('success');
+                }, 1800);
+            };
+
+            // Modern clipboard API with fallback for older Edge or restricted contexts
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+            } else {
+                fallbackCopy(text);
+                done();
+            }
+        }
+
+        function fallbackCopy(text) {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta);
         }
     </script>
 </head>
@@ -439,40 +535,44 @@
 
     <nav class="global-nav">
         <div class="nav-content">
+            <span class="nav-brand">The Matts</span>
             <a href="#getting-started">Get Started</a>
             <a href="#integrations">App Integrations</a>
             <a href="#exercises">Exercises</a>
             <a href="#more-examples">More Examples</a>
-            <a href="#best-practices">Best Practices</a>
         </div>
     </nav>
 
     <div class="container">
-        <header>
+        <header class="hero">
             <h1>M365 Copilot Trial</h1>
-            <p style="color: var(--apple-text-secondary); max-width: 650px; margin: 15px auto 25px; font-size: 19px; line-height: 1.5;">
-                Your Copilot licence gives you AI assistance across Teams, Outlook, Word, Excel, PowerPoint and more. Here's how to begin.
+            <p class="subtitle">Digital Productivity &amp; AI in the Workplace</p>
+            <p class="hero-intro">
+                Your M365 Copilot licence gives you AI assistance across Teams, Outlook, Word, Excel, PowerPoint and more. Here's how to begin.
             </p>
             <div class="quick-launch">
-                <a href="https://m365.cloud.microsoft/chat" target="_blank" class="launch-btn">
-                    💬 Open Copilot Chat
+                <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener" class="launch-btn">
+                    💬 Open M365 Copilot
                 </a>
-                <a href="https://m365.cloud.microsoft/copilot-prompts" target="_blank" class="launch-btn launch-btn-secondary">
+                <a href="https://m365.cloud.microsoft/copilot-prompts" target="_blank" rel="noopener" class="launch-btn launch-btn-secondary">
                     📚 Prompt Gallery
                 </a>
             </div>
         </header>
 
         <section id="getting-started" class="section-card">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <h2>Getting Started</h2>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Start Here</div>
+                    <h2>Getting Started</h2>
+                </div>
             </div>
 
             <div class="info-grid">
                 <div class="info-card">
                     <div class="info-icon">🔑</div>
                     <strong class="info-title">Sign In</strong>
-                    <p class="info-desc">Use your work Microsoft account to access Copilot features</p>
+                    <p class="info-desc">Use your work Microsoft account to access M365 Copilot features</p>
                 </div>
                 <div class="info-card">
                     <div class="info-icon">💬</div>
@@ -488,11 +588,12 @@
 
         </section>
 <section id="integrations" class="section-card">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2>App Integrations</h2>
-                <p style="color: var(--apple-text-secondary); max-width: 600px; margin: 10px auto 0;">
-                    Use Copilot directly in certain Microsoft Apps. Use the <strong>/ (Forward Slash)</strong> to anchor your prompts to specific files, people, meetings, sharepoints etc.
-                </p>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Copilot in Your Apps</div>
+                    <h2>App Integrations</h2>
+                </div>
+                <p>Use M365 Copilot directly in certain Microsoft Apps. Use the <strong>/ (Forward Slash)</strong> to anchor your prompts to specific files, people, meetings, sharepoints etc.</p>
             </div>
 
             <div class="integration-grid">
@@ -507,8 +608,18 @@
                 </div>
 
                 <div class="integration-card">
+                    <span class="integration-icon">📋</span>
+                    <span class="integration-title">Facilitator (Teams Meetings)</span>
+                    <p class="integration-desc">An AI meeting assistant. Add the Facilitator agent to a meeting and it keeps the agenda on track, takes live shared notes and captures tasks as you talk.</p>
+
+                    <div class="try-prompt" style="cursor: default;">
+                        <strong>Turn on:</strong> Schedule meeting → Copilot → Facilitator (or add mid-meeting)
+                    </div>
+                </div>
+
+                <div class="integration-card">
                     <span class="integration-icon">💬</span>
-                    <span class="integration-title">Copilot Chat</span>
+                    <span class="integration-title">M365 Copilot Chat</span>
                     <p class="integration-desc">Your central brain. It connects the dots between your files, emails, and chats.</p>
                     
                     <div class="try-prompt" onclick="navigator.clipboard.writeText('Draft a briefing note on [Project Name] by synthesizing the key points from /[File: Strategy Doc] and my recent emails with /[Person: Project Lead].')">
@@ -556,6 +667,16 @@
                     </div>
                 </div>
 
+                <div class="integration-card">
+                    <span class="integration-icon">🤖</span>
+                    <span class="integration-title">Agent Mode (Word · Excel · PowerPoint)</span>
+                    <p class="integration-desc">Now the default Copilot experience in the apps. Give it a goal and it plans, executes and checks multi-step edits on your open file, not just a first draft.</p>
+
+                    <div class="try-prompt" onclick="navigator.clipboard.writeText('Build a monthly budget tracker in this workbook: expense categories, a summary dashboard and a chart of spend by category. Show me your plan first.')">
+                        <strong>Delegate:</strong> "Build a budget tracker, plan first"
+                    </div>
+                </div>
+
             </div>
 
             <p style="text-align: center; margin-top: 25px; font-size: 13px; color: var(--apple-text-secondary);">
@@ -564,11 +685,12 @@
         </section>
     
         <section id="exercises" class="section-card">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2>Exercises</h2>
-                <p style="color: var(--apple-text-secondary); max-width: 600px; margin: 10px auto 0;">
-                    Hands-on activities to explore Copilot's capabilities.
-                </p>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Hands-On</div>
+                    <h2>Exercises</h2>
+                </div>
+                <p>Hands-on activities to explore M365 Copilot's capabilities.</p>
             </div>
 <details open>
                 <summary>Exercise 1 – My First M365 Prompt (The Roast)</summary>
@@ -774,17 +896,60 @@ Present the results in a simple list."</div>
         <p class="exercise-note">
             <strong>Part B: Share your Experiments.</strong> Share what's going well and what's less well, that empowers shared learning
         </p>
-
+    </div>
 </details>
         </section>
 
         <section id="more-examples" class="section-card">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2>More Copilot Chat Examples</h2>
-                <p style="color: var(--apple-text-secondary); max-width: 600px; margin: 10px auto 0;">
-                    Advanced prompts that combine multiple M365 data sources.
-                </p>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Go Further</div>
+                    <h2>More M365 Copilot Examples</h2>
+                </div>
+                <p>Advanced prompts that combine multiple M365 data sources.</p>
             </div>
+
+            <details>
+                <summary>Email Triage (Past 7 Days)</summary>
+                <div class="details-content">
+                    <p class="exercise-note">A daily starter: turns a week of inbox noise into three clear piles, with anything urgent or schedulable flagged.</p>
+                    <div class="prompt-box" id="more-triage7">"Review all emails from the past 7 days. Sort into Critical, Action Needed, and Can Wait. Highlight anything that needs scheduling or immediate attention."</div>
+                    <button onclick="copyToClipboard('more-triage7')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>Find a Meeting Time</summary>
+                <div class="details-content">
+                    <p class="exercise-note">Uses the / anchor so Copilot checks the real calendars of the people you pick, not just yours.</p>
+                    <div class="prompt-box" id="more-meetingtime">"Suggest a few time options for a meeting with /[Person]."</div>
+                    <button onclick="copyToClipboard('more-meetingtime')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>Task Lists (Daily &amp; Project)</summary>
+                <div class="details-content">
+                    <p class="exercise-note">Two flavours: a personal daily list ranked by urgency and importance, and a project list ordered by deadlines and dependencies.</p>
+
+                    <h4>Daily</h4>
+                    <div class="prompt-box" id="more-tasklist-daily">"Create a daily task list prioritising urgent and important items."</div>
+                    <button onclick="copyToClipboard('more-tasklist-daily')" class="btn-copy">Copy Prompt</button>
+
+                    <h4>Project</h4>
+                    <div class="prompt-box" id="more-tasklist-project">"Create a prioritised task list for [project] based on deadlines and dependencies."</div>
+                    <button onclick="copyToClipboard('more-tasklist-project')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>Client Relationship Recap</summary>
+                <div class="details-content">
+                    <p class="exercise-note">Pulls every touchpoint with a client into one briefing, so you walk into the next meeting knowing what was promised and what is still open.</p>
+                    <div class="prompt-box" id="more-clientrecap">"Provide a detailed summary of the recent interactions we've had with [client name], including dates, participants, topics discussed and outcomes. Highlight any commitments made or pending issues that need to be addressed in the upcoming meeting."</div>
+                    <button onclick="copyToClipboard('more-clientrecap')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
 
             <details>
                 <summary>Conflict Resolution</summary>
@@ -864,6 +1029,24 @@ Present the results in a simple list."</div>
 
            
 
+            <details>
+                <summary>Calendar &amp; Capacity Audit (Cowork)</summary>
+                <div class="details-content">
+                    <p class="exercise-note">An agentic workflow: Copilot audits your week with Work IQ, checks meeting attendees against the org hierarchy, and proposes a plan to reclaim focus time. Nothing is changed until you approve the plan.</p>
+                    <div class="prompt-box" id="more-calaudit">"Execute a comprehensive audit of my Outlook calendar for the upcoming week to optimize my capacity. First, leverage Work IQ to generate an analytical summary detailing the total hours committed to synchronous meetings, identify the days with the highest meeting density, and locate any existing uninterrupted focus blocks of two hours or more. Before making any modifications to my schedule, ask me to define my top three strategic objectives for the week and outline any personal time boundaries I must protect. Additionally, analyze the attendee lists of all my scheduled meetings against our Microsoft Entra ID organizational hierarchy to determine which recurring syncs or peer-level meetings are the lowest risk to reschedule. Once I provide my constraints, present a proposed execution plan that categorizes meetings to accept, recurring meetings to decline or shift to asynchronous Teams updates, and proposes new protected focus blocks. Do not decline any meetings, alter any calendar events, or send cancellation emails until I explicitly approve the specific execution plan."</div>
+                    <button onclick="copyToClipboard('more-calaudit')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>Meeting Recap Deck (Cowork)</summary>
+                <div class="details-content">
+                    <p class="exercise-note">Chains Teams transcripts, shared files and PowerPoint generation into one workflow: a week of project meetings becomes an executive deck, checked with you before it builds.</p>
+                    <div class="prompt-box" id="more-recapdeck">"Create a comprehensive executive PowerPoint deck summarizing the key outcomes, strategic decisions, and identified risks from all project-related meetings I attended over the last seven days. Access the Work IQ semantic index to pull the relevant meeting transcripts from Teams and retrieve any supporting PDF or Excel files that were shared within those specific meeting chats. Before building the presentation, present a list of the meetings you intend to include and ask me to define the intended audience (e.g., executive leadership, internal engineering team, or external client) so you can accurately adjust the required level of detail. Once I approve the meeting list and audience persona, build a PowerPoint deck utilizing our corporate SharePoint master template. Structure the deck to include a title slide with the date range, one summary slide per major workstream grouping related meetings, a dedicated slide for 'Key Decisions Made' with assigned personnel owners, and a final 'Open Items &amp; Next Steps' slide mapping due dates. Save the finalized deck to my OneDrive in the '/Presentations/Recaps/' folder and send me a direct Teams notification link when the task is complete."</div>
+                    <button onclick="copyToClipboard('more-recapdeck')" class="btn-copy">Copy Prompt</button>
+                </div>
+            </details>
+
     <details>
     <summary>Work vs Web Mode</summary>
     <div class="details-content">
@@ -924,144 +1107,27 @@ Present the results in a simple list."</div>
 </details>
         </section>
 
-        <section id="best-practices" class="section-card">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2>Best Practices</h2>
+
+
+        <section id="contact" class="section-card contact-strip">
+            <h3>Questions?</h3>
+            <p>We're here to help:</p>
+            <div class="contact-emails">
+                <span>Dr. Matt Mort: <a href="mailto:mortm@cardiff.ac.uk" class="contact-link">mortm@cardiff.ac.uk</a></span>
+                <span>Mr. Matt Hayden: <a href="mailto:haydenmj1@cardiff.ac.uk" class="contact-link">haydenmj1@cardiff.ac.uk</a></span>
             </div>
-
-            <details>
-                <summary>Responsible AI</summary>
-                <div class="details-content">
-                    <div class="exercise-note">
-                        <strong>The Human in the Loop:</strong> AI is a tool to enhance your work, not replace your judgement.
-                    </div>
-
-                    <div class="info-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); align-items: start;">
-                        <div class="info-card info-card-left">
-                            <div class="info-icon">🤝</div>
-                            <strong class="info-title">Human-Centric Approach</strong>
-                            <ul style="padding-left: 20px; margin: 10px 0 0 0; font-size: 14px; color: var(--apple-text-secondary); line-height: 1.6;">
-                                <li>It's your assistant (augment, don't replace)</li>
-                                <li>Protect critical skills: use AI to enhance them</li>
-                                <li>Target repetitive tasks first</li>
-                            </ul>
-                        </div>
-                        <div class="info-card info-card-left">
-                            <div class="info-icon">✅</div>
-                            <strong class="info-title">Practical Checks</strong>
-                            <ul style="padding-left: 20px; margin: 10px 0 0 0; font-size: 14px; color: var(--apple-text-secondary); line-height: 1.6;">
-                                <li><strong>Always</strong> review the output</li>
-                                <li>Be transparent: "I used AI for this"</li>
-                                <li>Use IT-approved AI tools only</li>
-                            </ul>
-                        </div>
-                        <div class="info-card info-card-left">
-                            <div class="info-icon">⚖️</div>
-                            <strong class="info-title">Responsibility & Ethics</strong>
-                            <ul style="padding-left: 20px; margin: 10px 0 0 0; font-size: 14px; color: var(--apple-text-secondary); line-height: 1.6;">
-                                <li>Watch for bias and hallucinations</li>
-                                <li>Own the results: AI doesn't take the blame</li>
-                                <li>Align usage with your values</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </details>
-
-            <details>
-                <summary>Private AI (Running Models Locally)</summary>
-                <div class="details-content">
-                    <div class="exercise-note">
-                        <strong>You Are In Charge:</strong> You don't always need the cloud. Running AI locally offers total privacy, zero fees, and works offline.
-                    </div>
-
-                    <div class="info-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                        <div class="info-card info-card-left">
-                            <div class="info-icon">🛡️</div>
-                            <strong class="info-title">Total Privacy & Control</strong>
-                            <ul style="padding-left: 20px; margin: 10px 0 0 0; font-size: 13px; color: var(--apple-text-secondary); line-height: 1.5;">
-                                <li>No data leaves your device</li>
-                                <li>Safe for sensitive information</li>
-                                <li>Full IP protection</li>
-                            </ul>
-                        </div>
-                        <div class="info-card info-card-left">
-                            <div class="info-icon">⚡</div>
-                            <strong class="info-title">Cost & Efficiency</strong>
-                            <ul style="padding-left: 20px; margin: 10px 0 0 0; font-size: 13px; color: var(--apple-text-secondary); line-height: 1.5;">
-                                <li>Open source models = zero fees</li>
-                                <li>Offline capable</li>
-                                <li>Lower energy use</li>
-                            </ul>
-                        </div>
-                        <div class="info-card info-card-left" style="background-color: #f0f8ff; border: 1px solid rgba(0, 113, 227, 0.2);">
-                            <div class="info-icon">🎓</div>
-                            <strong class="info-title" style="color: var(--apple-blue);">Private AI Workshop</strong>
-                            <p class="info-desc" style="font-weight: 500;">
-                                We run a 2-hour practical session to get you started with Private AI on your laptop.
-                            </p>
-                            <a href="mailto:haydenmj1@cardiff.ac.uk" style="font-size: 13px; color: var(--apple-blue); text-decoration: none; font-weight: 600;">Contact us for details →</a>
-                        </div>
-                    </div>
-                </div>
-            </details>
-
-            <details>
-                <summary>Your AI Road Map (Community Approach)</summary>
-                <div class="details-content">
-                    <div style="text-align: center; margin-bottom: 25px;">
-                        <p style="color: var(--apple-text-secondary); margin: 5px 0 15px 0; font-size: 17px;">
-                            No one knows everything about AI, but together we can figure it out faster.
-                        </p>
-                        <a href="https://dx.doi.org/10.2139/ssrn.5607191" target="_blank" style="display: inline-block; font-size: 13px; font-weight: 600; color: var(--copilot-purple); text-decoration: none; background: rgba(98, 100, 167, 0.1); padding: 8px 16px; border-radius: 980px;">
-                            📄 Read our Paper on the AI Community Approach ↗
-                        </a>
-                    </div>
-
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <div class="info-icon">🧠</div>
-                            <strong class="info-title">Mindset</strong>
-                            <p class="info-desc">Be curious. Ask: "Could this be useful?"</p>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">💬</div>
-                            <strong class="info-title">Conversations</strong>
-                            <p class="info-desc">Share learning, wins, and fails.</p>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">🧪</div>
-                            <strong class="info-title">Experiments</strong>
-                            <p class="info-desc">Learn by doing. Build expertise.</p>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">🤝</div>
-                            <strong class="info-title">Community</strong>
-                            <p class="info-desc">Turn scattered experiments into shared learning.</p>
-                        </div>
-                    </div>
-                </div>
-            </details>
         </section>
 
-        <section class="section-card" style="text-align: center; padding: 50px;">
-            <h3>Contact Information</h3>
-            <p style="color: var(--apple-text-secondary); margin-bottom: 20px;">Questions? We're here to help:</p>
-            <p style="margin-bottom: 0;">
-                Dr. Matt Mort: <a href="mailto:mortm@cardiff.ac.uk" class="contact-link">mortm@cardiff.ac.uk</a><br>
-                Mr. Matt Hayden: <a href="mailto:haydenmj1@cardiff.ac.uk" class="contact-link">haydenmj1@cardiff.ac.uk</a>
-            </p>
-        </section>
-    </div>
-
-    <footer>
+        <footer>
         <p>Workshop facilitated by Dr. Matt Mort and Mr. Matt Hayden. Materials © 2025.</p>
-        <p style="margin-top: 12px;">
-            <a href="https://dx.doi.org/10.2139/ssrn.5607191" target="_blank" class="contact-link">
+        <p style="margin-top: 8px;">
+            <a href="https://dx.doi.org/10.2139/ssrn.5607191" target="_blank" rel="noopener" class="contact-link">
                 Read our paper: AI The Community Approach ↗
             </a>
         </p>
-    </footer>
+        </footer>
+
+    </div>
 
 </body>
 </html>

@@ -1150,7 +1150,7 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">25</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">13</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">33</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
 
@@ -1635,6 +1635,255 @@ My only skill is pretending to listen in Zoom calls.</textarea>
 
             <!-- ============ TAB 2: PROMPT RECIPES ============ -->
             <div id="tab-recipes" class="tab-panel" role="tabpanel">
+
+                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Reception</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Front of house juggles calls, visitors and quick-turnaround messages. Copilot helps you capture phone notes cleanly, confirm appointments, hand over between shifts and keep parent-facing wording warm and clear.</p>
+
+                <details>
+                    <summary><span style="flex:1;">Phone Message Summary</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="rec-phone-note">"Act as a school receptionist. Draft a friendly phone message summary for a colleague, based on this note I jotted down during a call. Present it as a short message, no more than 3 sentences: [paste note]"</div>
+                        <button onclick="copyToClipboard('rec-phone-note')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample note:</em></p>
+                        <div class="prompt-box" id="rec-phone-note-sample">"parent called about swimming gala date - asked if it's still on for the 12th, wants email confirmation, no rush"</div>
+                        <button onclick="copyToClipboard('rec-phone-note-sample')" class="btn-copy">Copy Sample Note</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Admissions Tour Confirmation</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="rec-tour-confirm">"Act as a school receptionist. Write a short, welcoming email confirming a family's Admissions tour on [DATE] at [TIME], noting they should bring photo ID and arrive 10 minutes early. Keep it warm and welcoming. Structure it as a short email under 120 words."</div>
+                        <button onclick="copyToClipboard('rec-tour-confirm')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Visitor Sign-In Handover</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="rec-signin-handover">"Act as a school receptionist. Turn this list of today's visitor sign-ins into a clear, concise summary for the morning handover. Present it as a short bulleted note: [paste list]"</div>
+                        <button onclick="copyToClipboard('rec-signin-handover')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample sign-in list:</em></p>
+                        <div class="prompt-box" id="rec-signin-handover-sample">"9.10am - Delivery, office supplies, signed in and out by 9.20
+9.45am - Parent, Admissions meeting, signed out 10.30
+11.00am - Contractor, boiler service, still on site
+1.15pm - Parent tour group (3 visitors), Admissions, signed out 2.00"</div>
+                        <button onclick="copyToClipboard('rec-signin-handover-sample')" class="btn-copy">Copy Sample List</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Polite Holding Reply</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="rec-holding-reply">"Act as a school receptionist. Draft a polite holding reply letting the sender know someone will get back to them within 24 hours. Structure it as a short email, no more than 80 words: [paste enquiry]"</div>
+                        <button onclick="copyToClipboard('rec-holding-reply')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample enquiry:</em></p>
+                        <div class="prompt-box" id="rec-holding-reply-sample">"Hi, I emailed last week about transferring my son into Year 5 in January and haven't heard back, could someone let me know the process? Thanks."</div>
+                        <button onclick="copyToClipboard('rec-holding-reply-sample')" class="btn-copy">Copy Sample Enquiry</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Parent-Friendly Notice Rewrite</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="rec-parent-notice">"Act as a school receptionist. Rewrite this notice so it's clear and friendly for parents. Structure it as a short notice, no more than 4 sentences: [paste notice]"</div>
+                        <button onclick="copyToClipboard('rec-parent-notice')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample notice:</em></p>
+                        <div class="prompt-box" id="rec-parent-notice-sample">"please be advised gate opening times will change effective monday, gates will open at 745 instead of 730, this is due to staffing changes, thank you for your cooperation"</div>
+                        <button onclick="copyToClipboard('rec-parent-notice-sample')" class="btn-copy">Copy Sample Notice</button>
+                    </div>
+                </details>
+
+                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Office / Administration</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">The office keeps everything moving. Copilot turns rough notes into formal minutes, tidies letters without changing the facts, untangles long email chains and drafts notices and checklists in seconds.</p>
+
+                <details>
+                    <summary><span style="flex:1;">Rough Notes &rarr; Formal Minutes</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="admin-minutes">"Act as an office administrator. Turn these rough meeting notes into formal minutes, in a professional tone, with clear headings: [paste notes]"</div>
+                        <button onclick="copyToClipboard('admin-minutes')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample WAPTA meeting notes:</em></p>
+                        <div class="prompt-box" id="admin-minutes-sample">"wapta mtg agenda items: bake sale date confirm still oct 3, new committee member gemma joining as treasurer, funds raised last term 2400 to be spent on library corner, discussed uniform swap shop trial for jan, need volunteers for bearly used shop rota"</div>
+                        <button onclick="copyToClipboard('admin-minutes-sample')" class="btn-copy">Copy Sample Notes</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">All-Staff Notice</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="admin-staff-notice">"Act as an office administrator. Draft a short all-staff notice reminding everyone about the Staff Development Week schedule: admin session 9.30-11am, teacher setup 11am-1pm, full staff workshop 1.30-3pm, all in the Conference Room. Keep the tone friendly and clear. Structure it as a short notice under 100 words."</div>
+                        <button onclick="copyToClipboard('admin-staff-notice')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Tidy a Letter</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="admin-tidy-letter">"Act as an office administrator. Tidy this letter to make it sound more professional, without changing any of the facts. Structure it as a short formal letter: [paste letter]"</div>
+                        <button onclick="copyToClipboard('admin-tidy-letter')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample letter:</em></p>
+                        <div class="prompt-box" id="admin-tidy-letter-sample">"Dear Parents, just to let you no that the school photos day has been pushed back a week to the 15th due to the photographer being unavailable, sorry for any incovenience, more info to follow soon, thanks"</div>
+                        <button onclick="copyToClipboard('admin-tidy-letter-sample')" class="btn-copy">Copy Sample Letter</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Email Chain Summary</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="admin-email-chain">"Act as an office administrator. Summarise this email chain in a clear, neutral tone. Present it as 5 bullet points: [paste chain]"</div>
+                        <button onclick="copyToClipboard('admin-email-chain')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample email chain:</em></p>
+                        <div class="prompt-box" id="admin-email-chain-sample">"From: R. Silva
+Subject: Re: Re: Open Morning logistics
+Can we confirm start time is 9am and finish by 11.30? Also do we have enough parking marshals booked?
+
+From: T. Andrade
+Sent: Monday
+Start time confirmed 9am, finish 11.30. Two marshals booked already.
+
+From: R. Silva
+Sent: Monday
+Great, also need signage for the car park and reception desk, can someone confirm it's ordered?
+
+From: K. Bento
+Sent: Tuesday
+Signage ordered, arriving Thursday. Reception desk covered by two volunteers on the day."</div>
+                        <button onclick="copyToClipboard('admin-email-chain-sample')" class="btn-copy">Copy Sample Chain</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Room Setup Checklist</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="admin-room-checklist">"Act as an office administrator. Help me plan a checklist for setting up the Conference Room ahead of a staff training session, covering AV, seating, and refreshments. Keep the tone practical and clear. Structure it as a numbered checklist."</div>
+                        <button onclick="copyToClipboard('admin-room-checklist')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Finance</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Accuracy and tone both matter in finance. Copilot helps you sort and flag invoices, summarise budget notes into clean tables, and draft firm-but-respectful reminders and explainers — always without pupil or family details.</p>
+
+                <details>
+                    <summary><span style="flex:1;">Sort &amp; Flag Invoices</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fin-invoice-sort">"Act as a school finance administrator. Sort this list by due date and flag anything overdue, in a clear, factual tone. Structure it as a table with headings: [paste list]"</div>
+                        <button onclick="copyToClipboard('fin-invoice-sort')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample invoice list:</em></p>
+                        <div class="prompt-box" id="fin-invoice-sort-sample">"Supplier: ABC Cleaning Services - Invoice #1123 - Due Aug 5
+Supplier: Bermuda Office Supplies - Invoice #998 - Due July 20
+Supplier: GreenScape Grounds - Invoice #1050 - Due Aug 15
+Supplier: Island IT Support - Invoice #1201 - Due July 25"</div>
+                        <button onclick="copyToClipboard('fin-invoice-sort-sample')" class="btn-copy">Copy Sample List</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Chase an Outstanding Invoice</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fin-chase-email">"Act as a school finance administrator. Draft a polite, professional email chasing an outstanding invoice payment of [AMOUNT] for invoice [INVOICE NUMBER], overdue since [DATE]. Structure it as a short email under 120 words."</div>
+                        <button onclick="copyToClipboard('fin-chase-email')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Budget Notes &rarr; Summary Table</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fin-budget-table">"Act as a school finance administrator. Turn these budget notes into a clear summary table by department, in a clear, neutral tone: [paste notes]"</div>
+                        <button onclick="copyToClipboard('fin-budget-table')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample budget notes:</em></p>
+                        <div class="prompt-box" id="fin-budget-table-sample">"facilities spend so far 12,400, admin supplies 3,200, wapta contribution received 2,400, marine science equipment 1,800, IT support contract 4,500"</div>
+                        <button onclick="copyToClipboard('fin-budget-table-sample')" class="btn-copy">Copy Sample Notes</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Fee Reminder Rewrite</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fin-fee-reminder">"Act as a school finance administrator. Rewrite this fee reminder so it reads firm but respectful, without using any pupil or family details. Structure it as a short letter: [paste template]"</div>
+                        <button onclick="copyToClipboard('fin-fee-reminder')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample template:</em></p>
+                        <div class="prompt-box" id="fin-fee-reminder-sample">"this is a reminder that your account balance is overdue, please make payment as soon as possible to avoid further action"</div>
+                        <button onclick="copyToClipboard('fin-fee-reminder-sample')" class="btn-copy">Copy Sample Template</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Expense Process Explainer</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fin-expense-explainer">"Act as a school finance administrator. Help me draft a short explainer of a new expense claim process for staff, covering: submit receipts within 30 days, use the new online form, approval from department head required. Keep the tone clear and straightforward. Structure it as a short notice with a numbered list of steps."</div>
+                        <button onclick="copyToClipboard('fin-expense-explainer')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Facilities</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Facilities work is lists, suppliers and deadlines. Copilot prioritises maintenance requests, drafts supplier emails, pulls the decisions out of long threads and builds practical checklists for walk-rounds and works notices.</p>
+
+                <details>
+                    <summary><span style="flex:1;">Prioritised Maintenance List</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fac-maintenance-list">"Act as a school facilities administrator. Turn this maintenance request list into a prioritised action list with owner and target date, in a clear, practical tone: [paste list]"</div>
+                        <button onclick="copyToClipboard('fac-maintenance-list')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample maintenance list:</em></p>
+                        <div class="prompt-box" id="fac-maintenance-list-sample">"leaking tap in staff bathroom
+broken light in corridor B
+gate hinge needs oiling
+marquee storage area needs clearing before Sept
+fire extinguisher check overdue in science block"</div>
+                        <button onclick="copyToClipboard('fac-maintenance-list-sample')" class="btn-copy">Copy Sample List</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Supplier Quote Request</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fac-quote-email">"Act as a school facilities administrator. Draft a short email to a supplier requesting a quote for car park resurfacing, covering the full staff car park area. Keep the tone professional and to the point. Structure it as a short email under 100 words."</div>
+                        <button onclick="copyToClipboard('fac-quote-email')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Decided vs Outstanding</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fac-thread-summary">"Act as a school facilities administrator. Summarise this thread in a clear, neutral tone. Structure it as two sections: what's decided and what's outstanding: [paste thread]"</div>
+                        <button onclick="copyToClipboard('fac-thread-summary')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample thread:</em></p>
+                        <div class="prompt-box" id="fac-thread-summary-sample">"From: S. Furtado
+Subject: Re: Re: Tank filter
+Have we heard back from the supplier on the replacement filter?
+
+From: L. Pacheco
+Sent: Monday
+Yes, filter confirmed for delivery next week. Still waiting to hear about installation date.
+
+From: S. Furtado
+Sent: Tuesday
+Can we get someone booked in for installation as soon as it arrives, ideally before half term?
+
+From: L. Pacheco
+Sent: Wednesday
+Installer confirmed for the Thursday after delivery. Delivery date still not confirmed by supplier."</div>
+                        <button onclick="copyToClipboard('fac-thread-summary-sample')" class="btn-copy">Copy Sample Thread</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Pre-Term Walk-Round Checklist</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fac-walkround-checklist">"Act as a school facilities administrator. Help me write a simple checklist for the pre-term facilities walk-round, covering classrooms, car park, gates, and fire safety equipment. Keep the tone practical and clear. Structure it as a numbered checklist."</div>
+                        <button onclick="copyToClipboard('fac-walkround-checklist')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Temporary Access Notice</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="fac-access-notice">"Act as a school facilities administrator. Draft a notice to staff about temporary access changes to [LOCATION] while building work is underway from [START DATE] to [END DATE]. Keep the tone clear and reassuring. Structure it as a short notice under 100 words."</div>
+                        <button onclick="copyToClipboard('fac-access-notice')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">General (All Roles)</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Cross-role prompts for documents, data and day-to-day analysis — useful whatever your job title.</p>
 
                 <details open>
                     <summary><span style="flex:1;">Filter a document to your role</span></summary>

@@ -1150,7 +1150,7 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">29</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">33</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">36</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
 
@@ -2004,6 +2004,124 @@ Supplier: Island IT Support - Invoice #1201 - Due July 25"</div>
 
                 <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Facilities</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Facilities work is lists, suppliers and deadlines. Copilot prioritises maintenance requests, drafts supplier emails, pulls the decisions out of long threads and builds practical checklists for walk-rounds and works notices.</p>
+
+                <details>
+                    <summary><span style="flex:1;">Contractor &amp; Site Communication</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: A contractor is working on site and staff need to be informed about access restrictions, noise and safety arrangements — one clear notice covers it.
+                        </div>
+                        <div class="prompt-box" id="fac-contractor-comms">"Act as an experienced School Facilities Manager.
+
+Draft a professional communication for staff.
+
+Contractors will be resurfacing the staff car park on Thursday.
+Access will be restricted from 7:00am-4:00pm.
+Alternative parking is available on the sports field.
+Emergency access routes must remain clear.
+
+Use a clear, professional and reassuring tone.
+
+Structure the response as:
+- Email subject
+- Overview
+- Key impacts
+- Actions required
+- Contact details"</div>
+                        <button onclick="copyToClipboard('fac-contractor-comms')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Demo resource — the works details, if you want to paste them in as context:</em></p>
+                        <div class="prompt-box" id="fac-contractor-comms-sample">Facilities Notice
+
+Project: Staff Car Park Resurfacing
+Date: Thursday 12 September
+Time: 7:00am-4:00pm
+Contractor: ABC Surfacing Ltd
+Alternative Parking: Sports Field
+Contact: Facilities Office</div>
+                        <button onclick="copyToClipboard('fac-contractor-comms-sample')" class="btn-copy">Copy Notice Details</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Risk Assessment &amp; Site Inspection Support</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: A site walk identifies hazards that need recording and prioritising — Copilot turns the findings into a compliant, prioritised risk table.
+                        </div>
+                        <div class="prompt-box" id="fac-risk-assessment">"Act as a Health &amp; Safety Coordinator for a large secondary school.
+
+Review the inspection findings below.
+
+Identify:
+- Hazard
+- Associated risk
+- Priority level (High, Medium or Low)
+- Recommended action
+- Responsible team
+
+Inspection findings:
+- Loose paving slab near Reception
+- Fire exit partially blocked by deliveries
+- External lighting not working in car park
+- Overflowing waste bins behind the canteen
+
+Present the results in a clear table."</div>
+                        <button onclick="copyToClipboard('fac-risk-assessment')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Demo resource — or paste this inspection sheet instead:</em></p>
+                        <div class="prompt-box" id="fac-risk-assessment-sample">Location	Issue
+Reception	Loose paving slab
+Sports Hall Exit	Fire exit partially blocked
+Car Park	Lighting failure
+Canteen	Waste overflow</div>
+                        <button onclick="copyToClipboard('fac-risk-assessment-sample')" class="btn-copy">Copy Inspection Sheet</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Signage, Posters &amp; Safety Visuals</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Facilities teams often need quick signage or awareness materials — Microsoft Copilot can plan the design and generate images from text prompts.
+                        </div>
+                        <div class="prompt-box" id="fac-safety-poster">"Act as a school communications designer.
+
+Create a professional safety awareness poster.
+
+The purpose is to encourage staff and students to report
+maintenance issues quickly.
+
+Use a friendly and engaging tone.
+
+Provide:
+- Suggested headline
+- Visual design description
+- Colour palette
+- Short call to action
+
+The design should suit a modern UK secondary school."</div>
+                        <button onclick="copyToClipboard('fac-safety-poster')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Demo resource — then generate the image itself:</em></p>
+                        <div class="prompt-box" id="fac-safety-poster-image">"Create a professional school safety poster.
+
+Modern UK secondary school reception area.
+Students and staff reporting a maintenance issue.
+Clean educational environment.
+School colours.
+Friendly and professional style.
+No empty space."</div>
+                        <button onclick="copyToClipboard('fac-safety-poster-image')" class="btn-copy">Copy Image Prompt</button>
+                        <div style="margin-top:12px;">
+                            <p style="font-size:13px; font-weight:600; margin-bottom:6px;">Extension activity — create posters for:</p>
+                            <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
+                                <li>"Keep Fire Exits Clear"</li>
+                                <li>"Report IT &amp; Facilities Issues"</li>
+                                <li>"Energy Saving Week"</li>
+                                <li>"Visitor Sign-In Reminder"</li>
+                                <li>"Summer Works Project Update"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
 
                 <details>
                     <summary><span style="flex:1;">Prioritised Maintenance List</span></summary>

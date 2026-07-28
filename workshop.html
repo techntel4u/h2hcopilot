@@ -1149,7 +1149,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">26</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">29</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">33</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1297,8 +1297,123 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                     </div>
                 </details>
 
+                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Copilot with Spreadsheet Data</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Microsoft states that Copilot can help analyse data, identify trends, explain formulas and create summaries when working with spreadsheet data. Try these three use cases with the sample data provided.</p>
+
                 <details>
-                    <summary><span class="ex-num">09</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
+                    <summary><span class="ex-num">09</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: An administrator has a spreadsheet of attendance data and needs a quick summary for a manager — key findings, risks and recommended actions in one pass.
+                        </div>
+                        <div class="prompt-box" id="data-insights">"Act as a data analyst for a further education college.
+
+Analyse the attendance data below.
+
+Identify:
+- 3 key findings
+- 2 risks
+- 2 recommended actions
+
+Write in a professional tone suitable for senior leaders.
+
+Present the information using:
+1. Executive Summary
+2. Key Findings
+3. Risks
+4. Recommended Actions
+
+Data:
+[Paste spreadsheet data]"</div>
+                        <button onclick="copyToClipboard('data-insights')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
+                        <div class="prompt-box" id="data-insights-sample">Student	Course	Attendance %
+Ahmed	Engineering	96
+Sarah	Business	91
+James	Computing	72
+Olivia	Health	88
+David	Engineering	65
+Chloe	Business	94
+Ethan	Computing	78
+Amelia	Health	97</div>
+                        <button onclick="copyToClipboard('data-insights-sample')" class="btn-copy">Copy Sample Data</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — ask yourself: "What insight did Copilot identify that you might have missed?"</em></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">10</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: You know what you want to calculate but not the formula. Copilot writes it, explains each part in plain language, and warns you about common mistakes.
+                        </div>
+                        <div class="prompt-box" id="excel-formula">"Act as an expert Excel trainer.
+
+I am a beginner Excel user.
+
+Create the correct Excel formula for the task below and explain it in simple language.
+
+Provide:
+- The formula
+- What each part does
+- Step-by-step instructions
+- Common mistakes to avoid
+
+Task:
+Calculate the percentage achievement where Actual Value is in column C and Target Value is in column D."</div>
+                        <button onclick="copyToClipboard('excel-formula')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
+                        <div class="prompt-box" id="excel-formula-sample">Department	Actual Value	Target Value
+Admissions	120	150
+MIS	95	100
+Marketing	180	200
+Finance	140	150</div>
+                        <button onclick="copyToClipboard('excel-formula-sample')" class="btn-copy">Copy Sample Data</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — Copilot can also explain a formula you already have:</em></p>
+                        <div class="prompt-box" id="excel-formula-explain">"Explain this formula as if I were new to Excel:
+
+=IFERROR((C2/D2)*100,0)"</div>
+                        <button onclick="copyToClipboard('excel-formula-explain')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">11</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: A manager needs a monthly update but only has spreadsheet data. Copilot turns it into a leadership-ready report with highlights, concerns and next steps.
+                        </div>
+                        <div class="prompt-box" id="mgmt-report">"Act as an executive reporting officer.
+
+Using the spreadsheet data below, create a senior leadership report.
+
+Use a professional and evidence-based tone.
+
+Structure the response as:
+1. Executive Summary
+2. Performance Highlights
+3. Areas of Concern
+4. Recommended Next Steps
+
+Data:
+[Paste spreadsheet data]"</div>
+                        <button onclick="copyToClipboard('mgmt-report')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
+                        <div class="prompt-box" id="mgmt-report-sample">Department	Budget (£)	Actual Spend (£)
+IT	50,000	48,500
+Estates	60,000	63,200
+Marketing	20,000	15,800
+Student Services	30,000	34,500
+HR	25,000	23,100</div>
+                        <button onclick="copyToClipboard('mgmt-report-sample')" class="btn-copy">Copy Sample Data</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — follow up with:</em></p>
+                        <div class="prompt-box" id="mgmt-report-followup">"Create a board-ready dashboard description showing the best chart type for each metric and explain why."</div>
+                        <button onclick="copyToClipboard('mgmt-report-followup')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">12</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: A deliberate trap: this prompt breaks the PACTS formula and asks for a fiddly working-days calculation that depends on knowing the Bermuda public holidays in that period. The AI may miscount or miss a holiday while sounding completely confident. Run it, then check the answer against the official holiday dates — a reminder that confident-sounding output still needs verifying.
@@ -1310,7 +1425,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">10</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Turn five scrappy bullet points into a ready-to-send parent letter in one step.
@@ -1329,7 +1444,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">11</span><span style="flex:1;">Instant Image Creation</span></summary>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Instant Image Creation</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Design a poster-style graphic for a real noticeboard need — School Shop hours, a WAPTA event, a Bearly Used pop-up — then ask for a second version in a different style.
@@ -1373,7 +1488,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">12</span><span style="flex:1;">The Instant Slide Script</span></summary>
+                    <summary><span class="ex-num">15</span><span style="flex:1;">The Instant Slide Script</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get a full slide-by-slide outline — title, three bullets and a speaker note per slide — ready to paste straight into PowerPoint. Free Copilot writes the content; turning it into the actual designed deck still happens in PowerPoint itself.
@@ -1399,7 +1514,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">13</span><span style="flex:1;">Upload and Ask</span></summary>
+                    <summary><span class="ex-num">16</span><span style="flex:1;">Upload and Ask</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Upload a real document — a draft newsletter, a fee schedule, an old policy — and have Copilot summarise it or turn it into something else, live.
@@ -1414,7 +1529,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">14</span><span style="flex:1;">Read the Page</span></summary>
+                    <summary><span class="ex-num">17</span><span style="flex:1;">Read the Page</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste in a public web address and ask Copilot to summarise or extract from it — useful for reading a supplier page, a policy page or a news article quickly.
@@ -1433,7 +1548,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">15</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
+                    <summary><span class="ex-num">18</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Turn your school's public website into a working brand guidelines document — colours, tone of voice and imagery — grounded only in what is actually visible on the site.
@@ -1450,7 +1565,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Additional prompts to help you learn what Copilot can do — from remembering your preferences and reusing past chats to roleplay, formatting and self-evaluation techniques.</p>
 
                 <details>
-                    <summary><span class="ex-num">16</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <summary><span class="ex-num">19</span><span style="flex:1;">Copilot Memory</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -1482,7 +1597,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">17</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
+                    <summary><span class="ex-num">20</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
@@ -1493,7 +1608,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">18</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <summary><span class="ex-num">21</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
@@ -1514,7 +1629,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">19</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <summary><span class="ex-num">22</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
@@ -1526,7 +1641,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">20</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">23</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
@@ -1537,7 +1652,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">21</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">24</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1551,7 +1666,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">22</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">25</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1566,7 +1681,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">23</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">26</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1579,7 +1694,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">24</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">27</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1595,7 +1710,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                 </details>
 
                 <details>
-    <summary><span class="ex-num">25</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+    <summary><span class="ex-num">28</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
         <div class="exercise-note" style="border-left:3px solid #ff9500;">
                             <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
@@ -1626,7 +1741,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">26</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">29</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="border-left:3px solid #ff9500;">
                             <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.

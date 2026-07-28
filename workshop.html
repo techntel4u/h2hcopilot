@@ -1149,7 +1149,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">12</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">14</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">13</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1169,7 +1169,43 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">02</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <summary><span class="ex-num">02</span><span style="flex:1;">Staff Notice Email (PATS)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Turn a quick operational update into a clear, reassuring staff notice, with the key times in bold so nobody misses them.
+                        </div>
+                        <div class="prompt-box" id="facilities-gate-notice">"[P] Act as a facilities administrator. [A] Draft an email notice informing staff that the sports field gate will be locked at 4pm on Friday for contractor work. [T] Keep it clear, polite, and reassuring.
+[S] Format as 2 short paragraphs with key times in bold."</div>
+                        <button onclick="copyToClipboard('facilities-gate-notice')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Paste an existing draft and have the AI rewrite it for tone and format, turning a plain notice into a warm, parent-friendly message.
+                        </div>
+                        <p style="font-size:13px; color:var(--apple-text-secondary); margin-bottom:8px;"><em>First copy this draft email into Copilot:</em></p>
+                        <div class="prompt-box" id="lost-property-draft">"Subject: Lost Property Collection
+
+Dear Parent/Carer,
+
+We have some lost property items that may belong to your child. If you think any of these items belong to them, please come to the school reception to collect them.
+
+Lost property can be collected between 8:30am and 4:00pm on school days. Any unclaimed items will be donated or disposed of at the end of term.
+
+Kind regards,
+School Reception Team"</div>
+                        <button onclick="copyToClipboard('lost-property-draft')" class="btn-copy">Copy Draft Email</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then add the activity prompt:</em></p>
+                        <div class="prompt-box" id="lost-property-rewrite">"Act as a school receptionist (P). Rewrite this draft email (A) regarding lost property pick-up (C). Make it warm and helpful (T) in 3 concise bullet points (S)."</div>
+                        <button onclick="copyToClipboard('lost-property-rewrite')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
@@ -1181,7 +1217,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
@@ -1192,7 +1228,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Stress-test your challenges, new ideas, or decisions before finalising them.
@@ -1206,7 +1242,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">07</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1220,7 +1256,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">08</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1235,7 +1271,7 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">07</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">09</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1248,7 +1284,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">08</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">10</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1266,7 +1302,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
           
 
          <details>
-    <summary><span class="ex-num">09</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+    <summary><span class="ex-num">11</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
         <div class="exercise-note" style="margin-bottom: 18px;">
             <strong>The idea:</strong> An agent that explains any documents like you are 5 – ideal for policies, reports and guidance notes.
@@ -1294,7 +1330,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">10</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">12</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>New Agent Task:</strong> In this exercise, you will build a <strong>new agent</strong> designed for a completely different task: analyzing text data and generating visual word clouds using Python.
@@ -1369,7 +1405,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">11</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Copilot Memory</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -1401,7 +1437,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">12</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.

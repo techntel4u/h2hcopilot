@@ -1149,7 +1149,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">21</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">25</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">13</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1305,6 +1305,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                         </div>
                         <div class="prompt-box" id="catch-it-out">"Term 1 begins 2 September 2026. How many working days are there between 2 September and 20 December 2026, excluding weekends and any Bermuda public holidays in that period?"</div>
                         <button onclick="copyToClipboard('catch-it-out')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Check the answer against the official list: <a href="https://www.gov.bm/public-holidays" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Bermuda public holidays (gov.bm) &#8599;</a></em></p>
                     </div>
                 </details>
 
@@ -1328,7 +1329,56 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">11</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <summary><span class="ex-num">11</span><span style="flex:1;">Instant Image Creation</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Design a poster-style graphic for a real noticeboard need — School Shop hours, a WAPTA event, a Bearly Used pop-up — then ask for a second version in a different style.
+                        </div>
+                        <div class="prompt-box" id="instant-image">"Act as a school communications assistant. Create an image for [TOPIC], in a [STYLE, e.g. bright cartoon / clean minimal] style, friendly and welcoming in feel. Structure it as a single poster-style graphic suitable for a noticeboard, with clear space for a heading to be added afterwards."</div>
+                        <button onclick="copyToClipboard('instant-image')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Replace [TOPIC] and [STYLE], then run it again with a different style and compare the two versions.</em></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">12</span><span style="flex:1;">The Instant Slide Script</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Get a full slide-by-slide outline — title, three bullets and a speaker note per slide — ready to paste straight into PowerPoint. Free Copilot writes the content; turning it into the actual designed deck still happens in PowerPoint itself.
+                        </div>
+                        <div class="prompt-box" id="slide-script">"Act as a presentation writer. Create a slide-by-slide outline for a [NUMBER]-slide presentation about [TOPIC], for an audience of [AUDIENCE]. Keep the tone clear and professional. Structure each slide with a title, 3 bullet points, and a short speaker note."</div>
+                        <button onclick="copyToClipboard('slide-script')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Upload and Ask</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Upload a real document — a draft newsletter, a fee schedule, an old policy — and have Copilot summarise it or turn it into something else, live.
+                        </div>
+                        <div class="prompt-box" id="upload-ask-summary">"Act as an office administrator. Using the attached [FILENAME], summarise the key points in a clear, neutral tone. Structure it as 5 bullet points."</div>
+                        <button onclick="copyToClipboard('upload-ask-summary')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Second version, same document:</em></p>
+                        <div class="prompt-box" id="upload-ask-parent">"Act as an office administrator. Using the attached [FILENAME], turn this into a short, parent-friendly summary, warm and easy to read. Structure it as a single short paragraph, under 100 words."</div>
+                        <button onclick="copyToClipboard('upload-ask-parent')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Need a document to upload? Download the sample bulletin: <a href="Warwick_Weekly_Bulletin_Draft.docx" download style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Warwick Weekly Bulletin Draft (Word) &#8595;</a></em></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Read the Page</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Paste in a public web address and ask Copilot to summarise or extract from it — useful for reading a supplier page, a policy page or a news article quickly.
+                        </div>
+                        <div class="prompt-box" id="read-the-page">"Act as a research assistant. Summarise the key points from this page in a clear, neutral tone: [WEBSITE ADDRESS]. Structure it as 3 to 5 bullet points."</div>
+                        <button onclick="copyToClipboard('read-the-page')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">15</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
@@ -1340,7 +1390,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">12</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">16</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
@@ -1351,7 +1401,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">13</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">17</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1365,7 +1415,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">14</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">18</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1380,7 +1430,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">15</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">19</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1393,7 +1443,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">16</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">20</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1409,7 +1459,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">17</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <summary><span class="ex-num">21</span><span style="flex:1;">Copilot Memory</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -1441,7 +1491,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">18</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
+                    <summary><span class="ex-num">22</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
@@ -1452,7 +1502,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">19</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <summary><span class="ex-num">23</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
@@ -1473,7 +1523,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                 </details>
 
                 <details>
-    <summary><span class="ex-num">20</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+    <summary><span class="ex-num">24</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
         <div class="exercise-note" style="border-left:3px solid #ff9500;">
                             <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
@@ -1504,7 +1554,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">21</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">25</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="border-left:3px solid #ff9500;">
                             <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.

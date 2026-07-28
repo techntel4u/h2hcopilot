@@ -1149,7 +1149,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">15</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">21</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">13</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1215,7 +1215,120 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">The Email Glow-Up</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Paste a blunt reminder email and watch Copilot produce three tone options instantly, so you can pick the one that fits the parent and the situation.
+                        </div>
+                        <div class="prompt-box" id="email-glow-up">"Act as a school administrator. Rewrite this email three ways — warm, neutral, and firm — each under 100 words, keep the deadline. Present each version as a clearly labelled section: [paste email]"</div>
+                        <button onclick="copyToClipboard('email-glow-up')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample email:</em></p>
+                        <div class="prompt-box" id="email-glow-up-sample">"hi mr and mrs allen, reminder your daughters DofE bronze registration form still hasnt come back to us, needs to be in by friday for the award to go through this term, can you send asap thanks"</div>
+                        <button onclick="copyToClipboard('email-glow-up-sample')" class="btn-copy">Copy Sample Email</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Paste messy meeting notes and get a clean, owner-assigned action list ready to circulate.
+                        </div>
+                        <div class="prompt-box" id="meeting-notes-actions">"Act as an executive assistant. Turn these meeting notes into a clear action list, with an owner and deadline for each item. Keep the tone brisk and professional. Present it as a numbered list: [paste notes]"</div>
+                        <button onclick="copyToClipboard('meeting-notes-actions')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample notes:</em></p>
+                        <div class="prompt-box" id="meeting-notes-sample">"facilities mtg mon
+
+- car park resurfacing, get 3 quotes, sarah to chase
+- marine science facility, tank filter needs replacing before term starts
+- bearly used shop needs more rails, ask PTA if they have spares
+- school shop till roll running low, order more
+- reception desk chair broken, order replacement
+- staff parking permits renew 1st sept, need list of who's returning"</div>
+                        <button onclick="copyToClipboard('meeting-notes-sample')" class="btn-copy">Copy Sample Notes</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">07</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Paste a rambling email chain and get the decisions separated from the open questions in seconds.
+                        </div>
+                        <div class="prompt-box" id="long-thread-sorted">"Act as an office administrator. Summarise this email thread in a clear, neutral tone. Present it as 5 bullet points, separating what's decided from what's still open: [paste thread]"</div>
+                        <button onclick="copyToClipboard('long-thread-sorted')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample thread:</em></p>
+                        <div class="prompt-box" id="long-thread-sample">"From: J. Carter
+Subject: Re: Re: Re: Meet-the-Teacher evening
+Hi all, just circling back — is Y1-3 still 6pm and Y4-6 at 6.45, or has that shifted? Also do we know numbers yet for the Reception intro meeting?
+
+From: M. Ellis
+Sent: Tuesday
+Times are confirmed as originally planned. I'll check with Reception on numbers and get back to you.
+
+From: J. Carter
+Sent: Tuesday
+Also — do we need extra parking marshals that evening given three events back to back?
+
+From: D. Reyes
+Sent: Wednesday
+Confirmed: Reception 5.15-5.45, Y1-3 at 6pm, Y4-6 at 6.45, all in the halls as usual. Two marshals booked for car park that evening."</div>
+                        <button onclick="copyToClipboard('long-thread-sample')" class="btn-copy">Copy Sample Thread</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">08</span><span style="flex:1;">Spreadsheet SOS</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Paste a messy booking list and get it sorted by date, grouped by department, and presented as a ready-to-use table.
+                        </div>
+                        <div class="prompt-box" id="spreadsheet-sos">"Act as an office administrator. Sort this list by date and group it by department, in a clear, factual tone. Present it as a table with headings: [paste list]"</div>
+                        <button onclick="copyToClipboard('spreadsheet-sos')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample list:</em></p>
+                        <div class="prompt-box" id="spreadsheet-sos-sample">"Room 4 booking - Sept 3 - Admissions - parent tour
+School shop restock - Sept 2 - Facilities
+Room 2 booking - Sept 5 - WAPTA - committee meeting
+Marquee delivery - Sept 20 - Facilities - sports day
+Room 4 booking - Sept 10 - Admissions - open morning
+New starter IT setup - Sept 3 - Facilities
+Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
+                        <button onclick="copyToClipboard('spreadsheet-sos-sample')" class="btn-copy">Copy Sample List</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">09</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: A deliberate trap: this prompt breaks the PACTS formula and asks for a fiddly calculation with an irrelevant twist. Run it, then check the answer yourself — a reminder that confident-sounding output still needs verifying.
+                        </div>
+                        <div class="prompt-box" id="catch-it-out">"Term 1 begins 2 September 2026. How many working days are there between 2 September and 20 December 2026, excluding weekends and any Bermuda public holidays in that period?"</div>
+                        <button onclick="copyToClipboard('catch-it-out')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">10</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Turn five scrappy bullet points into a ready-to-send parent letter in one step.
+                        </div>
+                        <div class="prompt-box" id="bullets-letter">"Act as a school administrator. Turn these bullet points into a parent letter, warm but concise, under 200 words. Structure it as a greeting, a short body, and a brief sign-off: [paste bullets]"</div>
+                        <button onclick="copyToClipboard('bullets-letter')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample bullets:</em></p>
+                        <div class="prompt-box" id="bullets-letter-sample">"- Sports Day moved to Sept 20, previously Sept 13
+- reason: pitch resurfacing not finished in time
+- same format, same times
+- parents welcome from 1pm, usual field
+- DofE bronze award presentations now happening same afternoon
+- questions to the office as usual"</div>
+                        <button onclick="copyToClipboard('bullets-letter-sample')" class="btn-copy">Copy Sample Bullets</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">11</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
@@ -1227,7 +1340,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">12</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
@@ -1238,7 +1351,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">07</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Stress-test your challenges, new ideas, or decisions before finalising them.
@@ -1252,7 +1365,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">08</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1266,7 +1379,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">09</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">15</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1281,7 +1394,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">10</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">16</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1294,7 +1407,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">11</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">17</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1312,7 +1425,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
           
 
          <details>
-    <summary><span class="ex-num">12</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+    <summary><span class="ex-num">18</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
         <div class="exercise-note" style="margin-bottom: 18px;">
             <strong>The idea:</strong> An agent that explains any documents like you are 5 – ideal for policies, reports and guidance notes.
@@ -1340,7 +1453,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">13</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">19</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>New Agent Task:</strong> In this exercise, you will build a <strong>new agent</strong> designed for a completely different task: analyzing text data and generating visual word clouds using Python.
@@ -1415,7 +1528,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">14</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <summary><span class="ex-num">20</span><span style="flex:1;">Copilot Memory</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -1447,7 +1560,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">15</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <summary><span class="ex-num">21</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.

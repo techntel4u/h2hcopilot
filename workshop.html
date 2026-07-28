@@ -1351,21 +1351,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">13</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            Application: Stress-test your challenges, new ideas, or decisions before finalising them.
-                        </div>
-                        <div class="prompt-box" id="devils-advocate">"Act as a constructive devil's advocate. First identify potential weaknesses or blind spots, then suggest alternative perspectives. Be specific and challenging but constructive. My scenario is: [scenario here]"</div>
-                        <button onclick="copyToClipboard('devils-advocate')" class="btn-copy">Copy Prompt</button>
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Add in your own scenario: "I want to move from sales to leadership role", "dealing with a difficult client", provide some useful context as well. You could upload a document instead of typing a scenario e.g. upload your new travel policy. Then experiment with a meeting transcript, an Excel file or even a PowerPoint.</em></p>
-
-                     
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span class="ex-num">14</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1379,7 +1365,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">15</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1394,7 +1380,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">16</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">15</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1407,7 +1393,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">17</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">16</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1415,19 +1401,84 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                         <div class="prompt-box" id="prompt-chain">"Task: Suggest appealing fizzy drink names.
 Role: Young consumers (15-25).
 Tone: Humorous, but not childish.
-Constraint: Avoid existing UK product names.
+Constraint: Avoid existing Bermudian product names.
 Format: Provide 10 names in a 3-column table: Name, Rating (1-10), Reasoning
 Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                         <button onclick="copyToClipboard('prompt-chain')" class="btn-copy">Copy Prompt</button>
                     </div>
                 </details>
 
-          
+                <details>
+                    <summary><span class="ex-num">17</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note" style="margin-bottom: 18px;">
+                            <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
+                        </div>
 
-         <details>
-    <summary><span class="ex-num">18</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+                        <p style="font-size: 14px; line-height: 1.6; margin: 0 0 16px;">To store a rule, type an instruction that begins with <strong>"Remember and save to memory"</strong>. Copilot confirms it and keeps it.</p>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">To view your saved memories</p>
+                        <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0 0 18px;">
+                            <li>Click the three dots in the top right corner</li>
+                            <li>Click Settings</li>
+                            <li>Click Personalisation, then manage your saved memories</li>
+                        </ol>
+
+                        <p style="font-weight: 600; font-size: 15px; margin: 0 0 12px; color: var(--apple-text-primary);">Three prompts worth saving</p>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Regional preferences</p>
+                        <div class="prompt-box" id="memory-regional">Remember and save to memory that I prefer UK spelling, UK sources and UK naming conventions.</div>
+                        <button onclick="copyToClipboard('memory-regional')" class="btn-copy">Copy Prompt</button>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Honesty about gaps</p>
+                        <div class="prompt-box" id="memory-honesty">Remember and save to memory: No guessing. Acknowledge uncertainty and information gaps. State evidence limits.</div>
+                        <button onclick="copyToClipboard('memory-honesty')" class="btn-copy">Copy Prompt</button>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Challenge your thinking</p>
+                        <div class="prompt-box" id="memory-challenge">Remember and save to memory: Challenge my assumptions. Tell me when I am wrong and explain the reasoning. Give me the strongest counter-argument before you agree with me.</div>
+                        <button onclick="copyToClipboard('memory-challenge')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">18</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
+                        </div>
+                        <div class="prompt-box" id="memory-preferences">"Remember and save to memory that I prefer UK spelling and UK naming conventions, and that I am based in Bermuda, so use Bermuda-relevant sources, dates and public holidays where applicable."</div>
+                        <button onclick="copyToClipboard('memory-preferences')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">19</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note" style="margin-bottom: 18px;">
+                            <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
+                        </div>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Find prompting habits you repeat</p>
+                        <div class="prompt-box" id="chat-history-habits">Search my chat history from the last 3 months. Find 3 prompting habits I repeat. For each, show the habit, one example from my chat history, and a sharper prompt I can reuse. One line each, no filler.</div>
+                        <button onclick="copyToClipboard('chat-history-habits')" class="btn-copy">Copy Prompt</button>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Spot tasks you keep redoing by hand</p>
+                        <div class="prompt-box" id="chat-history-tasks">Read across my chat history and tell me which tasks I keep redoing by hand.</div>
+                        <button onclick="copyToClipboard('chat-history-tasks')" class="btn-copy">Copy Prompt</button>
+
+                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Capture your writing style</p>
+                        <div class="prompt-box" id="chat-history-style">From my chat history, draft a profile of my writing style, then remember and save it to memory.</div>
+                        <button onclick="copyToClipboard('chat-history-style')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+    <summary><span class="ex-num">20</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
-        <div class="exercise-note" style="margin-bottom: 18px;">
+        <div class="exercise-note" style="border-left:3px solid #ff9500;">
+                            <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
+                        </div>
+                        <div class="exercise-note" style="margin-bottom: 18px;">
             <strong>The idea:</strong> An agent that explains any documents like you are 5 – ideal for policies, reports and guidance notes.
         </div>
         <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0;">
@@ -1453,8 +1504,11 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">19</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">21</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
+                        <div class="exercise-note" style="border-left:3px solid #ff9500;">
+                            <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
+                        </div>
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>New Agent Task:</strong> In this exercise, you will build a <strong>new agent</strong> designed for a completely different task: analyzing text data and generating visual word clouds using Python.
                         </div>
@@ -1524,59 +1578,6 @@ My outfit is incomplete without a little bit of fur on it.
 I love the whooshing sound deadlines make as they fly by.
 My only skill is pretending to listen in Zoom calls.</textarea>
                         </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span class="ex-num">20</span><span style="flex:1;">Copilot Memory</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note" style="margin-bottom: 18px;">
-                            <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
-                        </div>
-
-                        <p style="font-size: 14px; line-height: 1.6; margin: 0 0 16px;">To store a rule, type an instruction that begins with <strong>"Remember and save to memory"</strong>. Copilot confirms it and keeps it.</p>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">To view your saved memories</p>
-                        <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0 0 18px;">
-                            <li>Click the three dots in the top right corner</li>
-                            <li>Click Settings</li>
-                            <li>Click Personalisation, then manage your saved memories</li>
-                        </ol>
-
-                        <p style="font-weight: 600; font-size: 15px; margin: 0 0 12px; color: var(--apple-text-primary);">Three prompts worth saving</p>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Regional preferences</p>
-                        <div class="prompt-box" id="memory-regional">Remember and save to memory that I prefer UK spelling, UK sources and UK naming conventions.</div>
-                        <button onclick="copyToClipboard('memory-regional')" class="btn-copy">Copy Prompt</button>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Honesty about gaps</p>
-                        <div class="prompt-box" id="memory-honesty">Remember and save to memory: No guessing. Acknowledge uncertainty and information gaps. State evidence limits.</div>
-                        <button onclick="copyToClipboard('memory-honesty')" class="btn-copy">Copy Prompt</button>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Challenge your thinking</p>
-                        <div class="prompt-box" id="memory-challenge">Remember and save to memory: Challenge my assumptions. Tell me when I am wrong and explain the reasoning. Give me the strongest counter-argument before you agree with me.</div>
-                        <button onclick="copyToClipboard('memory-challenge')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span class="ex-num">21</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note" style="margin-bottom: 18px;">
-                            <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
-                        </div>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Find prompting habits you repeat</p>
-                        <div class="prompt-box" id="chat-history-habits">Search my chat history from the last 3 months. Find 3 prompting habits I repeat. For each, show the habit, one example from my chat history, and a sharper prompt I can reuse. One line each, no filler.</div>
-                        <button onclick="copyToClipboard('chat-history-habits')" class="btn-copy">Copy Prompt</button>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Spot tasks you keep redoing by hand</p>
-                        <div class="prompt-box" id="chat-history-tasks">Read across my chat history and tell me which tasks I keep redoing by hand.</div>
-                        <button onclick="copyToClipboard('chat-history-tasks')" class="btn-copy">Copy Prompt</button>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Capture your writing style</p>
-                        <div class="prompt-box" id="chat-history-style">From my chat history, draft a profile of my writing style, then remember and save it to memory.</div>
-                        <button onclick="copyToClipboard('chat-history-style')" class="btn-copy">Copy Prompt</button>
                     </div>
                 </details>
 

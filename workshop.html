@@ -1149,7 +1149,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">14</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">15</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">13</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1169,19 +1169,29 @@
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">02</span><span style="flex:1;">Staff Notice Email (PATS)</span></summary>
+                    <summary><span class="ex-num">02</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
-                            Application: Turn a quick operational update into a clear, reassuring staff notice, with the key times in bold so nobody misses them.
+                            Application: Run this deliberately vague prompt first and note how much the AI has to guess: who is writing, which gate, when, and why. Then compare the result with the strong PACTS version in the next exercise.
                         </div>
-                        <div class="prompt-box" id="facilities-gate-notice">"[P] Act as a facilities administrator. [A] Draft an email notice informing staff that the sports field gate will be locked at 4pm on Friday for contractor work. [T] Keep it clear, polite, and reassuring.
-[S] Format as 2 short paragraphs with key times in bold."</div>
+                        <div class="prompt-box" id="weak-gate-prompt">"Write an email about the main gate being locked."</div>
+                        <button onclick="copyToClipboard('weak-gate-prompt')" class="btn-copy">Copy Prompt</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Strong (PACTS) Prompt: Staff Notice Email</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: The same task as the weak prompt, now with full PACTS structure. Every element the AI had to guess is spelled out, so you get a clear, reassuring staff notice with the key time in bold.
+                        </div>
+                        <div class="prompt-box" id="facilities-gate-notice">"[P] Act as a facilities administrator. [A] Draft an email notice [C] informing staff that the sports field gate will be locked at 4pm on Friday for contractor work. [T] Keep it clear, polite, and reassuring. [S] Format as 2 short paragraphs with key time in bold."</div>
                         <button onclick="copyToClipboard('facilities-gate-notice')" class="btn-copy">Copy Prompt</button>
                     </div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste an existing draft and have the AI rewrite it for tone and format, turning a plain notice into a warm, parent-friendly message.
@@ -1205,7 +1215,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Quickly understand complex topics or even an uploaded document.
@@ -1217,7 +1227,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
@@ -1228,7 +1238,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
+                    <summary><span class="ex-num">07</span><span style="flex:1;">Devil's Advocate (Blind Spots)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Stress-test your challenges, new ideas, or decisions before finalising them.
@@ -1242,7 +1252,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">07</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">08</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1256,7 +1266,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">08</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">09</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1271,7 +1281,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">09</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">10</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1284,7 +1294,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">10</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">11</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1302,7 +1312,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
           
 
          <details>
-    <summary><span class="ex-num">11</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+    <summary><span class="ex-num">12</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
         <div class="exercise-note" style="margin-bottom: 18px;">
             <strong>The idea:</strong> An agent that explains any documents like you are 5 – ideal for policies, reports and guidance notes.
@@ -1330,7 +1340,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">12</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>New Agent Task:</strong> In this exercise, you will build a <strong>new agent</strong> designed for a completely different task: analyzing text data and generating visual word clouds using Python.
@@ -1405,7 +1415,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">13</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Copilot Memory</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -1437,7 +1447,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">14</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <summary><span class="ex-num">15</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.

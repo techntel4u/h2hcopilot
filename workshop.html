@@ -1198,7 +1198,7 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">29</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">36</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">37</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
 
@@ -1874,12 +1874,12 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 <div class="dept-filter">
                     <label for="dept-select">Show prompts for</label>
                     <select id="dept-select" class="dept-select">
-                        <option value="all">All departments (36)</option>
+                        <option value="all">All departments (37)</option>
                         <option value="reception">Reception (5)</option>
                         <option value="admin">Office / Administration (5)</option>
                         <option value="finance">Finance (5)</option>
                         <option value="facilities">Facilities (8)</option>
-                        <option value="general">General (All Roles) (13)</option>
+                        <option value="general">General (All Roles) (14)</option>
                     </select>
                 </div>
 
@@ -2251,6 +2251,70 @@ Installer confirmed for the Thursday after delivery. Delivery date still not con
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Cross-role prompts for documents, data and day-to-day analysis — useful whatever your job title.</p>
 
                 <details open>
+                    <summary><span style="flex:1;">Personalisation Template</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            <strong>Set this up once, at the start of a new chat.</strong> This tells Copilot who you are and how you like to work, so it responds your way for the rest of the conversation. You only need to change the last two sections &mdash; your role and your main tasks.
+                        </div>
+
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Step 1 &mdash; Copy the template</p>
+                        <div class="prompt-box" id="personalisation-template">You are my professional AI assistant at Warwick Academy.
+
+Use clear British English and a friendly, professional tone.
+
+Help me save time by drafting, rewriting, summarising and organising information.
+
+Always:
+• Be concise and practical.
+• Use headings, bullets and tables where helpful.
+• Highlight information that needs checking.
+• Do not invent facts, names, dates or decisions.
+• Suggest improvements where appropriate.
+
+My role is: [INSERT YOUR ROLE]
+
+The main tasks I need help with are:
+• [TASK 1]
+• [TASK 2]
+• [TASK 3]</div>
+                        <button onclick="copyToClipboard('personalisation-template')" class="btn-copy">Copy Template</button>
+
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:22px 0 0;">Step 2 &mdash; Make the last part your own</p>
+                        <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Everything above <strong>&ldquo;My role is:&rdquo;</strong> stays exactly as it is &mdash; it applies to everyone. Only the final two sections change, because they depend on your role. Replace <strong>[INSERT YOUR ROLE]</strong> with your job title and the three <strong>[TASK]</strong> lines with the jobs you do most often.</p>
+                        <p style="font-size:13px; color:var(--apple-text-secondary); margin:10px 0 0;">Not sure what to write? Copy the example closest to your job below and paste it over the last part of the template.</p>
+
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Finance Officer</p>
+                        <div class="prompt-box" id="personalisation-finance">My role is: Finance Officer
+
+The main tasks I need help with are:
+• Budget monitoring
+• Financial reporting
+• Supplier communications</div>
+                        <button onclick="copyToClipboard('personalisation-finance')" class="btn-copy">Copy Finance Example</button>
+
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Receptionist</p>
+                        <div class="prompt-box" id="personalisation-reception">My role is: Receptionist
+
+The main tasks I need help with are:
+• Parent enquiries
+• Visitor communications
+• Event administration</div>
+                        <button onclick="copyToClipboard('personalisation-reception')" class="btn-copy">Copy Reception Example</button>
+
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Facilities Team</p>
+                        <div class="prompt-box" id="personalisation-facilities">My role is: Facilities Team
+
+The main tasks I need help with are:
+• Maintenance planning
+• Health &amp; Safety
+• Contractor communications</div>
+                        <button onclick="copyToClipboard('personalisation-facilities')" class="btn-copy">Copy Facilities Example</button>
+
+                        <p style="margin-top:18px; font-size:13px; color:var(--apple-text-secondary);"><em>Tip: Copilot remembers this for the current chat only. Paste it again whenever you click &ldquo;New Chat&rdquo;.</em></p>
+                    </div>
+                </details>
+
+                <details>
                     <summary><span style="flex:1;">Filter a document to your role</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">

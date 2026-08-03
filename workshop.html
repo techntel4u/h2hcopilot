@@ -2935,6 +2935,22 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
                 if (current) { current.items.push(el); }
             });
 
+            // Filtering shrinks the page, so the browser can clamp the scroll position and
+            // leave the dropdown above the viewport. Pull it back into view when that happens.
+            function keepFilterInView() {
+                var nav = document.querySelector('.global-nav');
+                var offset = (nav ? nav.offsetHeight : 0) + 16;
+                var top = select.getBoundingClientRect().top;
+                if (top >= offset) { return; }
+                var target = (window.pageYOffset || document.documentElement.scrollTop) + top - offset;
+                if (target < 0) { target = 0; }
+                if ('scrollBehavior' in document.documentElement.style) {
+                    window.scrollTo({ top: target, behavior: 'smooth' });
+                } else {
+                    window.scrollTo(0, target);
+                }
+            }
+
             select.addEventListener('change', function () {
                 var chosen = select.value;
                 groups.forEach(function (group) {
@@ -2943,6 +2959,12 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
                         el.style.display = show ? '' : 'none';
                     });
                 });
+                // Wait for the new layout before measuring.
+                if (window.requestAnimationFrame) {
+                    window.requestAnimationFrame(keepFilterInView);
+                } else {
+                    keepFilterInView();
+                }
             });
         })();
 

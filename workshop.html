@@ -656,6 +656,54 @@
         .tab-panel { display: none; }
         .tab-panel.active { display: block; animation: fadeIn 0.25s ease-out; }
 
+        /* --- Department filter dropdown --- */
+        .dept-filter {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 0 8px;
+        }
+
+        .dept-filter label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--apple-text-secondary);
+        }
+
+        .dept-select {
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--apple-text-primary);
+            background-color: var(--apple-bg-card);
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%236e6e73' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            border: 1px solid var(--apple-border);
+            border-radius: var(--radius-button);
+            padding: 10px 40px 10px 16px;
+            min-width: 240px;
+            max-width: 100%;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            transition: var(--transition);
+        }
+
+        .dept-select:hover { border-color: var(--apple-text-tertiary); }
+
+        .dept-select:focus-visible {
+            outline: none;
+            border-color: var(--apple-blue);
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.18);
+        }
+
+        @media (max-width: 640px) {
+            .dept-filter { flex-direction: column; align-items: stretch; }
+            .dept-select { min-width: 0; width: 100%; }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
@@ -1823,7 +1871,19 @@ My only skill is pretending to listen in Zoom calls.</textarea>
             <!-- ============ TAB 2: PROMPT RECIPES ============ -->
             <div id="tab-recipes" class="tab-panel" role="tabpanel">
 
-                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Reception</h2>
+                <div class="dept-filter">
+                    <label for="dept-select">Show prompts for</label>
+                    <select id="dept-select" class="dept-select">
+                        <option value="all">All departments (36)</option>
+                        <option value="reception">Reception (5)</option>
+                        <option value="admin">Office / Administration (5)</option>
+                        <option value="finance">Finance (5)</option>
+                        <option value="facilities">Facilities (8)</option>
+                        <option value="general">General (All Roles) (13)</option>
+                    </select>
+                </div>
+
+                <h2 data-dept="reception" style="font-size:20px; font-weight:700; margin:26px 0 4px;">Reception</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Front of house juggles calls, visitors and quick-turnaround messages. Copilot helps you capture phone notes cleanly, confirm appointments, hand over between shifts and keep parent-facing wording warm and clear.</p>
 
                 <details>
@@ -1881,7 +1941,7 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                     </div>
                 </details>
 
-                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Office / Administration</h2>
+                <h2 data-dept="admin" style="font-size:20px; font-weight:700; margin:26px 0 4px;">Office / Administration</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">The office keeps everything moving. Copilot turns rough notes into formal minutes, tidies letters without changing the facts, untangles long email chains and drafts notices and checklists in seconds.</p>
 
                 <details>
@@ -1947,7 +2007,7 @@ Signage ordered, arriving Thursday. Reception desk covered by two volunteers on 
                     </div>
                 </details>
 
-                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Finance</h2>
+                <h2 data-dept="finance" style="font-size:20px; font-weight:700; margin:26px 0 4px;">Finance</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Accuracy and tone both matter in finance. Copilot helps you sort and flag invoices, summarise budget notes into clean tables, and draft firm-but-respectful reminders and explainers — always without pupil or family details.</p>
 
                 <details>
@@ -2002,7 +2062,7 @@ Supplier: Island IT Support - Invoice #1201 - Due July 25"</div>
                     </div>
                 </details>
 
-                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Facilities</h2>
+                <h2 data-dept="facilities" style="font-size:20px; font-weight:700; margin:26px 0 4px;">Facilities</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Facilities work is lists, suppliers and deadlines. Copilot prioritises maintenance requests, drafts supplier emails, pulls the decisions out of long threads and builds practical checklists for walk-rounds and works notices.</p>
 
                 <details>
@@ -2187,7 +2247,7 @@ Installer confirmed for the Thursday after delivery. Delivery date still not con
                     </div>
                 </details>
 
-                <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">General (All Roles)</h2>
+                <h2 data-dept="general" style="font-size:20px; font-weight:700; margin:26px 0 4px;">General (All Roles)</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Cross-role prompts for documents, data and day-to-day analysis — useful whatever your job title.</p>
 
                 <details open>
@@ -2852,6 +2912,36 @@ Based on this context, draft an update email to the team about [Your Topic]..."<
                     btn.setAttribute('aria-selected', 'true');
                     var panel = document.getElementById('tab-' + target);
                     if (panel) { panel.classList.add('active'); }
+                });
+            });
+        })();
+
+        // ===== Workplace Prompts department filter =====
+        (function () {
+            var select = document.getElementById('dept-select');
+            var panel = document.getElementById('tab-recipes');
+            if (!select || !panel) { return; }
+
+            // Group every element after the dropdown under the department heading above it.
+            var groups = [];
+            var current = null;
+            Array.prototype.forEach.call(panel.children, function (el) {
+                if (el.classList.contains('dept-filter')) { return; }
+                var dept = el.getAttribute('data-dept');
+                if (dept) {
+                    current = { dept: dept, items: [] };
+                    groups.push(current);
+                }
+                if (current) { current.items.push(el); }
+            });
+
+            select.addEventListener('change', function () {
+                var chosen = select.value;
+                groups.forEach(function (group) {
+                    var show = (chosen === 'all' || chosen === group.dept);
+                    group.items.forEach(function (el) {
+                        el.style.display = show ? '' : 'none';
+                    });
                 });
             });
         })();

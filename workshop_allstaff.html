@@ -1197,7 +1197,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">30</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">31</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">37</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1281,7 +1281,137 @@ Generate 4 distinct, role-tailored outputs simultaneously:
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">03</span><span style="flex:1;">Welcome message</span></summary>
+                    <summary><span class="ex-num">03</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
+                    <div class="details-content">
+                        <div class="exercise-note">
+                            Application: One prompt that produces a quiz three ways &mdash; a version to display in class, a version formatted for Microsoft Forms Quick Import, and a Word document ready to upload. Set the number of questions and the topic, and Copilot does the rest.
+                        </div>
+                        <div class="prompt-box" id="quiz-generator">Create me [number of questions] questions on the [TOPIC], use a variety of question types.
+
+Whenever I ask you to create a quiz, always provide THREE outputs.
+
+OUTPUT 1: Classroom Display Version
+• Display the quiz normally in chat.
+• Format it professionally and clearly for use on a whiteboard, projector or lesson slide.
+• Include:
+   - Quiz title
+   - Learning objective
+   - Instructions for pupils
+   - Questions and answer options
+   - Separate teacher answer sheet
+
+OUTPUT 2: Microsoft Forms Import Version
+• Create a version specifically formatted for Microsoft Forms Quick Import from a Word document.
+• Use the following structure exactly:
+
+   Quiz Title
+
+   1. Question text?
+   A. Option 1
+   B. Option 2
+   C. Option 3
+   D. Option 4
+   Answer: B
+
+   2. Question text?
+   A. Option 1
+   B. Option 2
+   C. Option 3
+   D. Option 4
+   Answer: C
+
+• Use numbered questions.
+• Use A, B, C and D answer options.
+• Include a blank line between questions.
+• Include "Answer: X" after every question.
+• Do not use tables.
+• Do not use columns.
+• Do not use images.
+• Do not use text boxes.
+• Ensure the format is optimised for Microsoft Forms Quick Import.
+
+OUTPUT 3: Word Document
+• Automatically generate a Microsoft Word (.docx) file containing the Microsoft Forms Import Version.
+• Make the document ready for direct upload into Microsoft Forms using Quick Import.
+• Do not wait for me to ask for the Word version.
+• Always provide the downloadable .docx file.
+
+ADDITIONAL REQUIREMENTS
+• Use clear British English.
+• Include an estimated completion time.
+• Include the total marks available.
+• Make questions age-appropriate for the subject and audience.
+• For multiple-choice questions, identify one correct answer only unless I specify otherwise.
+• Always display the Classroom Display Version in chat even when generating the Word document.</div>
+                        <button onclick="copyToClipboard('quiz-generator')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Replace <strong>[number of questions]</strong> and <strong>[TOPIC]</strong>, for example &ldquo;Create me 10 questions on the water cycle&rdquo;.</p>
+
+                        <div class="exercise-note" style="margin-top:18px; padding:14px 16px; background:var(--apple-bg-subtle); border:1px solid var(--border-soft); border-radius:var(--radius-medium);">
+                            <strong>Tip: save the long part once, in your Copilot settings.</strong> Everything from &ldquo;Whenever I ask you to create a quiz&rdquo; onwards never changes &mdash; it is a standing instruction. Paste that block into Copilot&rsquo;s chat settings (the same place as the Personalisation Template) and Copilot applies it to every future chat. After that you only type the first line.
+                        </div>
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:16px 0 0;">The part to save in settings</p>
+                        <div class="prompt-box" id="quiz-generator-standing">Whenever I ask you to create a quiz, always provide THREE outputs.
+
+OUTPUT 1: Classroom Display Version
+• Display the quiz normally in chat.
+• Format it professionally and clearly for use on a whiteboard, projector or lesson slide.
+• Include:
+   - Quiz title
+   - Learning objective
+   - Instructions for pupils
+   - Questions and answer options
+   - Separate teacher answer sheet
+
+OUTPUT 2: Microsoft Forms Import Version
+• Create a version specifically formatted for Microsoft Forms Quick Import from a Word document.
+• Use the following structure exactly:
+
+   Quiz Title
+
+   1. Question text?
+   A. Option 1
+   B. Option 2
+   C. Option 3
+   D. Option 4
+   Answer: B
+
+   2. Question text?
+   A. Option 1
+   B. Option 2
+   C. Option 3
+   D. Option 4
+   Answer: C
+
+• Use numbered questions.
+• Use A, B, C and D answer options.
+• Include a blank line between questions.
+• Include "Answer: X" after every question.
+• Do not use tables.
+• Do not use columns.
+• Do not use images.
+• Do not use text boxes.
+• Ensure the format is optimised for Microsoft Forms Quick Import.
+
+OUTPUT 3: Word Document
+• Automatically generate a Microsoft Word (.docx) file containing the Microsoft Forms Import Version.
+• Make the document ready for direct upload into Microsoft Forms using Quick Import.
+• Do not wait for me to ask for the Word version.
+• Always provide the downloadable .docx file.
+
+ADDITIONAL REQUIREMENTS
+• Use clear British English.
+• Include an estimated completion time.
+• Include the total marks available.
+• Make questions age-appropriate for the subject and audience.
+• For multiple-choice questions, identify one correct answer only unless I specify otherwise.
+• Always display the Classroom Display Version in chat even when generating the Word document.</div>
+                        <button onclick="copyToClipboard('quiz-generator-standing')" class="btn-copy">Copy Standing Instructions</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>With that saved, your day-to-day prompt becomes one line: &ldquo;Create me 10 questions on the water cycle, use a variety of question types.&rdquo;</em></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span class="ex-num">04</span><span style="flex:1;">Welcome message</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Draft a friendly, on-brand welcome message for visitors in seconds.
@@ -1292,7 +1422,7 @@ Generate 4 distinct, role-tailored outputs simultaneously:
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">04</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
+                    <summary><span class="ex-num">05</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Run this deliberately vague prompt first and note how much the AI has to guess: who is writing, which gate, when, and why. Then compare the result with the strong PACTS version in the next exercise.
@@ -1303,7 +1433,7 @@ Generate 4 distinct, role-tailored outputs simultaneously:
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">05</span><span style="flex:1;">Strong (PACTS) Prompt: Staff Notice Email</span></summary>
+                    <summary><span class="ex-num">06</span><span style="flex:1;">Strong (PACTS) Prompt: Staff Notice Email</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: The same task as the weak prompt, now with full PACTS structure. Every element the AI had to guess is spelled out, so you get a clear, reassuring staff notice with the key time in bold.
@@ -1314,7 +1444,7 @@ Generate 4 distinct, role-tailored outputs simultaneously:
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">06</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
+                    <summary><span class="ex-num">07</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste an existing draft and have the AI rewrite it for tone and format, turning a plain notice into a warm, parent-friendly message.
@@ -1338,7 +1468,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">07</span><span style="flex:1;">The Email Glow-Up</span></summary>
+                    <summary><span class="ex-num">08</span><span style="flex:1;">The Email Glow-Up</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste a blunt reminder email and watch Copilot produce three tone options instantly, so you can pick the one that fits the parent and the situation.
@@ -1352,7 +1482,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">08</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
+                    <summary><span class="ex-num">09</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste messy meeting notes and get a clean, owner-assigned action list ready to circulate.
@@ -1373,7 +1503,7 @@ School Reception Team"</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">09</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
+                    <summary><span class="ex-num">10</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste a rambling email chain and get the decisions separated from the open questions in seconds.
@@ -1401,7 +1531,7 @@ Confirmed: Reception 5.15-5.45, Y1-3 at 6pm, Y4-6 at 6.45, all in the halls as u
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">10</span><span style="flex:1;">Spreadsheet SOS</span></summary>
+                    <summary><span class="ex-num">11</span><span style="flex:1;">Spreadsheet SOS</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste a messy booking list and get it sorted by date, grouped by department, and presented as a ready-to-use table.
@@ -1424,7 +1554,7 @@ Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Microsoft states that Copilot can help analyse data, identify trends, explain formulas and create summaries when working with spreadsheet data. Try these three use cases with the sample data provided.</p>
 
                 <details>
-                    <summary><span class="ex-num">11</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
+                    <summary><span class="ex-num">12</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: An administrator has a spreadsheet of attendance data and needs a quick summary for a manager — key findings, risks and recommended actions in one pass.
@@ -1465,7 +1595,7 @@ Amelia	Geography	97</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">12</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
+                    <summary><span class="ex-num">13</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: You know what you want to calculate but not the formula. Copilot writes it, explains each part in plain language, and warns you about common mistakes.
@@ -1501,7 +1631,7 @@ Finance	140	150</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">13</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
+                    <summary><span class="ex-num">14</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: A manager needs a monthly update but only has spreadsheet data. Copilot turns it into a leadership-ready report with highlights, concerns and next steps.
@@ -1536,7 +1666,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">14</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
+                    <summary><span class="ex-num">15</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: A deliberate trap: this prompt breaks the PACTS formula and asks for a fiddly working-days calculation that depends on knowing the Bermuda public holidays in that period. The AI may miscount or miss a holiday while sounding completely confident. Run it, then check the answer against the official holiday dates — a reminder that confident-sounding output still needs verifying.
@@ -1548,7 +1678,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">15</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
+                    <summary><span class="ex-num">16</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Turn five scrappy bullet points into a ready-to-send parent letter in one step.
@@ -1567,7 +1697,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">16</span><span style="flex:1;">Instant Image Creation</span></summary>
+                    <summary><span class="ex-num">17</span><span style="flex:1;">Instant Image Creation</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Design a poster-style graphic for a real noticeboard need — School Shop hours, a WAPTA event, a Bearly Used pop-up — then ask for a second version in a different style.
@@ -1611,7 +1741,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">17</span><span style="flex:1;">The Instant Slide Script</span></summary>
+                    <summary><span class="ex-num">18</span><span style="flex:1;">The Instant Slide Script</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get a full slide-by-slide outline — title, three bullets and a speaker note per slide — ready to paste straight into PowerPoint. Free Copilot writes the content; turning it into the actual designed deck still happens in PowerPoint itself.
@@ -1637,7 +1767,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">18</span><span style="flex:1;">Upload and Ask</span></summary>
+                    <summary><span class="ex-num">19</span><span style="flex:1;">Upload and Ask</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Upload a real document — a draft newsletter, a fee schedule, an old policy — and have Copilot summarise it or turn it into something else, live.
@@ -1652,7 +1782,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">19</span><span style="flex:1;">Read the Page</span></summary>
+                    <summary><span class="ex-num">20</span><span style="flex:1;">Read the Page</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Paste in a public web address and ask Copilot to summarise or extract from it — useful for reading a supplier page, a policy page or a news article quickly.
@@ -1671,7 +1801,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">20</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
+                    <summary><span class="ex-num">21</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Turn your school's public website into a working brand guidelines document — colours, tone of voice and imagery — grounded only in what is actually visible on the site.
@@ -1688,7 +1818,7 @@ HR	25,000	23,100</div>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Additional prompts to help you learn what Copilot can do — from remembering your preferences and reusing past chats to roleplay, formatting and self-evaluation techniques.</p>
 
                 <details>
-                    <summary><span class="ex-num">21</span><span style="flex:1;">Copilot Memory</span></summary>
+                    <summary><span class="ex-num">22</span><span style="flex:1;">Copilot Memory</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -1720,7 +1850,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">22</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
+                    <summary><span class="ex-num">23</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
@@ -1731,7 +1861,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">23</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                    <summary><span class="ex-num">24</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="margin-bottom: 18px;">
                             <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
@@ -1752,7 +1882,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">24</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
+                    <summary><span class="ex-num">25</span><span style="flex:1;">Roleplay for Difficult Conversations</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Useful for learning, or to prepare for an upcoming meeting. Rehearse performance reviews or conflict resolution in a safe space.
@@ -1763,7 +1893,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">25</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
+                    <summary><span class="ex-num">26</span><span style="flex:1;">Professional Persona (Role Prompting)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Tailor communication tone for specific audiences.
@@ -1777,7 +1907,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">26</span><span style="flex:1;">Format &amp; Structure</span></summary>
+                    <summary><span class="ex-num">27</span><span style="flex:1;">Format &amp; Structure</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             <strong>Application:</strong> Force the AI to output exactly what you need (Table, SOP, Creative Text) in a single request.
@@ -1792,7 +1922,7 @@ HR	25,000	23,100</div>
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">27</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
+                    <summary><span class="ex-num">28</span><span style="flex:1;">Self-Evaluation (Mark Your Homework)</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Get AI to critique its own work to improve quality before you review it.
@@ -1805,7 +1935,7 @@ Score each example on a 1-10 scale for Memorability, Distinctiveness and Global 
                 </details>
 
                 <details>
-                    <summary><span class="ex-num">28</span><span style="flex:1;">Prompt Chaining</span></summary>
+                    <summary><span class="ex-num">29</span><span style="flex:1;">Prompt Chaining</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
                             Application: Combine Role, Tone, Constraints, and Format into one request.
@@ -1821,7 +1951,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
                 </details>
 
                 <details>
-    <summary><span class="ex-num">29</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+    <summary><span class="ex-num">30</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
     <div class="details-content">
         <div class="exercise-note" style="border-left:3px solid #ff9500;">
                             <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
@@ -1852,7 +1982,7 @@ Examples: CitrusBurst, AquaFizz, SolarPop."</div>
 </details>
 
                 <details>
-                    <summary><span class="ex-num">30</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                    <summary><span class="ex-num">31</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                     <div class="details-content">
                         <div class="exercise-note" style="border-left:3px solid #ff9500;">
                             <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.

@@ -1266,7 +1266,7 @@
             </div>
 
             <div class="tab-bar" role="tablist">
-                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">32</span></button>
+                <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">33</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">42</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
@@ -1275,12 +1275,35 @@
             <div id="tab-exercises" class="tab-panel active" role="tabpanel">
 
                 <details class="ex-section">
-                    <summary><span style="flex:1;">Section 1: Prompts to follow the live workshop</span><span class="section-count">7 prompts</span></summary>
+                    <summary><span style="flex:1;">Section 1: Prompts to follow the live workshop</span><span class="section-count">8 prompts</span></summary>
                     <div class="section-body">
                         <p class="section-intro">Work through these together during the session. Everyone does the same prompts, whatever your role.</p>
 
     <details>
-                        <summary><span class="ex-num">01</span><span style="flex:1;">Salute Day: Four Roles, One Prompt</span></summary>
+                        <summary><span class="ex-num">01</span><span style="flex:1;">Your First Prompt in 30 Seconds</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: The quickest possible start. Pick the line for your role, paste it into Copilot, and see what comes back. No set-up, no PACTS structure &mdash; just one sentence.
+                            </div>
+
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:16px 0 0;">Teachers</p>
+                            <div class="prompt-box" id="first-prompt-teachers">Explain volcanic eruptions to a Year 5 pupil.</div>
+                            <button onclick="copyToClipboard('first-prompt-teachers')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Support Staff</p>
+                            <div class="prompt-box" id="first-prompt-support">Draft a friendly reminder about an upcoming event.</div>
+                            <button onclick="copyToClipboard('first-prompt-support')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Leaders</p>
+                            <div class="prompt-box" id="first-prompt-leaders">Summarise the benefits of flexible working in 5 bullet points.</div>
+                            <button onclick="copyToClipboard('first-prompt-leaders')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="margin-top:18px; font-size:13px; color:var(--apple-text-secondary);"><em>Or type your own question &mdash; anything you were going to look up or write today works fine.</em></p>
+                        </div>
+                    </details>
+
+    <details>
+                        <summary><span class="ex-num">02</span><span style="flex:1;">Salute Day: Four Roles, One Prompt</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: One prompt, four ready-to-use outputs &mdash; each written for a different team. Shows how naming the role, the audience and the format in a single ask saves running four separate prompts.
@@ -1301,7 +1324,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">02</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                        <summary><span class="ex-num">03</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Turn anything complicated into plain English &mdash; a topic you are teaching, a policy you have been sent, or a system you are expected to use. Ask for it as simply as you like, then ask follow-up questions until it clicks.
@@ -1355,7 +1378,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">03</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
+                        <summary><span class="ex-num">04</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: One prompt that produces a quiz three ways &mdash; a version to display in class, a version formatted for Microsoft Forms Quick Import, and a Word document ready to upload. Set the number of questions and the topic, and Copilot does the rest.
@@ -1485,7 +1508,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">04</span><span style="flex:1;">Welcome message</span></summary>
+                        <summary><span class="ex-num">05</span><span style="flex:1;">Welcome message</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Draft a friendly, on-brand welcome message for visitors in seconds.
@@ -1496,7 +1519,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">05</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
+                        <summary><span class="ex-num">06</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Run this deliberately vague prompt first and note how much Copilot has to guess: which year group, how long the lesson is, what the pupils already know, and what you want to end up with. Then compare the result with the strong PACTS version in the next exercise.
@@ -1507,7 +1530,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">06</span><span style="flex:1;">Strong (PACTS) Prompt: Volcano Lesson Outline</span></summary>
+                        <summary><span class="ex-num">07</span><span style="flex:1;">Strong (PACTS) Prompt: Volcano Lesson Outline</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: The same task as the weak prompt, now with full PACTS structure. Every element Copilot had to guess is spelled out, so you get a usable 50-minute outline instead of a generic overview.
@@ -1522,7 +1545,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">07</span><span style="flex:1;">Visual Starter Activity</span></summary>
+                        <summary><span class="ex-num">08</span><span style="flex:1;">Visual Starter Activity</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Ask for an image and the thinking around it in one go &mdash; an image prompt to generate the picture, plus the questions that turn it into a discussion.
@@ -1541,7 +1564,7 @@
                         <p class="section-intro">Planning, marking, resources and parent conversations &mdash; written for the classroom.</p>
 
     <details>
-                        <summary><span class="ex-num">08</span><span style="flex:1;">Classroom Display Image</span></summary>
+                        <summary><span class="ex-num">09</span><span style="flex:1;">Classroom Display Image</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Design a poster-style graphic for a classroom or corridor display &mdash; a topic banner, a keyword poster, a reading corner sign &mdash; then ask for a second version in a different style.
@@ -1585,7 +1608,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">09</span><span style="flex:1;">Lesson Slide Outline</span></summary>
+                        <summary><span class="ex-num">10</span><span style="flex:1;">Lesson Slide Outline</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Get a full slide-by-slide lesson outline &mdash; title, three bullets and a teacher note per slide &mdash; ready to paste straight into PowerPoint. Free Copilot writes the content; turning it into the designed deck still happens in PowerPoint itself.
@@ -1611,7 +1634,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">10</span><span style="flex:1;">Upload a Document and Ask</span></summary>
+                        <summary><span class="ex-num">11</span><span style="flex:1;">Upload a Document and Ask</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Upload a real document &mdash; a scheme of work, a curriculum guide, a long policy &mdash; and have Copilot summarise it or turn it into something else, live.
@@ -1626,7 +1649,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">11</span><span style="flex:1;">Read a Web Page</span></summary>
+                        <summary><span class="ex-num">12</span><span style="flex:1;">Read a Web Page</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Paste in a public web address and ask Copilot to summarise or extract from it &mdash; useful for getting through an exam board page, a research article or a policy quickly.
@@ -1645,7 +1668,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">12</span><span style="flex:1;">Rehearse a Tricky Parent Conversation</span></summary>
+                        <summary><span class="ex-num">13</span><span style="flex:1;">Rehearse a Tricky Parent Conversation</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Rehearse a conversation you are dreading &mdash; a parents' evening, a call about behaviour or missed homework &mdash; in a safe space, before you have it for real.
@@ -1656,7 +1679,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">13</span><span style="flex:1;">Pitch the Same Idea to Different Audiences</span></summary>
+                        <summary><span class="ex-num">14</span><span style="flex:1;">Pitch the Same Idea to Different Audiences</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: The same explanation, pitched two ways. Run both and compare &mdash; it is the clearest demonstration of why naming the audience changes everything.
@@ -1670,7 +1693,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">14</span><span style="flex:1;">Three Outputs in One Request</span></summary>
+                        <summary><span class="ex-num">15</span><span style="flex:1;">Three Outputs in One Request</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 <strong>Application:</strong> Ask for several different formats at once &mdash; creative text, a set of instructions and a table &mdash; instead of running three separate prompts.
@@ -1685,7 +1708,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">15</span><span style="flex:1;">Ask Copilot to Mark Its Own Work</span></summary>
+                        <summary><span class="ex-num">16</span><span style="flex:1;">Ask Copilot to Mark Its Own Work</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Make Copilot score and justify its own suggestions, so the weak ones are already flagged before you read them.
@@ -1698,7 +1721,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">16</span><span style="flex:1;">Prompt Chaining: Build a Rich Request</span></summary>
+                        <summary><span class="ex-num">17</span><span style="flex:1;">Prompt Chaining: Build a Rich Request</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Combine Task, Audience, Tone, Constraints and Format into one request, so you get a usable classroom resource first time.
@@ -1714,7 +1737,7 @@
                     </details>
 
     <details>
-        <summary><span class="ex-num">17</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+        <summary><span class="ex-num">18</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
         <div class="details-content">
             <div class="exercise-note" style="border-left:3px solid #ff9500;">
                                 <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
@@ -1745,7 +1768,7 @@
     </details>
 
     <details>
-                        <summary><span class="ex-num">18</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                        <summary><span class="ex-num">19</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
                         <div class="details-content">
                             <div class="exercise-note" style="border-left:3px solid #ff9500;">
                                 <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
@@ -1830,7 +1853,7 @@
                         <p class="section-intro">Email, documents, spreadsheets and reporting &mdash; written for office and operational work.</p>
 
     <details>
-                        <summary><span class="ex-num">19</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
+                        <summary><span class="ex-num">20</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Paste an existing draft and have the AI rewrite it for tone and format, turning a plain notice into a warm, parent-friendly message.
@@ -1854,7 +1877,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">20</span><span style="flex:1;">The Email Glow-Up</span></summary>
+                        <summary><span class="ex-num">21</span><span style="flex:1;">The Email Glow-Up</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Paste a blunt reminder email and watch Copilot produce three tone options instantly, so you can pick the one that fits the parent and the situation.
@@ -1868,7 +1891,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">21</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
+                        <summary><span class="ex-num">22</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Paste messy meeting notes and get a clean, owner-assigned action list ready to circulate.
@@ -1889,7 +1912,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">22</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
+                        <summary><span class="ex-num">23</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Paste a rambling email chain and get the decisions separated from the open questions in seconds.
@@ -1917,7 +1940,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">23</span><span style="flex:1;">Spreadsheet SOS</span></summary>
+                        <summary><span class="ex-num">24</span><span style="flex:1;">Spreadsheet SOS</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Paste a messy booking list and get it sorted by date, grouped by department, and presented as a ready-to-use table.
@@ -1940,7 +1963,7 @@
                     <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Microsoft states that Copilot can help analyse data, identify trends, explain formulas and create summaries when working with spreadsheet data. Try these three use cases with the sample data provided.</p>
 
     <details>
-                        <summary><span class="ex-num">24</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
+                        <summary><span class="ex-num">25</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: An administrator has a spreadsheet of attendance data and needs a quick summary for a manager — key findings, risks and recommended actions in one pass.
@@ -1981,7 +2004,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">25</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
+                        <summary><span class="ex-num">26</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: You know what you want to calculate but not the formula. Copilot writes it, explains each part in plain language, and warns you about common mistakes.
@@ -2017,7 +2040,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">26</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
+                        <summary><span class="ex-num">27</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: A manager needs a monthly update but only has spreadsheet data. Copilot turns it into a leadership-ready report with highlights, concerns and next steps.
@@ -2052,7 +2075,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">27</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
+                        <summary><span class="ex-num">28</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: A deliberate trap: this prompt breaks the PACTS formula and asks for a fiddly working-days calculation that depends on knowing the Bermuda public holidays in that period. The AI may miscount or miss a holiday while sounding completely confident. Run it, then check the answer against the official holiday dates — a reminder that confident-sounding output still needs verifying.
@@ -2064,7 +2087,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">28</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
+                        <summary><span class="ex-num">29</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Turn five scrappy bullet points into a ready-to-send parent letter in one step.
@@ -2083,7 +2106,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">29</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
+                        <summary><span class="ex-num">30</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Turn your school's public website into a working brand guidelines document — colours, tone of voice and imagery — grounded only in what is actually visible on the site.
@@ -2100,7 +2123,7 @@
                     <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Additional prompts to help you learn what Copilot can do — from remembering your preferences and reusing past chats to roleplay, formatting and self-evaluation techniques.</p>
 
     <details>
-                        <summary><span class="ex-num">30</span><span style="flex:1;">Copilot Memory</span></summary>
+                        <summary><span class="ex-num">31</span><span style="flex:1;">Copilot Memory</span></summary>
                         <div class="details-content">
                             <div class="exercise-note" style="margin-bottom: 18px;">
                                 <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
@@ -2132,7 +2155,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">31</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
+                        <summary><span class="ex-num">32</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
@@ -2143,7 +2166,7 @@
                     </details>
 
     <details>
-                        <summary><span class="ex-num">32</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                        <summary><span class="ex-num">33</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
                         <div class="details-content">
                             <div class="exercise-note" style="margin-bottom: 18px;">
                                 <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.

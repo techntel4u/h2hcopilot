@@ -1198,7 +1198,7 @@
 
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">31</span></button>
-                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">37</span></button>
+                <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">42</span></button>
                 <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
             </div>
 
@@ -2067,11 +2067,12 @@ My only skill is pretending to listen in Zoom calls.</textarea>
                 <div class="dept-filter">
                     <label for="dept-select">Show prompts for</label>
                     <select id="dept-select" class="dept-select">
-                        <option value="all">All departments (37)</option>
+                        <option value="all">All departments (42)</option>
                         <option value="reception">Reception (5)</option>
                         <option value="admin">Office / Administration (5)</option>
                         <option value="finance">Finance (5)</option>
                         <option value="facilities">Facilities (8)</option>
+                        <option value="teaching">Teaching Staff (5)</option>
                         <option value="general">General (All Roles) (14)</option>
                     </select>
                 </div>
@@ -2440,6 +2441,65 @@ Installer confirmed for the Thursday after delivery. Delivery date still not con
                     </div>
                 </details>
 
+                <h2 data-dept="teaching" style="font-size:20px; font-weight:700; margin:26px 0 4px;">Teaching Staff</h2>
+                <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Planning, marking and reporting eat the hours around teaching. Copilot drafts the first version &mdash; lesson outlines, feedback, differentiated tasks and parent messages &mdash; so you edit rather than start from a blank page. Always check the content against your own knowledge of the pupil and the curriculum.</p>
+
+                <details>
+                    <summary><span style="flex:1;">Marking Feedback: Two Stars and a Wish</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="teach-feedback">"Act as a teacher at Warwick Academy. Turn my rough marking notes into constructive written feedback for the pupil, using two strengths and one clear next step. Keep the tone encouraging and the language age-appropriate for [YEAR GROUP]. Present it as a short paragraph the pupil can read: [paste notes]"</div>
+                        <button onclick="copyToClipboard('teach-feedback')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample marking notes:</em></p>
+                        <div class="prompt-box" id="teach-feedback-sample">"good structure, clear intro and conclusion, used 3 sources but didn't say where quotes came from, handwriting rushed at the end, needs to explain WHY not just what happened"</div>
+                        <button onclick="copyToClipboard('teach-feedback-sample')" class="btn-copy">Copy Sample Notes</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Lesson Plan Starter</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="teach-lesson-plan">"Act as a teacher at Warwick Academy. Draft a 50-minute lesson plan on [TOPIC] for [YEAR GROUP]. Include a starter activity, the main task, a check for understanding partway through, and a plenary. Show a timing for each section and list any resources needed."</div>
+                        <button onclick="copyToClipboard('teach-lesson-plan')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Treat the result as a first draft to shape around your class, not a finished plan.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Differentiate a Task Three Ways</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="teach-differentiate">"Act as a teacher. Rewrite this task at three levels: additional support, core, and stretch. Keep the same learning objective for all three and change only the demand. Present it as three clearly labelled versions: [paste task]"</div>
+                        <button onclick="copyToClipboard('teach-differentiate')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample task:</em></p>
+                        <div class="prompt-box" id="teach-differentiate-sample">"Write a paragraph explaining why the Titanic sank, using evidence from the sources we looked at in class."</div>
+                        <button onclick="copyToClipboard('teach-differentiate-sample')" class="btn-copy">Copy Sample Task</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Report Comment from Bullet Points</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="teach-report-comment">"Act as a teacher writing end-of-term reports. Turn these bullet points about a pupil into a 4-sentence report comment in a warm, professional tone. Use only what I have given you and do not invent grades, scores or incidents: [paste bullets]"</div>
+                        <button onclick="copyToClipboard('teach-report-comment')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample bullets:</em></p>
+                        <div class="prompt-box" id="teach-report-comment-sample">"works hard, always prepared
+contributes in group work but rarely volunteers in whole class
+written work improving, spelling still a barrier
+target next term: check work before handing in"</div>
+                        <button onclick="copyToClipboard('teach-report-comment-sample')" class="btn-copy">Copy Sample Bullets</button>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><span style="flex:1;">Tactful Email to a Parent</span></summary>
+                    <div class="details-content">
+                        <div class="prompt-box" id="teach-parent-email">"Act as a teacher at Warwick Academy. Draft a short, tactful email to a parent about their child's recent progress. Cover one genuine strength and one area to work on, and suggest one practical thing they could do at home. Keep it under 150 words and avoid jargon: [paste details]"</div>
+                        <button onclick="copyToClipboard('teach-parent-email')" class="btn-copy">Copy Prompt</button>
+                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample details:</em></p>
+                        <div class="prompt-box" id="teach-parent-email-sample">"Year 5, reading fluency much better this term, really enjoys non-fiction, but homework often late or missing, would help if there was a set time at home for it"</div>
+                        <button onclick="copyToClipboard('teach-parent-email-sample')" class="btn-copy">Copy Sample Details</button>
+                    </div>
+                </details>
+
                 <h2 data-dept="general" style="font-size:20px; font-weight:700; margin:26px 0 4px;">General (All Roles)</h2>
                 <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Cross-role prompts for documents, data and day-to-day analysis — useful whatever your job title.</p>
 
@@ -2502,6 +2562,15 @@ The main tasks I need help with are:
 • Health &amp; Safety
 • Contractor communications</div>
                         <button onclick="copyToClipboard('personalisation-facilities')" class="btn-copy">Copy Facilities Example</button>
+
+                        <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:18px 0 0;">Teaching Staff</p>
+                        <div class="prompt-box" id="personalisation-teaching">My role is: Teaching Staff
+
+The main tasks I need help with are:
+• Lesson planning and resources
+• Marking and pupil feedback
+• Parent communications and reports</div>
+                        <button onclick="copyToClipboard('personalisation-teaching')" class="btn-copy">Copy Teaching Example</button>
 
                         <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:22px 0 0;">Step 3 &mdash; Save it in your Copilot settings</p>
                         <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Paste your finished template into Copilot&rsquo;s chat settings, <strong>not</strong> into a chat message. Saved there, Copilot applies it to all future chats, so it keeps working every time you click &ldquo;New Chat&rdquo;. Come back and update it whenever your role or main tasks change.</p>

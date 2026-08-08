@@ -1323,7 +1323,7 @@
                         </div>
                     </details>
 
-    <details>
+                    <details>
                         <summary><span class="ex-num">02</span><span style="flex:1;">Salute Day: Four Roles, One Prompt</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
@@ -1344,8 +1344,34 @@
                         </div>
                     </details>
 
-    <details>
-                        <summary><span class="ex-num">03</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
+                    <details>
+                        <summary><span class="ex-num">03</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Run this deliberately vague prompt first and note how much Copilot has to guess: which year group, how long the lesson is, what the pupils already know, and what you want to end up with. Then compare the result with the strong PACTS version in the next exercise.
+                            </div>
+                            <div class="prompt-box" id="weak-gate-prompt">"Make me a lesson on volcanoes."</div>
+                            <button onclick="copyToClipboard('weak-gate-prompt')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">04</span><span style="flex:1;">Strong (PACTS) Prompt: Volcano Lesson Outline</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: The same task as the weak prompt, now with full PACTS structure. Every element Copilot had to guess is spelled out, so you get a usable 50-minute outline instead of a generic overview.
+                            </div>
+                            <div class="prompt-box" id="facilities-gate-notice">[P] Act as an experienced Year 7 geography teacher.
+    [A] Create a 50-minute lesson outline on how volcanoes form.
+    [C] The class has mixed prior knowledge.
+    [T] Keep it clear, practical and engaging.
+    [S] Structure as: learning objective, starter, teacher input, activity, check for understanding, plenary, and homework.</div>
+                            <button onclick="copyToClipboard('facilities-gate-notice')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">05</span><span style="flex:1;">Explain it like I am 5 (ELI5)</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Turn anything complicated into plain English &mdash; a topic you are teaching, a policy you have been sent, or a system you are expected to use. Ask for it as simply as you like, then ask follow-up questions until it clicks.
@@ -1398,8 +1424,8 @@
                         </div>
                     </details>
 
-    <details>
-                        <summary><span class="ex-num">04</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
+                    <details>
+                        <summary><span class="ex-num">06</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: One prompt that produces a quiz three ways &mdash; a version to display in class, a version formatted for Microsoft Forms Quick Import, and a Word document ready to upload. Set the number of questions and the topic, and Copilot does the rest.
@@ -1528,45 +1554,8 @@
                         </div>
                     </details>
 
-    <details>
-                        <summary><span class="ex-num">05</span><span style="flex:1;">Welcome message</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Draft a friendly, on-brand welcome message for visitors in seconds.
-                            </div>
-                            <div class="prompt-box" id="welcome-message">"Write a 3-sentence welcome message for visitors to Warwick Academic school visitor in the style of a cheerful tour guide"</div>
-                            <button onclick="copyToClipboard('welcome-message')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">06</span><span style="flex:1;">Weak (PACTS) Prompt</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Run this deliberately vague prompt first and note how much Copilot has to guess: which year group, how long the lesson is, what the pupils already know, and what you want to end up with. Then compare the result with the strong PACTS version in the next exercise.
-                            </div>
-                            <div class="prompt-box" id="weak-gate-prompt">"Make me a lesson on volcanoes."</div>
-                            <button onclick="copyToClipboard('weak-gate-prompt')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">07</span><span style="flex:1;">Strong (PACTS) Prompt: Volcano Lesson Outline</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: The same task as the weak prompt, now with full PACTS structure. Every element Copilot had to guess is spelled out, so you get a usable 50-minute outline instead of a generic overview.
-                            </div>
-                            <div class="prompt-box" id="facilities-gate-notice">[P] Act as an experienced Year 7 geography teacher.
-    [A] Create a 50-minute lesson outline on how volcanoes form.
-    [C] The class has mixed prior knowledge.
-    [T] Keep it clear, practical and engaging.
-    [S] Structure as: learning objective, starter, teacher input, activity, check for understanding, plenary, and homework.</div>
-                            <button onclick="copyToClipboard('facilities-gate-notice')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">08</span><span style="flex:1;">Visual Starter Activity</span></summary>
+                    <details>
+                        <summary><span class="ex-num">07</span><span style="flex:1;">Visual Starter Activity</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: Ask for an image and the thinking around it in one go &mdash; an image prompt to generate the picture, plus the questions that turn it into a discussion.
@@ -1574,6 +1563,17 @@
                             <div class="prompt-box" id="visual-starter">Act as a classroom starter activity designer. Create a visual starter image for the topic [TOPIC]. It should stimulate discussion. Provide the image prompt, three discussion questions, and one extension question.</div>
                             <button onclick="copyToClipboard('visual-starter')" class="btn-copy">Copy Prompt</button>
                             <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Perfect for assemblies, newsletters, noticeboards, and instantly hooking a classroom&rsquo;s attention.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">08</span><span style="flex:1;">Welcome message</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Draft a friendly, on-brand welcome message for visitors in seconds.
+                            </div>
+                            <div class="prompt-box" id="welcome-message">"Write a 3-sentence welcome message for visitors to Warwick Academic school visitor in the style of a cheerful tour guide"</div>
+                            <button onclick="copyToClipboard('welcome-message')" class="btn-copy">Copy Prompt</button>
                         </div>
                     </details>
                     </div>

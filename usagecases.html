@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy2Host - 100 AI Use Cases</title>
+    <title>Happy2Host - 112 AI Use Cases</title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
         /* --- Apple Design System Variables --- */
@@ -316,7 +316,7 @@
 
     <div class="container">
         <header>
-            <h1>Happy2Host 100 AI Use Cases</h1>
+            <h1>Happy2Host 112 AI Use Cases</h1>
             <div class="subtitle">Unlock your productivity potential.</div>
         </header>
 
@@ -334,6 +334,7 @@
                 </div>
                 <div class="filter-pills" id="filterContainer">
                     <button class="pill active" onclick="filterCases('all')">All</button>
+                    <button class="pill" onclick="filterCases('Teaching &amp; Learning')">Teaching &amp; Learning</button>
                     <button class="pill" onclick="filterCases('Business')">Business</button>
                     <button class="pill" onclick="filterCases('Productivity')">Productivity</button>
                     <button class="pill" onclick="filterCases('Writing')">Writing</button>
@@ -357,9 +358,21 @@
     </div>
 
 <script>
-// --- Data Source: 100 AI Use Cases ---
+// --- Data Source: 112 AI Use Cases ---
 // Prompts optimized for clarity and effectiveness (Chain of thought / Role prompting included where applicable)
 const useCases = [
+    { id: 101, cat: "Teaching & Learning", title: "Lesson Plan Builder 📋", desc: "Adapted from Case #62 — a full lesson outline.", prompt: "[P] Act as an experienced [Subject] teacher. [A] Write a 50-minute lesson plan on [Topic] for [Year Group]. [C] The class has mixed prior knowledge and [any constraint, e.g. no computer access]. [T] Keep it practical and clear, with no jargon. [S] Give a learning objective, starter, teacher input, main activity, a check for understanding, plenary and homework, with a timing for each." },
+    { id: 102, cat: "Teaching & Learning", title: "Differentiate a Task Three Ways 🪜", desc: "One task, three levels of demand.", prompt: "[P] Act as a [Subject] teacher. [A] Rewrite the task below at three levels: additional support, core, and stretch. [C] Keep the same learning objective for all three and change only the demand. Suitable for [Year Group]. [T] Age-appropriate and encouraging. [S] Present three clearly labelled versions: [paste task]" },
+    { id: 103, cat: "Teaching & Learning", title: "Marking Feedback: Two Stars and a Wish ⭐", desc: "Rough marking notes into pupil-ready feedback.", prompt: "[P] Act as a [Subject] teacher. [A] Turn my rough marking notes into written feedback for the pupil. [C] Use only what my notes say — do not invent evidence, grades or incidents. Written for [Year Group]. [T] Encouraging and specific, never generic. [S] Give two genuine strengths and one clear next step, as a short paragraph the pupil can read: [paste notes]" },
+    { id: 104, cat: "Teaching & Learning", title: "Explain It Two Ways 🔁", desc: "Adapted from Case #14 — same idea, two audiences.", prompt: "[P] Act as a teacher explaining [Topic]. [A] Explain it twice for two different audiences. [C] Version one is for a [Year Group] pupil meeting the idea for the first time; version two is for a colleague who needs the detail. [T] Plain English, with any unavoidable jargon defined. [S] Label each version clearly and keep each under 150 words." },
+    { id: 105, cat: "Teaching & Learning", title: "Retrieval Practice Quiz ✅", desc: "Low-stakes questions on recent teaching.", prompt: "[P] Act as a [Subject] teacher planning retrieval practice. [A] Write [number] low-stakes quiz questions on [Topic]. [C] Cover what [Year Group] has been taught over the last [period] and vary the question types. [T] Clear and unambiguous — no trick questions. [S] Number the questions, then give a separate teacher answer sheet." },
+    { id: 106, cat: "Teaching & Learning", title: "Spot the Misconception 🔎", desc: "The wrong ideas pupils commonly arrive with.", prompt: "[P] Act as an experienced [Subject] teacher. [A] List the five most common misconceptions [Year Group] pupils hold about [Topic]. [C] Base these on what typically goes wrong when this is taught. [T] Practical and specific. [S] For each: the misconception, why pupils fall for it, one question that reveals it, and one way to correct it." },
+    { id: 107, cat: "Teaching & Learning", title: "Success Criteria &amp; Rubric 📊", desc: "Objectives turned into pupil-friendly criteria.", prompt: "[P] Act as a [Subject] teacher. [A] Turn the learning objective below into pupil-friendly success criteria and a simple marking rubric. [C] For [Year Group]; the wording must be understandable by the pupils themselves, not just staff. [T] Concrete rather than abstract. [S] Five 'I can' statements, then a rubric with three levels: working towards, meeting, exceeding: [paste objective]" },
+    { id: 108, cat: "Teaching & Learning", title: "Adjust the Reading Age 📖", desc: "Same content, more accessible language.", prompt: "[P] Act as a literacy specialist. [A] Rewrite the passage below for a reading age of [age]. [C] Keep every fact and all essential subject vocabulary — simplify the sentence structure, not the content. [T] Clear and respectful, never patronising. [S] Give the rewritten passage, then list the subject words you kept and why: [paste passage]" },
+    { id: 109, cat: "Teaching & Learning", title: "Personalised Revision Plan 🗓️", desc: "Adapted from Cases #4 and #17 — a realistic timetable.", prompt: "[P] Act as a study coach. [A] Build a [number]-week revision plan for [Subject]. [C] The exam is on [date], I can revise [hours] per week, and I am weakest at [topics]. [T] Realistic and encouraging — do not overload the week. [S] A week-by-week table with topics, a retrieval activity, and a checkpoint for each week." },
+    { id: 110, cat: "Teaching & Learning", title: "Practice Problems, Answers Held Back 🧮", desc: "Adapted from Case #41 — practice that makes pupils think.", prompt: "[P] Act as a [Subject] tutor. [A] Write [number] practice problems on [Topic] in increasing order of difficulty. [C] Suitable for [Year Group]. Do not show any answers until I ask for them. [T] Encouraging. [S] Number the problems, then wait; when I ask, give a fully worked solution for each." },
+    { id: 111, cat: "Teaching & Learning", title: "Essay Scaffold ✍️", desc: "Adapted from Case #23 — structure before writing.", prompt: "[P] Act as a [Subject] teacher. [A] Build an essay scaffold for the question [Question]. [C] For [Year Group] pupils who struggle to structure an argument and use evidence. [T] Supportive and concrete. [S] Give a thesis sentence, three paragraph headings each with a prompt question and a sentence starter, and a conclusion prompt." },
+    { id: 112, cat: "Teaching & Learning", title: "Safe Space to Ask 🛡️", desc: "Adapted from Case #85 — for staff learning something new.", prompt: "[P] Act as a patient tutor. [A] Explain [Concept] to me from the very beginning. [C] I am embarrassed to ask about this. Assume I know nothing and define any term you use. [T] Warm and non-judgemental. [S] A short explanation, one everyday analogy, then three questions to check I have understood." },
     { id: 1, cat: "Personal", title: "Therapy/Companionship 🗣️", desc: "A safe space to process stress or rehearse conversations.", prompt: "Act as a supportive sounding board. I'm dealing with [Situation]. Ask 3 clarifying questions to help me process my thoughts, then suggest one practical next step." },
     { id: 2, cat: "Productivity", title: "Organising My Life 📅", desc: "Structure chaotic tasks into a clear plan.", prompt: "Here is a list of tasks I need to do: [Insert List]. Create a prioritised schedule. Group similar tasks together and suggest realistic time blocks for each." },
     { id: 3, cat: "Personal", title: "Finding Purpose 🎯", desc: "Explore values and career alignment.", prompt: "I am feeling stuck in my role as [Job Title]. Guide me through a short values assessment. Ask me one question at a time to help identify what truly motivates me." },

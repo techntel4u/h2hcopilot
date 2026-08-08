@@ -1289,7 +1289,7 @@
             <div class="tab-bar" role="tablist">
                 <button class="tab-btn active" data-tab="exercises" role="tab" aria-controls="tab-exercises" aria-selected="true"><span class="tab-label-full">Copilot Exercises</span><span class="tab-label-short">Exercises</span><span class="tab-count">29</span></button>
                 <button class="tab-btn" data-tab="recipes" role="tab" aria-controls="tab-recipes" aria-selected="false"><span class="tab-label-full">Workplace Prompts</span><span class="tab-label-short">Prompts</span><span class="tab-count">37</span></button>
-                <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">8</span></button>
+                <button class="tab-btn" data-tab="concepts" role="tab" aria-controls="tab-concepts" aria-selected="false"><span class="tab-label-full">Concepts &amp; Reference</span><span class="tab-label-short">Concepts</span><span class="tab-count">3</span></button>
             </div>
 
             <!-- ============ TAB 1: EXERCISES ============ -->
@@ -2722,37 +2722,6 @@ Be precise. Reference the actual words of both documents.</div>
                 </details>
 
                 <details>
-                    <summary><span style="flex:1;">Two heads are better than one: get a second AI opinion</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            <strong>The Reality:</strong> an AI rarely spots its own mistakes. It is anchored to its first answer. A second opinion catches what it missed: ask a different tool (Copilot vs Gemini), or even start a new chat in the same tool.
-                        </div>
-
-                        <div class="inner-grid">
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🔀</span>
-                                <strong>Best: a different tool (Copilot vs Gemini)</strong>
-                                <p style="margin-top: 8px;">Paste Copilot's answer into Gemini, or Gemini's into Copilot, and ask it to review. They are built on different AI, so they have different blind spots: each catches the other's misses.</p>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🔄</span>
-                                <strong>Or: the same tool, a new chat</strong>
-                                <p style="margin-top: 8px;">No second tool? Open a new chat in the same one, paste only the output, and ask for a critical review. With no memory of how it got there, it judges the work, not its own reasoning.</p>
-                            </div>
-                        </div>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 16px 0 6px; color: var(--apple-text-primary);">A reusable review prompt:</p>
-                        <div class="prompt-box" id="second-opinion-review">Act as a critical second opinion. You did not write the text below, so be objective. Check it for factual errors, weak reasoning, missing information, and anything unclear or overstated. List the specific problems you find, then give an improved version. Be direct.
-
-[PASTE THE OUTPUT HERE]</div>
-                        <button onclick="copyToClipboard('second-opinion-review')" class="btn-copy">Copy Prompt</button>
-
-                        <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Why it works: an AI tends to defend its first answer and rarely self-corrects without an outside nudge. A different tool, or a clean chat, removes that bias.</p>
-                        <p style="margin-top:10px; font-size:13px; color:var(--apple-text-secondary);"><strong>Keep it safe:</strong> only use IT-approved tools, and never paste confidential (C1/C2) work data into a tool that has not been approved.</p>
-                    </div>
-                </details>
-
-                <details>
                     <summary><span style="flex:1;">Write better prompts: the 1-2-3 method</span></summary>
                     <div class="details-content">
                         <div class="exercise-note">
@@ -2792,135 +2761,6 @@ Be precise. Reference the actual words of both documents.</div>
                                 <div style="background: #fff8d6; border: 1px solid #e6cf8b; color: #5c4b18; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: 600; margin-top: 12px;">
                                     "...to maximize the chances of a quick response."
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Stop repeating yourself: keep a MegaDoc</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            <strong>Concept:</strong> Stop retyping the same background. Keep a Word doc of your org's context and paste it into prompts.
-                        </div>
-
-                        <div class="inner-grid">
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🔤</span>
-                                <strong>Acronyms</strong>
-                                <p>e.g. "DCG = Division of Cancer &amp; Genetics"</p>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">✒️</span>
-                                <strong>Style Guide</strong>
-                                <p>"Formal but warm. UK English. Bullet points."</p>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">📋</span>
-                                <strong>Key Facts</strong>
-                                <p>Personnel, boilerplate, standard procedures.</p>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🚀</span>
-                                <strong>Project Overview</strong>
-                                <p>Goals, status, blockers.</p>
-                            </div>
-                        </div>
-
-                        <p style="font-weight: 600; font-size: 14px; margin: 16px 0 6px; color: var(--apple-text-primary);">Try it today:</p>
-                        <p style="font-size: 13px; margin: 0 0 12px; color: var(--apple-text-secondary);">List your top 10 acronyms and one project snapshot. Paste into your next prompt and watch the difference.</p>
-
-                        <div class="prompt-box" id="megadoc-prompt">"Here is some context from my MegaDoc:
-[PASTE YOUR ACRONYMS/STYLE GUIDE HERE]
-
-Based on this context, draft an update email to the team about [Your Topic]..."</div>
-                        <button onclick="copyToClipboard('megadoc-prompt')" class="btn-copy">Copy Prompt</button>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Chat with your own documents (NotebookLM)</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            <strong>The Tool:</strong> NotebookLM grounds AI in your own documents. Our curated prompt library helps you analyse them.
-                        </div>
-
-                        <div class="inner-grid">
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🎧</span>
-                                <strong>Audio Overviews</strong>
-                                <p>Turn dry reports into engaging "Deep Dive" podcasts.</p>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🕵️</span>
-                                <strong>Critical Analysis</strong>
-                                <p>Identify blind spots, contradictions, and missing data.</p>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🏗️</span>
-                                <strong>Structured Output</strong>
-                                <p>Convert notes into Slide Decks, Briefs, and SOPs.</p>
-                            </div>
-                        </div>
-
-                        <div style="text-align: center; margin-top: 16px;">
-                            <a href="https://wmgmm.github.io/notebooklm/" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--apple-blue); color: white; padding: 11px 22px; border-radius: 980px; text-decoration: none; font-weight: 600; font-size: 14px;">
-                                Open NotebookLM Prompt Library ↗
-                            </a>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Get AI help with code</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            <strong>Two ways to use AI for code:</strong>
-                            <ul style="padding-left: 18px; margin: 10px 0 12px; font-size: 14px; line-height: 1.55;">
-                                <li style="margin-bottom: 6px;"><strong>Chat:</strong> paste in code, errors, or questions.</li>
-                                <li><strong>Coding Agent:</strong> connects to your system and can read, write, and run files. Use a local model + decent GPU to keep data private.</li>
-                            </ul>
-                        </div>
-
-                        <div style="text-align: center; margin-top: 16px;">
-                            <a href="https://wmgmm.github.io/coding/" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--apple-blue); color: white; padding: 11px 22px; border-radius: 980px; text-decoration: none; font-weight: 600; font-size: 14px;">
-                                Open AI Coding Prompt Library ↗
-                            </a>
-                        </div>
-                    </div>
-                </details>
-
-                <details>
-                    <summary><span style="flex:1;">Run AI privately on your own device</span></summary>
-                    <div class="details-content">
-                        <div class="exercise-note">
-                            <strong>You Are In Charge:</strong> Run AI on your own device. Total privacy, zero fees, no Wi-Fi needed.
-                        </div>
-
-                        <div class="inner-grid">
-                            <div class="inner-card">
-                                <span class="inner-card-icon">🛡️</span>
-                                <strong>Privacy &amp; Control</strong>
-                                <ul style="padding-left: 18px; margin: 8px 0 0; font-size: 13px; color: var(--apple-text-secondary); line-height: 1.55;">
-                                    <li style="margin-bottom: 6px;">Data never leaves your device.</li>
-                                    <li style="margin-bottom: 6px;">Safe for sensitive material.</li>
-                                    <li>Full IP ownership.</li>
-                                </ul>
-                            </div>
-                            <div class="inner-card">
-                                <span class="inner-card-icon">⚡</span>
-                                <strong>Cost &amp; Efficiency</strong>
-                                <ul style="padding-left: 18px; margin: 8px 0 0; font-size: 13px; color: var(--apple-text-secondary); line-height: 1.55;">
-                                    <li style="margin-bottom: 6px;">Zero fees (open-source models).</li>
-                                    <li style="margin-bottom: 6px;">Works offline.</li>
-                                    <li>Lower energy use.</li>
-                                </ul>
-                            </div>
-                            <div class="inner-card" style="background-color: #f0f8ff; border: 1px solid rgba(0, 113, 227, 0.2);">
-                                <span class="inner-card-icon">🎓</span>
-                                <strong style="color: var(--apple-blue);">Private AI Workshop</strong>
-                                <p style="margin: 8px 0;">A 2-hour session to get you started on your own laptop.</p>
-                                <a href="mailto:hello@happy2host.education" style="font-size: 13px; color: var(--apple-blue); text-decoration: none; font-weight: 600;">Contact us for details →</a>
                             </div>
                         </div>
                     </div>

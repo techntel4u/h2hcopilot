@@ -760,7 +760,7 @@
             transition: var(--transition);
         }
 
-        details[open] .ex-num {
+        details[open] > summary .ex-num {
             background: transparent;
             color: var(--apple-blue);
             border-color: var(--apple-blue);
@@ -785,18 +785,18 @@
             transform: translateX(2px);
         }
 
-        details[open] summary::after {
+        details[open] > summary::after {
             content: 'Hide prompt';
             background: #d2d2d7;
             color: var(--apple-text-primary);
         }
 
-        details[open]:hover summary::after {
+        details[open]:hover > summary::after {
             background: #c7c7cc;
             transform: none;
         }
 
-        details[open] summary { color: var(--apple-blue); }
+        details[open] > summary { color: var(--apple-blue); }
 
         .details-content {
             padding: 0 0 24px 40px;

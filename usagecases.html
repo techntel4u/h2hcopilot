@@ -283,6 +283,49 @@
         }
 
         /* --- Login Hint --- */
+        .workshop-nav {
+            max-width: 600px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .workshop-nav-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .workshop-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--bg-card);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 9px 18px;
+            border-radius: 980px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+
+        .workshop-nav a:hover {
+            border-color: var(--apple-blue);
+            color: var(--apple-blue);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 560px) {
+            .workshop-nav { flex-direction: column; gap: 8px; }
+            .workshop-nav a { width: 100%; justify-content: center; }
+        }
+
         .login-hint {
             max-width: 600px;
             margin: 0 auto 40px;
@@ -319,6 +362,12 @@
             <h1>Happy2Host 112 AI Use Cases</h1>
             <div class="subtitle">Unlock your productivity potential.</div>
         </header>
+
+        <nav class="workshop-nav" aria-label="Back to workshop">
+            <span class="workshop-nav-label">Back to your workshop:</span>
+            <a href="workshop.html"><span aria-hidden="true">&#8592;</span> Admin &amp; Operations</a>
+            <a href="workshop_allstaff.html"><span aria-hidden="true">&#8592;</span> All Staff</a>
+        </nav>
 
         <div class="login-hint">
             Experiments build Expertise, click to open <a href="https://m365copilot.com/" target="_blank">Microsoft Copilot</a> with your work account.

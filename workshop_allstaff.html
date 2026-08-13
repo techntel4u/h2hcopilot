@@ -1428,40 +1428,39 @@
                         <summary><span class="ex-num">06</span><span style="flex:1;">Upload a Document and Ask</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
-                                Application: Upload a document that would normally take an hour to read, and get back something you can teach from. We use a real exam board syllabus &mdash; 64 pages, 21 topics, split into Core and Supplement &mdash; and pull one topic out of it at a time.
+                                Application: Upload a document that would normally take an hour to read, and get back something you can actually teach from. Here we use an exam board syllabus &mdash; the same approach works on a scheme of work, a policy or an inspection report.
                             </div>
 
                             <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:16px 0 0;">Step 1 &mdash; Get the document</p>
-                            <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Save the syllabus below, then attach it to Copilot. Teach another subject? Use your own syllabus &mdash; the prompts work the same way, just change the subject and topic.</p>
-                            <p style="margin:10px 0 0;"><a href="https://www.cambridgeinternational.org/Images/697203-2026-2028-syllabus.pdf" target="_blank" rel="noopener" style="display:inline-block; font-size:13px; font-weight:600; color:var(--apple-blue); text-decoration:none; background:rgba(0,113,227,0.1); padding:10px 20px; border-radius:var(--radius-button);">&#128196; Cambridge IGCSE Biology 0610 &mdash; syllabus for 2026&ndash;2028 (PDF) &#8599;</a></p>
+                            <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Open the syllabus below and save it, then attach it to Copilot. If you teach this subject, use your own syllabus instead &mdash; the prompt works with any of them.</p>
+                            <p style="margin:10px 0 0;"><a href="https://www.cambridgeinternational.org/Images/697203-2026-2028-syllabus.pdf" target="_blank" rel="noopener" style="display:inline-block; font-size:13px; font-weight:600; color:var(--apple-blue); text-decoration:none; background:rgba(0,113,227,0.1); padding:10px 20px; border-radius:var(--radius-button);">&#128196; Cambridge International syllabus 2026&ndash;2028 (PDF) &#8599;</a></p>
 
-                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:20px 0 0;">Step 2 &mdash; Turn one topic into a teaching checklist</p>
-                            <div class="prompt-box" id="upload-syllabus-checklist">"[P] Act as the Head of Biology at Warwick Academy preparing a scheme of work.
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:20px 0 0;">Step 2 &mdash; Turn it into a teaching checklist</p>
+                            <div class="prompt-box" id="upload-syllabus-checklist">"[P] Act as the Head of [SUBJECT] at Warwick Academy preparing a scheme of work.
 
-[A] Read the attached Cambridge IGCSE Biology 0610 syllabus and turn topic [NUMBER 1-21, e.g. 7 Human nutrition] into a complete teaching checklist.
+[A] Read the syllabus I have attached and turn it into a complete checklist of everything pupils must learn.
 
-[C] Work only from the attached document. This syllabus splits content into Core and Supplement: Core candidates sit Papers 1 and 3, Extended candidates sit Papers 2 and 4, and both sit either Paper 5 or Paper 6. My class is sitting [Core / Extended]. Do not add anything from another exam board or from your own knowledge of Biology. If the syllabus is unclear on a point, say so rather than filling the gap.
+[C] Work only from the attached document. Do not add topics from other exam boards, other years, or your own knowledge of the subject. Where the syllabus is vague, say so rather than filling the gap.
 
-[T] Precise and in plain English, written to be read in a department meeting.
+[T] Precise and in plain English, written to be read aloud in a department meeting.
 
-[S] A table with one row per learning objective: Objective in the syllabus's own words | Command word used | Core or Supplement | Which paper assesses it. Below the table, add two short lists: 'Practical skills this topic needs' and 'Points to confirm with Cambridge'."</div>
+[S] Give me a table with one row per topic: Topic | Sub-topic | What pupils must be able to do | Which paper assesses it | Weighting. Underneath the table, add two short lists: 'Assumed prior knowledge' and 'Points to confirm with the exam board'."</div>
                             <button onclick="copyToClipboard('upload-syllabus-checklist')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:10px; font-size:13px; color:var(--apple-text-secondary);"><em>One topic at a time gives far better results than asking for all 21 at once.</em></p>
 
                             <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:20px 0 0;">Step 3 &mdash; Same document, now for the pupils</p>
-                            <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Stay in the same chat so Copilot still has the syllabus attached.</p>
-                            <div class="prompt-box" id="upload-syllabus-organiser">"[P] Act as a Biology teacher writing a knowledge organiser.
+                            <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Stay in the same chat so Copilot still has the syllabus.</p>
+                            <div class="prompt-box" id="upload-syllabus-organiser">"[P] Act as a [SUBJECT] teacher writing a knowledge organiser.
 
-[A] Using the same attached syllabus, turn the same topic into pupil-facing 'I can' statements.
+[A] Using the same attached syllabus, turn the topic list into pupil-facing 'I can' statements.
 
-[C] For [YEAR GROUP] sitting [Core / Extended]. Keep Cambridge's meaning exactly, but use words the pupils themselves would use. Mark every Supplement-only statement so pupils can see which apply to them. Do not invent content that is not in the syllabus.
+[C] For [YEAR GROUP]. Keep the exam board's meaning exactly, but use words the pupils themselves would use. Do not invent content that is not in the syllabus.
 
 [T] Direct and encouraging.
 
-[S] Group the statements under the topic heading, no more than eight of them, with Supplement ones marked (S)."</div>
+[S] Group the statements under the syllabus topic headings, with no more than eight statements per topic."</div>
                             <button onclick="copyToClipboard('upload-syllabus-organiser')" class="btn-copy">Copy Prompt</button>
 
-                            <p style="margin-top:16px; font-size:13px; color:var(--apple-text-secondary);"><em>Not a teacher? Try the same two-step idea on a document from your own role &mdash; here is a sample: <a href="Warwick_Weekly_Bulletin_Draft.docx" download style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Warwick Weekly Bulletin Draft (Word) &#8595;</a></em></p>
+                            <p style="margin-top:16px; font-size:13px; color:var(--apple-text-secondary);"><em>Not a teacher? Try the same two-step idea on a document from your own role.</em></p>
                             <p style="margin-top:10px; font-size:13px; color:var(--apple-text-secondary);"><strong>Always check the output against the document.</strong> Copilot is reading a long PDF and can miss or merge rows &mdash; the table is a starting point for the department, not a substitute for the syllabus.</p>
                         </div>
                     </details>

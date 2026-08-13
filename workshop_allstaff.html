@@ -1296,7 +1296,7 @@
             <div id="tab-exercises" class="tab-panel active" role="tabpanel">
 
                 <details class="ex-section">
-                    <summary><span style="flex:1;">Section 1: Prompts to follow the live workshop</span><span class="section-count">8 prompts</span></summary>
+                    <summary><span style="flex:1;">Section 1: Prompts to follow the live workshop</span><span class="section-count">9 prompts</span></summary>
                     <div class="section-body">
                         <p class="section-intro">Work through these together during the session. Everyone does the same prompts, whatever your role.</p>
 
@@ -1425,7 +1425,654 @@
                     </details>
 
                     <details>
-                        <summary><span class="ex-num">06</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
+                        <summary><span class="ex-num">06</span><span style="flex:1;">Upload a Document and Ask</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Upload a real document &mdash; a scheme of work, a curriculum guide, a long policy &mdash; and have Copilot summarise it or turn it into something else, live.
+                            </div>
+                            <div class="prompt-box" id="upload-ask-summary">"Act as a teacher. Using the attached [FILENAME], summarise the key points in a clear, neutral tone. Structure it as 5 bullet points."</div>
+                            <button onclick="copyToClipboard('upload-ask-summary')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Second version, same document:</em></p>
+                            <div class="prompt-box" id="upload-ask-parent">"Act as a teacher. Using the attached [FILENAME], turn this into a short, pupil-friendly explanation for [YEAR GROUP], warm and easy to read. Structure it as a single short paragraph, under 100 words."</div>
+                            <button onclick="copyToClipboard('upload-ask-parent')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Need a document to upload? Download the sample bulletin: <a href="Warwick_Weekly_Bulletin_Draft.docx" download style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Warwick Weekly Bulletin Draft (Word) &#8595;</a></em></p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">07</span><span style="flex:1;">Read a Web Page</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Paste in a public web address and ask Copilot to summarise or extract from it &mdash; useful for getting through an exam board page, a research article or a policy quickly.
+                            </div>
+                            <div class="prompt-box" id="read-the-page">"Act as a teacher's research assistant. Summarise the key points from this page in a clear, neutral tone, and note anything that would matter for my teaching: [WEBSITE ADDRESS]. Structure it as 3 to 5 bullet points."</div>
+                            <button onclick="copyToClipboard('read-the-page')" class="btn-copy">Copy Prompt</button>
+                            <div style="margin-top:12px;">
+                                <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[WEBSITE ADDRESS] ideas to try:</p>
+                                <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
+                                    <li><a href="https://www.privacy.bm/guide-to-pipa" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Guide to PIPA — Bermuda's Personal Information Protection Act (privacy.bm) &#8599;</a></li>
+                                    <li><a href="https://www.gov.bm/articles/artificial-intelligence-ai-policy" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Bermuda Government Artificial Intelligence (AI) Policy (gov.bm) &#8599;</a></li>
+                                    <li><a href="https://news.microsoft.com/source/2026/06/24/microsofts-new-ai-in-education-report-highlights-widespread-adoption-and-increasing-demand-for-support/" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Microsoft's AI in Education report (news.microsoft.com) &#8599;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">08</span><span style="flex:1;">Visual Starter Activity</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Ask for an image and the thinking around it in one go &mdash; an image prompt to generate the picture, plus the questions that turn it into a discussion.
+                            </div>
+                            <div class="prompt-box" id="visual-starter">Act as a classroom starter activity designer. Create a visual starter image for the topic [TOPIC]. It should stimulate discussion. Provide the image prompt, three discussion questions, and one extension question.</div>
+                            <button onclick="copyToClipboard('visual-starter')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Perfect for assemblies, newsletters, noticeboards, and instantly hooking a classroom&rsquo;s attention.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">09</span><span style="flex:1;">Welcome message</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Draft a friendly, on-brand welcome message for visitors in seconds.
+                            </div>
+                            <div class="prompt-box" id="welcome-message">"Write a 3-sentence welcome message for visitors to Warwick Academic school visitor in the style of a cheerful tour guide"</div>
+                            <button onclick="copyToClipboard('welcome-message')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+                    </div>
+                </details>
+
+                <details class="ex-section">
+                    <summary><span style="flex:1;">Section 2: Prompts for Teaching Staff</span><span class="section-count">9 prompts</span></summary>
+                    <div class="section-body">
+                        <p class="section-intro">Planning, marking, resources and parent conversations &mdash; written for the classroom.</p>
+
+    <details>
+                        <summary><span class="ex-num">10</span><span style="flex:1;">Classroom Display Image</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Design a poster-style graphic for a classroom or corridor display &mdash; a topic banner, a keyword poster, a reading corner sign &mdash; then ask for a second version in a different style.
+                            </div>
+                            <div class="prompt-box" id="instant-image">"Act as a teacher creating a classroom display. Create an image for [TOPIC], in a [STYLE, e.g. bright cartoon / clean minimal] style, friendly and age-appropriate for [YEAR GROUP]. Structure it as a single poster-style graphic suitable for a classroom wall, with clear space for a heading to be added afterwards."</div>
+                            <button onclick="copyToClipboard('instant-image')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Replace [TOPIC] and [STYLE], then run it again with a different style and compare the two versions.</em></p>
+                            <div style="display:flex; gap:24px; flex-wrap:wrap; margin-top:12px;">
+                                <div style="flex:1; min-width:220px;">
+                                    <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[TOPIC] ideas to consider:</p>
+                                    <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
+                                        <li>Healthy eating</li>
+                                        <li>Sustainability and recycling</li>
+                                        <li>Staying safe online</li>
+                                        <li>Revision tips</li>
+                                        <li>The water cycle</li>
+                                        <li>Volcanoes and plate tectonics</li>
+                                        <li>Times tables</li>
+                                        <li>Book week</li>
+                                        <li>Sun safety at break times</li>
+                                        <li>Kindness and anti-bullying week</li>
+                                    </ul>
+                                </div>
+                                <div style="flex:1; min-width:220px;">
+                                    <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[STYLE] options to try:</p>
+                                    <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
+                                        <li>Bright cartoon</li>
+                                        <li>Clean minimal</li>
+                                        <li>Watercolour</li>
+                                        <li>Retro travel poster</li>
+                                        <li>8-bit pixel art</li>
+                                        <li>Chalkboard illustration</li>
+                                        <li>Paper cut-out collage</li>
+                                        <li>Hand-drawn sketch</li>
+                                        <li>Photo-realistic</li>
+                                        <li>Comic book</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">11</span><span style="flex:1;">Lesson Slide Outline</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Get a full slide-by-slide lesson outline &mdash; title, three bullets and a teacher note per slide &mdash; ready to paste straight into PowerPoint. Free Copilot writes the content; turning it into the designed deck still happens in PowerPoint itself.
+                            </div>
+                            <div class="prompt-box" id="slide-script">"Act as a teacher. Create a slide-by-slide outline for a [NUMBER]-slide lesson presentation on [TOPIC] for [YEAR GROUP]. Keep the language clear and age-appropriate. Structure each slide with a title, 3 bullet points, and a short teacher note."</div>
+                            <button onclick="copyToClipboard('slide-script')" class="btn-copy">Copy Prompt</button>
+                            <div style="margin-top:12px;">
+                                <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[TOPIC] ideas to consider:</p>
+                                <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
+                                    <li>How volcanoes form</li>
+                                    <li>The water cycle</li>
+                                    <li>Fractions and decimals</li>
+                                    <li>Writing a persuasive paragraph</li>
+                                    <li>Bermuda's reefs and why they matter</li>
+                                    <li>Staying safe online</li>
+                                    <li>Exam revision techniques</li>
+                                    <li>Introducing a new class novel</li>
+                                    <li>Settling into a new year group</li>
+                                    <li>Using AI honestly in your schoolwork</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">12</span><span style="flex:1;">Rehearse a Tricky Parent Conversation</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Rehearse a conversation you are dreading &mdash; a parents' evening, a call about behaviour or missed homework &mdash; in a safe space, before you have it for real.
+                            </div>
+                            <div class="prompt-box" id="roleplay-conversation">"Roleplay: You are the parent of a Year 8 pupil, unhappy that your child's recent grade is lower than expected and convinced the marking was unfair. I am the class teacher, trying to explain the marking fairly and keep the conversation constructive. Stay in character, push back where a real parent would, and wait for my replies."</div>
+                            <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">13</span><span style="flex:1;">Pitch the Same Idea to Different Audiences</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: The same explanation, pitched two ways. Run both and compare &mdash; it is the clearest demonstration of why naming the audience changes everything.
+                            </div>
+                            <div class="prompt-box" id="role-prompt-medical">"You are a Year 4 teacher. Explain photosynthesis to your class in under 100 words."</div>
+                            <button onclick="copyToClipboard('role-prompt-medical')" class="btn-copy">Copy Prompt</button>
+
+                            <div class="prompt-box" id="role-prompt-comedian" style="margin-top:14px;">"You are a GCSE biology teacher. Explain photosynthesis to your class in under 100 words."</div>
+                            <button onclick="copyToClipboard('role-prompt-comedian')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">14</span><span style="flex:1;">Three Outputs in One Request</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                <strong>Application:</strong> Ask for several different formats at once &mdash; creative text, a set of instructions and a table &mdash; instead of running three separate prompts.
+                            </div>
+                            <div class="prompt-box" id="format-prompt-merged">"You are planning a Year 5 topic on the Ancient Egyptians. Please generate the following three items:
+
+    1. Write a short, catchy chant the class could learn to remember the stages of mummification.
+    2. Draft a step-by-step instruction sheet for a classroom activity making a model canopic jar, including the resources needed.
+    3. Create a table with three columns: Egyptian god, what they were god of, and one memorable fact."</div>
+                            <button onclick="copyToClipboard('format-prompt-merged')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">15</span><span style="flex:1;">Ask Copilot to Mark Its Own Work</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Make Copilot score and justify its own suggestions, so the weak ones are already flagged before you read them.
+                            </div>
+                            <div class="prompt-box" id="evaluation-prompt">"I need five ideas for a Year 6 end-of-topic project on the Victorians, please.
+    For each idea, justify why it suits the age group and say what it would let pupils demonstrate.
+    Score each idea on a 1-10 scale for Curriculum fit, Pupil engagement and Ease of marking. Provide a reason for each score."</div>
+                            <button onclick="copyToClipboard('evaluation-prompt')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">16</span><span style="flex:1;">Prompt Chaining: Build a Rich Request</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Combine Task, Audience, Tone, Constraints and Format into one request, so you get a usable classroom resource first time.
+                            </div>
+                            <div class="prompt-box" id="prompt-chain">"Task: Suggest starter questions for a lesson on climate change.
+    Audience: Year 8, mixed prior knowledge.
+    Tone: Curious and open, not alarming.
+    Constraint: No question should have a single right answer.
+    Format: Provide 10 questions in a 3-column table: Question, Thinking skill, Why it works
+    Examples: 'What would you miss most if summers got hotter?'"</div>
+                            <button onclick="copyToClipboard('prompt-chain')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+        <summary><span class="ex-num">17</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
+        <div class="details-content">
+            <div class="exercise-note" style="border-left:3px solid #ff9500;">
+                                <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
+                            </div>
+                            <div class="exercise-note" style="margin-bottom: 18px;">
+                <strong>The idea:</strong> An agent that explains any documents like you are 5 – ideal for policies, reports and guidance notes.
+            </div>
+            <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0;">
+                <li style="margin-bottom: 10px;">
+                    <strong>Open Copilot</strong> – go to <a href="https://m365copilot.com" target="_blank" rel="noopener" style="color: var(--apple-blue); text-decoration: none;">m365copilot.com</a> and click <strong>"Create agent"</strong> in the left-hand menu.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Enter Description then submit</strong> – In the "Describe" tab, paste the following and hit the submit arrow:
+                    <div class="prompt-box" id="eli5-document">You are a witty ELI5 Pal. Start every chat by asking: "Upload a document and I'll explain it like you're 5." First give a short ELI5 executive summary: a friendly one-line intro and 3 to 5 simple key points. Then give the full simple version in the chat: reading age of a young child, very short sentences, everyday words, a friendly tone with emojis and clear headings. Use simple analogies and everyday examples to explain the tricky ideas. Keep all key facts, rules and obligations, and explain any word that has to stay. The code interpreter / file generation capability is enabled. At the end, offer the simple version as a 1-page PDF, for example: "Want this as a 1-page PDF to share? Just say the word." Only create the PDF if the user asks.</div>
+                    <button onclick="copyToClipboard('eli5-document')" class="btn-copy">Copy Prompt</button>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Click Create</strong> – Name the agent if prompted, then click the <strong>Create</strong> button.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>Click Go to Agent</strong> – Wait for the success message, then click the blue 'Go to Agent' button.
+                </li>
+                <li>
+                    <strong>Test it</strong> – Upload a dense document e.g. a policy or committee report, and compare the output against the original.
+                </li>
+            </ol>
+        </div>
+    </details>
+
+                    <details>
+                        <summary><span class="ex-num">18</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note" style="border-left:3px solid #ff9500;">
+                                <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
+                            </div>
+                            <div class="exercise-note" style="margin-bottom: 18px;">
+                                <strong>New Agent Task:</strong> In this exercise, you will build a <strong>new agent</strong> designed for a completely different task: analysing text data and generating visual word clouds using Python.
+                            </div>
+
+                            <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0;">
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Open Copilot</strong> – Go to <a href="https://m365copilot.com" target="_blank" rel="noopener" style="color: var(--apple-blue); text-decoration: none;">m365copilot.com</a> and click <strong>"Create agent"</strong> in the left-hand menu to start a fresh agent.
+                                </li>
+                                <li style="margin-bottom: 16px;">
+                                    <strong>Describe the Agent</strong> – Ensure you are on the <strong>Describe</strong> tab. Copy and paste the description below into the chat box and hit the submit arrow:
+                                    <div class="callout" style="margin-top:10px;">
+                                        <strong>📋 Copy this Prompt:</strong>
+                                        <div class="callout-body">
+                                            "The user will provide sentences (via attached .xlsx or pasted below). For each sentence, assign only one broad, high-level parent category as a SINGLE word (e.g., generalize 'Spreadsheet' to Work, 'Tacos' to Food).  Use CONSISTANT category names and avoid splitting similar concepts into separate categories. REVIEW YOUR CATEGORIES FOR CONSISTANCY ONCE YOU HAVE BEEN THROUGH THE FULL LIST.
+                                            <br><br>
+                                            DO ALL OF THE FOLLOWING 3 THINGS AUTOMATICALLY:<br>
+                                            1, Output a table with columns: Sentence, Category.<br>
+                                            2, Calculate topic frequency by counting how many sentences fall under each category.<br>
+                                            3, Write and Execute Python code to generate and DISPLAY on screen a word cloud where each category's size is proportional to its topic frequency."
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Configure Settings</strong> – Switch to the <strong>Configure</strong> tab (next to Describe). Name your agent <strong>"Sentence Categorizer"</strong>.
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Enable Code Generation</strong> – Scroll down to the "Capabilities" section. Toggle the slider for <strong>"Create documents, charts, and code"</strong> to the <strong>On</strong> position (it will turn blue).
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Create Agent</strong> – Click the <strong>Create</strong> button and wait for the success message.
+                                </li>
+                                <li>
+                                    <strong>Test it</strong> – Click "Go to agent". Use the sample data below (either upload the file or copy the text) to see it generate a category table and a word cloud image.
+                                </li>
+                            </ol>
+
+                            <div class="sample-data">
+                                <h4>📂 Sample Data for Testing</h4>
+                                <p style="margin-bottom: 12px; color: #555; font-size: 14px;">
+                                    You can either download the Excel file called <em>sentences.xlsx</em> to upload to your agent, or copy the text below directly into the Agent's chat.
+                                </p>
+                                <div style="margin-bottom: 14px;">
+                                    <a href="sentences.xlsx" download class="download-btn">⬇️ Download sentences.xlsx</a>
+                                </div>
+                                <div style="margin-bottom: 8px; font-weight: 600; color: #444; font-size: 13px;">Or copy these sentences:</div>
+                                <textarea class="sample-textarea" readonly>I survived another meeting that should have been an email.
+    My therapist has a wet nose and a wagging tail.
+    I apologise for what I said when I was hungry.
+    There is no 'we' in fries.
+    I run like the winded.
+    My head says gym, but my heart says tacos.
+    Excel is my love language.
+    I earn a salary just so my cat can have a better life.
+    It's raining in Cardiff... again.
+    I need a six-month holiday, twice a year.
+    Be the person your dog thinks you are.
+    Stressed is just desserts spelled backwards.
+    Please do not 'reply all' to my existence.
+    My favorite cardio is running out of patience.
+    A balanced diet is a slice of pizza in each hand.
+    Sent from my iPhone (not really, I'm at my desk).
+    I thought they said 'extra fries', not 'exercise'.
+    Llanfairpwllgwyngyll... never mind, just meet me at the pub.
+    My boss told me to have a good day, so I went home.
+    Traffic was stopped by a flock of sheep on the road.
+    My outfit is incomplete without a little bit of fur on it.
+    I love the whooshing sound deadlines make as they fly by.
+    My only skill is pretending to listen in Zoom calls.</textarea>
+                            </div>
+                        </div>
+                    </details>
+                    </div>
+                </details>
+
+                <details class="ex-section">
+                    <summary><span style="flex:1;">Section 3: Prompts for Admin &amp; Operations</span><span class="section-count">15 prompts</span></summary>
+                    <div class="section-body">
+                        <p class="section-intro">Email, documents, spreadsheets and reporting &mdash; written for office and operational work.</p>
+
+    <details>
+                        <summary><span class="ex-num">19</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Paste an existing draft and have the AI rewrite it for tone and format, turning a plain notice into a warm, parent-friendly message.
+                            </div>
+                            <p style="font-size:13px; color:var(--apple-text-secondary); margin-bottom:8px;"><em>First copy this draft email into Copilot:</em></p>
+                            <div class="prompt-box" id="lost-property-draft">"Subject: Lost Property Collection
+
+    Dear Parent/Carer,
+
+    We have some lost property items that may belong to your child. If you think any of these items belong to them, please come to the school reception to collect them.
+
+    Lost property can be collected between 8:30am and 4:00pm on school days. Any unclaimed items will be donated or disposed of at the end of term.
+
+    Kind regards,
+    School Reception Team"</div>
+                            <button onclick="copyToClipboard('lost-property-draft')" class="btn-copy">Copy Draft Email</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then add the activity prompt:</em></p>
+                            <div class="prompt-box" id="lost-property-rewrite">"Act as a school receptionist (P). Rewrite this draft email (A) regarding lost property pick-up (C). Make it warm and helpful (T) in 3 concise bullet points (S)."</div>
+                            <button onclick="copyToClipboard('lost-property-rewrite')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">20</span><span style="flex:1;">The Email Glow-Up</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Paste a blunt reminder email and watch Copilot produce three tone options instantly, so you can pick the one that fits the parent and the situation.
+                            </div>
+                            <div class="prompt-box" id="email-glow-up">"Act as a school administrator. Rewrite this email three ways — warm, neutral, and firm — each under 100 words, keep the deadline. Present each version as a clearly labelled section: [paste email]"</div>
+                            <button onclick="copyToClipboard('email-glow-up')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample email:</em></p>
+                            <div class="prompt-box" id="email-glow-up-sample">"hi mr and mrs allen, reminder your daughters DofE bronze registration form still hasnt come back to us, needs to be in by friday for the award to go through this term, can you send asap thanks"</div>
+                            <button onclick="copyToClipboard('email-glow-up-sample')" class="btn-copy">Copy Sample Email</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">21</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Paste messy meeting notes and get a clean, owner-assigned action list ready to circulate.
+                            </div>
+                            <div class="prompt-box" id="meeting-notes-actions">"Act as an executive assistant. Turn these meeting notes into a clear action list, with an owner and deadline for each item. Keep the tone brisk and professional. Present it as a numbered list: [paste notes]"</div>
+                            <button onclick="copyToClipboard('meeting-notes-actions')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample notes:</em></p>
+                            <div class="prompt-box" id="meeting-notes-sample">"facilities mtg mon
+
+    - car park resurfacing, get 3 quotes, sarah to chase
+    - marine science facility, tank filter needs replacing before term starts
+    - bearly used shop needs more rails, ask PTA if they have spares
+    - school shop till roll running low, order more
+    - reception desk chair broken, order replacement
+    - staff parking permits renew 1st sept, need list of who's returning"</div>
+                            <button onclick="copyToClipboard('meeting-notes-sample')" class="btn-copy">Copy Sample Notes</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">22</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Paste a rambling email chain and get the decisions separated from the open questions in seconds.
+                            </div>
+                            <div class="prompt-box" id="long-thread-sorted">"Act as an office administrator. Summarise this email thread in a clear, neutral tone. Present it as 5 bullet points, separating what's decided from what's still open: [paste thread]"</div>
+                            <button onclick="copyToClipboard('long-thread-sorted')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample thread:</em></p>
+                            <div class="prompt-box" id="long-thread-sample">"From: J. Carter
+    Subject: Re: Re: Re: Meet-the-Teacher evening
+    Hi all, just circling back — is Y1-3 still 6pm and Y4-6 at 6.45, or has that shifted? Also do we know numbers yet for the Reception intro meeting?
+
+    From: M. Ellis
+    Sent: Tuesday
+    Times are confirmed as originally planned. I'll check with Reception on numbers and get back to you.
+
+    From: J. Carter
+    Sent: Tuesday
+    Also — do we need extra parking marshals that evening given three events back to back?
+
+    From: D. Reyes
+    Sent: Wednesday
+    Confirmed: Reception 5.15-5.45, Y1-3 at 6pm, Y4-6 at 6.45, all in the halls as usual. Two marshals booked for car park that evening."</div>
+                            <button onclick="copyToClipboard('long-thread-sample')" class="btn-copy">Copy Sample Thread</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">23</span><span style="flex:1;">Spreadsheet SOS</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Paste a messy booking list and get it sorted by date, grouped by department, and presented as a ready-to-use table.
+                            </div>
+                            <div class="prompt-box" id="spreadsheet-sos">"Act as an office administrator. Sort this list by date and group it by department, in a clear, factual tone. Present it as a table with headings: [paste list]"</div>
+                            <button onclick="copyToClipboard('spreadsheet-sos')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample list:</em></p>
+                            <div class="prompt-box" id="spreadsheet-sos-sample">"Room 4 booking - Sept 3 - Admissions - parent tour
+    School shop restock - Sept 2 - Facilities
+    Room 2 booking - Sept 5 - WAPTA - committee meeting
+    Marquee delivery - Sept 20 - Facilities - sports day
+    Room 4 booking - Sept 10 - Admissions - open morning
+    New starter IT setup - Sept 3 - Facilities
+    Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
+                            <button onclick="copyToClipboard('spreadsheet-sos-sample')" class="btn-copy">Copy Sample List</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">24</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: An administrator has a spreadsheet of attendance data and needs a quick summary for a manager — key findings, risks and recommended actions in one pass.
+                            </div>
+                            <div class="prompt-box" id="data-insights">"Act as a data analyst for an academy school.
+
+    Analyse the attendance data below.
+
+    Identify:
+    - 3 key findings
+    - 2 risks
+    - 2 recommended actions
+
+    Write in a professional tone suitable for senior leaders.
+
+    Present the information using:
+    1. Executive Summary
+    2. Key Findings
+    3. Risks
+    4. Recommended Actions
+
+    Data:
+    [Paste spreadsheet data]"</div>
+                            <button onclick="copyToClipboard('data-insights')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
+                            <div class="prompt-box" id="data-insights-sample">Student	Subject	Attendance %
+    Ahmed	Maths	96
+    Sarah	English	91
+    James	Science	72
+    Olivia	Geography	88
+    David	Maths	65
+    Chloe	English	94
+    Ethan	Science	78
+    Amelia	Geography	97</div>
+                            <button onclick="copyToClipboard('data-insights-sample')" class="btn-copy">Copy Sample Data</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — ask yourself: "What insight did Copilot identify that you might have missed?"</em></p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">25</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: You know what you want to calculate but not the formula. Copilot writes it, explains each part in plain language, and warns you about common mistakes.
+                            </div>
+                            <div class="prompt-box" id="excel-formula">"Act as an expert Excel trainer.
+
+    I am a beginner Excel user.
+
+    Create the correct Excel formula for the task below and explain it in simple language.
+
+    Provide:
+    - The formula
+    - What each part does
+    - Step-by-step instructions
+    - Common mistakes to avoid
+
+    Task:
+    Calculate the percentage achievement where Actual Value is in column C and Target Value is in column D."</div>
+                            <button onclick="copyToClipboard('excel-formula')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
+                            <div class="prompt-box" id="excel-formula-sample">Department	Actual Value	Target Value
+    Admissions	120	150
+    MIS	95	100
+    Marketing	180	200
+    Finance	140	150</div>
+                            <button onclick="copyToClipboard('excel-formula-sample')" class="btn-copy">Copy Sample Data</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — Copilot can also explain a formula you already have:</em></p>
+                            <div class="prompt-box" id="excel-formula-explain">"Explain this formula as if I were new to Excel:
+
+    =IFERROR((C2/D2)*100,0)"</div>
+                            <button onclick="copyToClipboard('excel-formula-explain')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">26</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: A manager needs a monthly update but only has spreadsheet data. Copilot turns it into a leadership-ready report with highlights, concerns and next steps.
+                            </div>
+                            <div class="prompt-box" id="mgmt-report">"Act as an executive reporting officer.
+
+    Using the spreadsheet data below, create a senior leadership report.
+
+    Use a professional and evidence-based tone.
+
+    Structure the response as:
+    1. Executive Summary
+    2. Performance Highlights
+    3. Areas of Concern
+    4. Recommended Next Steps
+
+    Data:
+    [Paste spreadsheet data]"</div>
+                            <button onclick="copyToClipboard('mgmt-report')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
+                            <div class="prompt-box" id="mgmt-report-sample">Department	Budget ($)	Actual Spend ($)
+    IT	50,000	48,500
+    Estates	60,000	63,200
+    Marketing	20,000	15,800
+    Student Services	30,000	34,500
+    HR	25,000	23,100</div>
+                            <button onclick="copyToClipboard('mgmt-report-sample')" class="btn-copy">Copy Sample Data</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — follow up with:</em></p>
+                            <div class="prompt-box" id="mgmt-report-followup">"Create a board-ready dashboard description showing the best chart type for each metric and explain why."</div>
+                            <button onclick="copyToClipboard('mgmt-report-followup')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">27</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: A deliberate trap: this prompt breaks the PACTS formula and asks for a fiddly working-days calculation that depends on knowing the Bermuda public holidays in that period. The AI may miscount or miss a holiday while sounding completely confident. Run it, then check the answer against the official holiday dates — a reminder that confident-sounding output still needs verifying.
+                            </div>
+                            <div class="prompt-box" id="catch-it-out">"Term 1 begins 2 September 2026. How many working days are there between 2 September and 20 December 2026, excluding weekends and any Bermuda public holidays in that period?"</div>
+                            <button onclick="copyToClipboard('catch-it-out')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Check the answer against the official list: <a href="https://www.gov.bm/public-holidays" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Bermuda public holidays (gov.bm) &#8599;</a></em></p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">28</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Turn five scrappy bullet points into a ready-to-send parent letter in one step.
+                            </div>
+                            <div class="prompt-box" id="bullets-letter">"Act as a school administrator. Turn these bullet points into a parent letter, warm but concise, under 200 words. Structure it as a greeting, a short body, and a brief sign-off: [paste bullets]"</div>
+                            <button onclick="copyToClipboard('bullets-letter')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample bullets:</em></p>
+                            <div class="prompt-box" id="bullets-letter-sample">"- Sports Day moved to Sept 20, previously Sept 13
+    - reason: pitch resurfacing not finished in time
+    - same format, same times
+    - parents welcome from 1pm, usual field
+    - DofE bronze award presentations now happening same afternoon
+    - questions to the office as usual"</div>
+                            <button onclick="copyToClipboard('bullets-letter-sample')" class="btn-copy">Copy Sample Bullets</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">29</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Turn your school's public website into a working brand guidelines document — colours, tone of voice and imagery — grounded only in what is actually visible on the site.
+                            </div>
+                            <div class="prompt-box" id="brand-guidelines">"Act as a brand and communications consultant. Using the Warwick Academy website (https://www.warwick.bm/) as your source, create a set of branding guidelines covering colours, tone of voice, and imagery style. Base it on what's actually visible on the site — don't assume anything not shown there. Keep the tone clear and professional, written for staff who'll use it day to day. Structure it as a short document with headings: Colours, Tone of Voice, Imagery Style, and a Dos and Don'ts list."</div>
+                            <button onclick="copyToClipboard('brand-guidelines')" class="btn-copy">Copy Prompt</button>
+                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Sometimes a short prompt gets you what you want without the full framework — try this one and compare the results:</em></p>
+                            <div class="prompt-box" id="brand-guidelines-short">"using Warwick Academy - Home website https://www.warwick.bm/, create me a branding guidelines"</div>
+                            <button onclick="copyToClipboard('brand-guidelines-short')" class="btn-copy">Copy Short Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">30</span><span style="flex:1;">Copilot Memory</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note" style="margin-bottom: 18px;">
+                                <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
+                            </div>
+
+                            <p style="font-size: 14px; line-height: 1.6; margin: 0 0 16px;">To store a rule, type an instruction that begins with <strong>"Remember and save to memory"</strong>. Copilot confirms it and keeps it.</p>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">To view your saved memories</p>
+                            <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0 0 18px;">
+                                <li>Click the three dots in the top right corner</li>
+                                <li>Click Settings</li>
+                                <li>Click Personalisation, then manage your saved memories</li>
+                            </ol>
+
+                            <p style="font-weight: 600; font-size: 15px; margin: 0 0 12px; color: var(--apple-text-primary);">Three prompts worth saving</p>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Regional preferences</p>
+                            <div class="prompt-box" id="memory-regional">Remember and save to memory that I prefer UK spelling, Bermuda-relevant sources and UK naming conventions.</div>
+                            <button onclick="copyToClipboard('memory-regional')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Honesty about gaps</p>
+                            <div class="prompt-box" id="memory-honesty">Remember and save to memory: No guessing. Acknowledge uncertainty and information gaps. State evidence limits.</div>
+                            <button onclick="copyToClipboard('memory-honesty')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Challenge your thinking</p>
+                            <div class="prompt-box" id="memory-challenge">Remember and save to memory: Challenge my assumptions. Tell me when I am wrong and explain the reasoning. Give me the strongest counter-argument before you agree with me.</div>
+                            <button onclick="copyToClipboard('memory-challenge')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">31</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note">
+                                Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
+                            </div>
+                            <div class="prompt-box" id="memory-preferences">"Remember and save to memory that I prefer UK spelling and UK naming conventions, and that I am based in Bermuda, so use Bermuda-relevant sources, dates and public holidays where applicable."</div>
+                            <button onclick="copyToClipboard('memory-preferences')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">32</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
+                        <div class="details-content">
+                            <div class="exercise-note" style="margin-bottom: 18px;">
+                                <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
+                            </div>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Find prompting habits you repeat</p>
+                            <div class="prompt-box" id="chat-history-habits">Search my chat history from the last 3 months. Find 3 prompting habits I repeat. For each, show the habit, one example from my chat history, and a sharper prompt I can reuse. One line each, no filler.</div>
+                            <button onclick="copyToClipboard('chat-history-habits')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Spot tasks you keep redoing by hand</p>
+                            <div class="prompt-box" id="chat-history-tasks">Read across my chat history and tell me which tasks I keep redoing by hand.</div>
+                            <button onclick="copyToClipboard('chat-history-tasks')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Capture your writing style</p>
+                            <div class="prompt-box" id="chat-history-style">From my chat history, draft a profile of my writing style, then remember and save it to memory.</div>
+                            <button onclick="copyToClipboard('chat-history-style')" class="btn-copy">Copy Prompt</button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><span class="ex-num">33</span><span style="flex:1;">Quiz Generator: Classroom, Forms &amp; Word</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
                                 Application: One prompt that produces a quiz three ways &mdash; a version to display in class, a version formatted for Microsoft Forms Quick Import, and a Word document ready to upload. Set the number of questions and the topic, and Copilot does the rest.
@@ -1551,659 +2198,6 @@
     • Always display the Classroom Display Version in chat even when generating the Word document.</div>
                             <button onclick="copyToClipboard('quiz-generator-standing')" class="btn-copy">Copy Standing Instructions</button>
                             <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>With that saved, your day-to-day prompt becomes one line: &ldquo;Create me 10 questions on the water cycle, use a variety of question types.&rdquo;</em></p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary><span class="ex-num">07</span><span style="flex:1;">Visual Starter Activity</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Ask for an image and the thinking around it in one go &mdash; an image prompt to generate the picture, plus the questions that turn it into a discussion.
-                            </div>
-                            <div class="prompt-box" id="visual-starter">Act as a classroom starter activity designer. Create a visual starter image for the topic [TOPIC]. It should stimulate discussion. Provide the image prompt, three discussion questions, and one extension question.</div>
-                            <button onclick="copyToClipboard('visual-starter')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);">Perfect for assemblies, newsletters, noticeboards, and instantly hooking a classroom&rsquo;s attention.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary><span class="ex-num">08</span><span style="flex:1;">Welcome message</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Draft a friendly, on-brand welcome message for visitors in seconds.
-                            </div>
-                            <div class="prompt-box" id="welcome-message">"Write a 3-sentence welcome message for visitors to Warwick Academic school visitor in the style of a cheerful tour guide"</div>
-                            <button onclick="copyToClipboard('welcome-message')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-                    </div>
-                </details>
-
-                <details class="ex-section">
-                    <summary><span style="flex:1;">Section 2: Prompts for Teaching Staff</span><span class="section-count">11 prompts</span></summary>
-                    <div class="section-body">
-                        <p class="section-intro">Planning, marking, resources and parent conversations &mdash; written for the classroom.</p>
-
-    <details>
-                        <summary><span class="ex-num">09</span><span style="flex:1;">Classroom Display Image</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Design a poster-style graphic for a classroom or corridor display &mdash; a topic banner, a keyword poster, a reading corner sign &mdash; then ask for a second version in a different style.
-                            </div>
-                            <div class="prompt-box" id="instant-image">"Act as a teacher creating a classroom display. Create an image for [TOPIC], in a [STYLE, e.g. bright cartoon / clean minimal] style, friendly and age-appropriate for [YEAR GROUP]. Structure it as a single poster-style graphic suitable for a classroom wall, with clear space for a heading to be added afterwards."</div>
-                            <button onclick="copyToClipboard('instant-image')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Replace [TOPIC] and [STYLE], then run it again with a different style and compare the two versions.</em></p>
-                            <div style="display:flex; gap:24px; flex-wrap:wrap; margin-top:12px;">
-                                <div style="flex:1; min-width:220px;">
-                                    <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[TOPIC] ideas to consider:</p>
-                                    <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
-                                        <li>Healthy eating</li>
-                                        <li>Sustainability and recycling</li>
-                                        <li>Staying safe online</li>
-                                        <li>Revision tips</li>
-                                        <li>The water cycle</li>
-                                        <li>Volcanoes and plate tectonics</li>
-                                        <li>Times tables</li>
-                                        <li>Book week</li>
-                                        <li>Sun safety at break times</li>
-                                        <li>Kindness and anti-bullying week</li>
-                                    </ul>
-                                </div>
-                                <div style="flex:1; min-width:220px;">
-                                    <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[STYLE] options to try:</p>
-                                    <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
-                                        <li>Bright cartoon</li>
-                                        <li>Clean minimal</li>
-                                        <li>Watercolour</li>
-                                        <li>Retro travel poster</li>
-                                        <li>8-bit pixel art</li>
-                                        <li>Chalkboard illustration</li>
-                                        <li>Paper cut-out collage</li>
-                                        <li>Hand-drawn sketch</li>
-                                        <li>Photo-realistic</li>
-                                        <li>Comic book</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">10</span><span style="flex:1;">Lesson Slide Outline</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Get a full slide-by-slide lesson outline &mdash; title, three bullets and a teacher note per slide &mdash; ready to paste straight into PowerPoint. Free Copilot writes the content; turning it into the designed deck still happens in PowerPoint itself.
-                            </div>
-                            <div class="prompt-box" id="slide-script">"Act as a teacher. Create a slide-by-slide outline for a [NUMBER]-slide lesson presentation on [TOPIC] for [YEAR GROUP]. Keep the language clear and age-appropriate. Structure each slide with a title, 3 bullet points, and a short teacher note."</div>
-                            <button onclick="copyToClipboard('slide-script')" class="btn-copy">Copy Prompt</button>
-                            <div style="margin-top:12px;">
-                                <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[TOPIC] ideas to consider:</p>
-                                <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
-                                    <li>How volcanoes form</li>
-                                    <li>The water cycle</li>
-                                    <li>Fractions and decimals</li>
-                                    <li>Writing a persuasive paragraph</li>
-                                    <li>Bermuda's reefs and why they matter</li>
-                                    <li>Staying safe online</li>
-                                    <li>Exam revision techniques</li>
-                                    <li>Introducing a new class novel</li>
-                                    <li>Settling into a new year group</li>
-                                    <li>Using AI honestly in your schoolwork</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">11</span><span style="flex:1;">Upload a Document and Ask</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Upload a real document &mdash; a scheme of work, a curriculum guide, a long policy &mdash; and have Copilot summarise it or turn it into something else, live.
-                            </div>
-                            <div class="prompt-box" id="upload-ask-summary">"Act as a teacher. Using the attached [FILENAME], summarise the key points in a clear, neutral tone. Structure it as 5 bullet points."</div>
-                            <button onclick="copyToClipboard('upload-ask-summary')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Second version, same document:</em></p>
-                            <div class="prompt-box" id="upload-ask-parent">"Act as a teacher. Using the attached [FILENAME], turn this into a short, pupil-friendly explanation for [YEAR GROUP], warm and easy to read. Structure it as a single short paragraph, under 100 words."</div>
-                            <button onclick="copyToClipboard('upload-ask-parent')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Need a document to upload? Download the sample bulletin: <a href="Warwick_Weekly_Bulletin_Draft.docx" download style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Warwick Weekly Bulletin Draft (Word) &#8595;</a></em></p>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">12</span><span style="flex:1;">Read a Web Page</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Paste in a public web address and ask Copilot to summarise or extract from it &mdash; useful for getting through an exam board page, a research article or a policy quickly.
-                            </div>
-                            <div class="prompt-box" id="read-the-page">"Act as a teacher's research assistant. Summarise the key points from this page in a clear, neutral tone, and note anything that would matter for my teaching: [WEBSITE ADDRESS]. Structure it as 3 to 5 bullet points."</div>
-                            <button onclick="copyToClipboard('read-the-page')" class="btn-copy">Copy Prompt</button>
-                            <div style="margin-top:12px;">
-                                <p style="font-size:13px; font-weight:600; margin-bottom:6px;">[WEBSITE ADDRESS] ideas to try:</p>
-                                <ul style="font-size:13px; color:var(--apple-text-secondary); margin:0; padding-left:18px; line-height:1.7;">
-                                    <li><a href="https://www.privacy.bm/guide-to-pipa" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Guide to PIPA — Bermuda's Personal Information Protection Act (privacy.bm) &#8599;</a></li>
-                                    <li><a href="https://www.gov.bm/articles/artificial-intelligence-ai-policy" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Bermuda Government Artificial Intelligence (AI) Policy (gov.bm) &#8599;</a></li>
-                                    <li><a href="https://news.microsoft.com/source/2026/06/24/microsofts-new-ai-in-education-report-highlights-widespread-adoption-and-increasing-demand-for-support/" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Microsoft's AI in Education report (news.microsoft.com) &#8599;</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">13</span><span style="flex:1;">Rehearse a Tricky Parent Conversation</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Rehearse a conversation you are dreading &mdash; a parents' evening, a call about behaviour or missed homework &mdash; in a safe space, before you have it for real.
-                            </div>
-                            <div class="prompt-box" id="roleplay-conversation">"Roleplay: You are the parent of a Year 8 pupil, unhappy that your child's recent grade is lower than expected and convinced the marking was unfair. I am the class teacher, trying to explain the marking fairly and keep the conversation constructive. Stay in character, push back where a real parent would, and wait for my replies."</div>
-                            <button onclick="copyToClipboard('roleplay-conversation')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">14</span><span style="flex:1;">Pitch the Same Idea to Different Audiences</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: The same explanation, pitched two ways. Run both and compare &mdash; it is the clearest demonstration of why naming the audience changes everything.
-                            </div>
-                            <div class="prompt-box" id="role-prompt-medical">"You are a Year 4 teacher. Explain photosynthesis to your class in under 100 words."</div>
-                            <button onclick="copyToClipboard('role-prompt-medical')" class="btn-copy">Copy Prompt</button>
-
-                            <div class="prompt-box" id="role-prompt-comedian" style="margin-top:14px;">"You are a GCSE biology teacher. Explain photosynthesis to your class in under 100 words."</div>
-                            <button onclick="copyToClipboard('role-prompt-comedian')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">15</span><span style="flex:1;">Three Outputs in One Request</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                <strong>Application:</strong> Ask for several different formats at once &mdash; creative text, a set of instructions and a table &mdash; instead of running three separate prompts.
-                            </div>
-                            <div class="prompt-box" id="format-prompt-merged">"You are planning a Year 5 topic on the Ancient Egyptians. Please generate the following three items:
-
-    1. Write a short, catchy chant the class could learn to remember the stages of mummification.
-    2. Draft a step-by-step instruction sheet for a classroom activity making a model canopic jar, including the resources needed.
-    3. Create a table with three columns: Egyptian god, what they were god of, and one memorable fact."</div>
-                            <button onclick="copyToClipboard('format-prompt-merged')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">16</span><span style="flex:1;">Ask Copilot to Mark Its Own Work</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Make Copilot score and justify its own suggestions, so the weak ones are already flagged before you read them.
-                            </div>
-                            <div class="prompt-box" id="evaluation-prompt">"I need five ideas for a Year 6 end-of-topic project on the Victorians, please.
-    For each idea, justify why it suits the age group and say what it would let pupils demonstrate.
-    Score each idea on a 1-10 scale for Curriculum fit, Pupil engagement and Ease of marking. Provide a reason for each score."</div>
-                            <button onclick="copyToClipboard('evaluation-prompt')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">17</span><span style="flex:1;">Prompt Chaining: Build a Rich Request</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Combine Task, Audience, Tone, Constraints and Format into one request, so you get a usable classroom resource first time.
-                            </div>
-                            <div class="prompt-box" id="prompt-chain">"Task: Suggest starter questions for a lesson on climate change.
-    Audience: Year 8, mixed prior knowledge.
-    Tone: Curious and open, not alarming.
-    Constraint: No question should have a single right answer.
-    Format: Provide 10 questions in a 3-column table: Question, Thinking skill, Why it works
-    Examples: 'What would you miss most if summers got hotter?'"</div>
-                            <button onclick="copyToClipboard('prompt-chain')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-        <summary><span class="ex-num">18</span><span style="flex:1;">Build your first Agent: ELI5 a Document</span></summary>
-        <div class="details-content">
-            <div class="exercise-note" style="border-left:3px solid #ff9500;">
-                                <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
-                            </div>
-                            <div class="exercise-note" style="margin-bottom: 18px;">
-                <strong>The idea:</strong> An agent that explains any documents like you are 5 – ideal for policies, reports and guidance notes.
-            </div>
-            <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0;">
-                <li style="margin-bottom: 10px;">
-                    <strong>Open Copilot</strong> – go to <a href="https://m365copilot.com" target="_blank" rel="noopener" style="color: var(--apple-blue); text-decoration: none;">m365copilot.com</a> and click <strong>"Create agent"</strong> in the left-hand menu.
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <strong>Enter Description then submit</strong> – In the "Describe" tab, paste the following and hit the submit arrow:
-                    <div class="prompt-box" id="eli5-document">You are a witty ELI5 Pal. Start every chat by asking: "Upload a document and I'll explain it like you're 5." First give a short ELI5 executive summary: a friendly one-line intro and 3 to 5 simple key points. Then give the full simple version in the chat: reading age of a young child, very short sentences, everyday words, a friendly tone with emojis and clear headings. Use simple analogies and everyday examples to explain the tricky ideas. Keep all key facts, rules and obligations, and explain any word that has to stay. The code interpreter / file generation capability is enabled. At the end, offer the simple version as a 1-page PDF, for example: "Want this as a 1-page PDF to share? Just say the word." Only create the PDF if the user asks.</div>
-                    <button onclick="copyToClipboard('eli5-document')" class="btn-copy">Copy Prompt</button>
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <strong>Click Create</strong> – Name the agent if prompted, then click the <strong>Create</strong> button.
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <strong>Click Go to Agent</strong> – Wait for the success message, then click the blue 'Go to Agent' button.
-                </li>
-                <li>
-                    <strong>Test it</strong> – Upload a dense document e.g. a policy or committee report, and compare the output against the original.
-                </li>
-            </ol>
-        </div>
-    </details>
-
-    <details>
-                        <summary><span class="ex-num">19</span><span style="flex:1;">Build a New Agent: Sentence Categoriser</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note" style="border-left:3px solid #ff9500;">
-                                <strong>Note:</strong> Agents are not available in the FREE version of Copilot. This example is for demonstration purposes only, and for if Agents ever become available on your account.
-                            </div>
-                            <div class="exercise-note" style="margin-bottom: 18px;">
-                                <strong>New Agent Task:</strong> In this exercise, you will build a <strong>new agent</strong> designed for a completely different task: analysing text data and generating visual word clouds using Python.
-                            </div>
-
-                            <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0;">
-                                <li style="margin-bottom: 10px;">
-                                    <strong>Open Copilot</strong> – Go to <a href="https://m365copilot.com" target="_blank" rel="noopener" style="color: var(--apple-blue); text-decoration: none;">m365copilot.com</a> and click <strong>"Create agent"</strong> in the left-hand menu to start a fresh agent.
-                                </li>
-                                <li style="margin-bottom: 16px;">
-                                    <strong>Describe the Agent</strong> – Ensure you are on the <strong>Describe</strong> tab. Copy and paste the description below into the chat box and hit the submit arrow:
-                                    <div class="callout" style="margin-top:10px;">
-                                        <strong>📋 Copy this Prompt:</strong>
-                                        <div class="callout-body">
-                                            "The user will provide sentences (via attached .xlsx or pasted below). For each sentence, assign only one broad, high-level parent category as a SINGLE word (e.g., generalize 'Spreadsheet' to Work, 'Tacos' to Food).  Use CONSISTANT category names and avoid splitting similar concepts into separate categories. REVIEW YOUR CATEGORIES FOR CONSISTANCY ONCE YOU HAVE BEEN THROUGH THE FULL LIST.
-                                            <br><br>
-                                            DO ALL OF THE FOLLOWING 3 THINGS AUTOMATICALLY:<br>
-                                            1, Output a table with columns: Sentence, Category.<br>
-                                            2, Calculate topic frequency by counting how many sentences fall under each category.<br>
-                                            3, Write and Execute Python code to generate and DISPLAY on screen a word cloud where each category's size is proportional to its topic frequency."
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>Configure Settings</strong> – Switch to the <strong>Configure</strong> tab (next to Describe). Name your agent <strong>"Sentence Categorizer"</strong>.
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>Enable Code Generation</strong> – Scroll down to the "Capabilities" section. Toggle the slider for <strong>"Create documents, charts, and code"</strong> to the <strong>On</strong> position (it will turn blue).
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>Create Agent</strong> – Click the <strong>Create</strong> button and wait for the success message.
-                                </li>
-                                <li>
-                                    <strong>Test it</strong> – Click "Go to agent". Use the sample data below (either upload the file or copy the text) to see it generate a category table and a word cloud image.
-                                </li>
-                            </ol>
-
-                            <div class="sample-data">
-                                <h4>📂 Sample Data for Testing</h4>
-                                <p style="margin-bottom: 12px; color: #555; font-size: 14px;">
-                                    You can either download the Excel file called <em>sentences.xlsx</em> to upload to your agent, or copy the text below directly into the Agent's chat.
-                                </p>
-                                <div style="margin-bottom: 14px;">
-                                    <a href="sentences.xlsx" download class="download-btn">⬇️ Download sentences.xlsx</a>
-                                </div>
-                                <div style="margin-bottom: 8px; font-weight: 600; color: #444; font-size: 13px;">Or copy these sentences:</div>
-                                <textarea class="sample-textarea" readonly>I survived another meeting that should have been an email.
-    My therapist has a wet nose and a wagging tail.
-    I apologise for what I said when I was hungry.
-    There is no 'we' in fries.
-    I run like the winded.
-    My head says gym, but my heart says tacos.
-    Excel is my love language.
-    I earn a salary just so my cat can have a better life.
-    It's raining in Cardiff... again.
-    I need a six-month holiday, twice a year.
-    Be the person your dog thinks you are.
-    Stressed is just desserts spelled backwards.
-    Please do not 'reply all' to my existence.
-    My favorite cardio is running out of patience.
-    A balanced diet is a slice of pizza in each hand.
-    Sent from my iPhone (not really, I'm at my desk).
-    I thought they said 'extra fries', not 'exercise'.
-    Llanfairpwllgwyngyll... never mind, just meet me at the pub.
-    My boss told me to have a good day, so I went home.
-    Traffic was stopped by a flock of sheep on the road.
-    My outfit is incomplete without a little bit of fur on it.
-    I love the whooshing sound deadlines make as they fly by.
-    My only skill is pretending to listen in Zoom calls.</textarea>
-                            </div>
-                        </div>
-                    </details>
-                    </div>
-                </details>
-
-                <details class="ex-section">
-                    <summary><span style="flex:1;">Section 3: Prompts for Admin &amp; Operations</span><span class="section-count">14 prompts</span></summary>
-                    <div class="section-body">
-                        <p class="section-intro">Email, documents, spreadsheets and reporting &mdash; written for office and operational work.</p>
-
-    <details>
-                        <summary><span class="ex-num">20</span><span style="flex:1;">Rewrite an Email Draft (PACTS)</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Paste an existing draft and have the AI rewrite it for tone and format, turning a plain notice into a warm, parent-friendly message.
-                            </div>
-                            <p style="font-size:13px; color:var(--apple-text-secondary); margin-bottom:8px;"><em>First copy this draft email into Copilot:</em></p>
-                            <div class="prompt-box" id="lost-property-draft">"Subject: Lost Property Collection
-
-    Dear Parent/Carer,
-
-    We have some lost property items that may belong to your child. If you think any of these items belong to them, please come to the school reception to collect them.
-
-    Lost property can be collected between 8:30am and 4:00pm on school days. Any unclaimed items will be donated or disposed of at the end of term.
-
-    Kind regards,
-    School Reception Team"</div>
-                            <button onclick="copyToClipboard('lost-property-draft')" class="btn-copy">Copy Draft Email</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then add the activity prompt:</em></p>
-                            <div class="prompt-box" id="lost-property-rewrite">"Act as a school receptionist (P). Rewrite this draft email (A) regarding lost property pick-up (C). Make it warm and helpful (T) in 3 concise bullet points (S)."</div>
-                            <button onclick="copyToClipboard('lost-property-rewrite')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">21</span><span style="flex:1;">The Email Glow-Up</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Paste a blunt reminder email and watch Copilot produce three tone options instantly, so you can pick the one that fits the parent and the situation.
-                            </div>
-                            <div class="prompt-box" id="email-glow-up">"Act as a school administrator. Rewrite this email three ways — warm, neutral, and firm — each under 100 words, keep the deadline. Present each version as a clearly labelled section: [paste email]"</div>
-                            <button onclick="copyToClipboard('email-glow-up')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample email:</em></p>
-                            <div class="prompt-box" id="email-glow-up-sample">"hi mr and mrs allen, reminder your daughters DofE bronze registration form still hasnt come back to us, needs to be in by friday for the award to go through this term, can you send asap thanks"</div>
-                            <button onclick="copyToClipboard('email-glow-up-sample')" class="btn-copy">Copy Sample Email</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">22</span><span style="flex:1;">Meeting Notes &rarr; Action List</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Paste messy meeting notes and get a clean, owner-assigned action list ready to circulate.
-                            </div>
-                            <div class="prompt-box" id="meeting-notes-actions">"Act as an executive assistant. Turn these meeting notes into a clear action list, with an owner and deadline for each item. Keep the tone brisk and professional. Present it as a numbered list: [paste notes]"</div>
-                            <button onclick="copyToClipboard('meeting-notes-actions')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample notes:</em></p>
-                            <div class="prompt-box" id="meeting-notes-sample">"facilities mtg mon
-
-    - car park resurfacing, get 3 quotes, sarah to chase
-    - marine science facility, tank filter needs replacing before term starts
-    - bearly used shop needs more rails, ask PTA if they have spares
-    - school shop till roll running low, order more
-    - reception desk chair broken, order replacement
-    - staff parking permits renew 1st sept, need list of who's returning"</div>
-                            <button onclick="copyToClipboard('meeting-notes-sample')" class="btn-copy">Copy Sample Notes</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">23</span><span style="flex:1;">The Long Thread, Sorted</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Paste a rambling email chain and get the decisions separated from the open questions in seconds.
-                            </div>
-                            <div class="prompt-box" id="long-thread-sorted">"Act as an office administrator. Summarise this email thread in a clear, neutral tone. Present it as 5 bullet points, separating what's decided from what's still open: [paste thread]"</div>
-                            <button onclick="copyToClipboard('long-thread-sorted')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample thread:</em></p>
-                            <div class="prompt-box" id="long-thread-sample">"From: J. Carter
-    Subject: Re: Re: Re: Meet-the-Teacher evening
-    Hi all, just circling back — is Y1-3 still 6pm and Y4-6 at 6.45, or has that shifted? Also do we know numbers yet for the Reception intro meeting?
-
-    From: M. Ellis
-    Sent: Tuesday
-    Times are confirmed as originally planned. I'll check with Reception on numbers and get back to you.
-
-    From: J. Carter
-    Sent: Tuesday
-    Also — do we need extra parking marshals that evening given three events back to back?
-
-    From: D. Reyes
-    Sent: Wednesday
-    Confirmed: Reception 5.15-5.45, Y1-3 at 6pm, Y4-6 at 6.45, all in the halls as usual. Two marshals booked for car park that evening."</div>
-                            <button onclick="copyToClipboard('long-thread-sample')" class="btn-copy">Copy Sample Thread</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">24</span><span style="flex:1;">Spreadsheet SOS</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Paste a messy booking list and get it sorted by date, grouped by department, and presented as a ready-to-use table.
-                            </div>
-                            <div class="prompt-box" id="spreadsheet-sos">"Act as an office administrator. Sort this list by date and group it by department, in a clear, factual tone. Present it as a table with headings: [paste list]"</div>
-                            <button onclick="copyToClipboard('spreadsheet-sos')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample list:</em></p>
-                            <div class="prompt-box" id="spreadsheet-sos-sample">"Room 4 booking - Sept 3 - Admissions - parent tour
-    School shop restock - Sept 2 - Facilities
-    Room 2 booking - Sept 5 - WAPTA - committee meeting
-    Marquee delivery - Sept 20 - Facilities - sports day
-    Room 4 booking - Sept 10 - Admissions - open morning
-    New starter IT setup - Sept 3 - Facilities
-    Room 2 booking - Sept 8 - WAPTA - newsletter planning"</div>
-                            <button onclick="copyToClipboard('spreadsheet-sos-sample')" class="btn-copy">Copy Sample List</button>
-                        </div>
-                    </details>
-
-    <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Copilot with Spreadsheet Data</h2>
-                    <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Microsoft states that Copilot can help analyse data, identify trends, explain formulas and create summaries when working with spreadsheet data. Try these three use cases with the sample data provided.</p>
-
-    <details>
-                        <summary><span class="ex-num">25</span><span style="flex:1;">Turn Raw Data into Key Insights</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: An administrator has a spreadsheet of attendance data and needs a quick summary for a manager — key findings, risks and recommended actions in one pass.
-                            </div>
-                            <div class="prompt-box" id="data-insights">"Act as a data analyst for an academy school.
-
-    Analyse the attendance data below.
-
-    Identify:
-    - 3 key findings
-    - 2 risks
-    - 2 recommended actions
-
-    Write in a professional tone suitable for senior leaders.
-
-    Present the information using:
-    1. Executive Summary
-    2. Key Findings
-    3. Risks
-    4. Recommended Actions
-
-    Data:
-    [Paste spreadsheet data]"</div>
-                            <button onclick="copyToClipboard('data-insights')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
-                            <div class="prompt-box" id="data-insights-sample">Student	Subject	Attendance %
-    Ahmed	Maths	96
-    Sarah	English	91
-    James	Science	72
-    Olivia	Geography	88
-    David	Maths	65
-    Chloe	English	94
-    Ethan	Science	78
-    Amelia	Geography	97</div>
-                            <button onclick="copyToClipboard('data-insights-sample')" class="btn-copy">Copy Sample Data</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — ask yourself: "What insight did Copilot identify that you might have missed?"</em></p>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">26</span><span style="flex:1;">Explain and Create Excel Formulas</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: You know what you want to calculate but not the formula. Copilot writes it, explains each part in plain language, and warns you about common mistakes.
-                            </div>
-                            <div class="prompt-box" id="excel-formula">"Act as an expert Excel trainer.
-
-    I am a beginner Excel user.
-
-    Create the correct Excel formula for the task below and explain it in simple language.
-
-    Provide:
-    - The formula
-    - What each part does
-    - Step-by-step instructions
-    - Common mistakes to avoid
-
-    Task:
-    Calculate the percentage achievement where Actual Value is in column C and Target Value is in column D."</div>
-                            <button onclick="copyToClipboard('excel-formula')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
-                            <div class="prompt-box" id="excel-formula-sample">Department	Actual Value	Target Value
-    Admissions	120	150
-    MIS	95	100
-    Marketing	180	200
-    Finance	140	150</div>
-                            <button onclick="copyToClipboard('excel-formula-sample')" class="btn-copy">Copy Sample Data</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — Copilot can also explain a formula you already have:</em></p>
-                            <div class="prompt-box" id="excel-formula-explain">"Explain this formula as if I were new to Excel:
-
-    =IFERROR((C2/D2)*100,0)"</div>
-                            <button onclick="copyToClipboard('excel-formula-explain')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">27</span><span style="flex:1;">Create a Management Report from Spreadsheet Data</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: A manager needs a monthly update but only has spreadsheet data. Copilot turns it into a leadership-ready report with highlights, concerns and next steps.
-                            </div>
-                            <div class="prompt-box" id="mgmt-report">"Act as an executive reporting officer.
-
-    Using the spreadsheet data below, create a senior leadership report.
-
-    Use a professional and evidence-based tone.
-
-    Structure the response as:
-    1. Executive Summary
-    2. Performance Highlights
-    3. Areas of Concern
-    4. Recommended Next Steps
-
-    Data:
-    [Paste spreadsheet data]"</div>
-                            <button onclick="copyToClipboard('mgmt-report')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste this sample data:</em></p>
-                            <div class="prompt-box" id="mgmt-report-sample">Department	Budget ($)	Actual Spend ($)
-    IT	50,000	48,500
-    Estates	60,000	63,200
-    Marketing	20,000	15,800
-    Student Services	30,000	34,500
-    HR	25,000	23,100</div>
-                            <button onclick="copyToClipboard('mgmt-report-sample')" class="btn-copy">Copy Sample Data</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Learning moment — follow up with:</em></p>
-                            <div class="prompt-box" id="mgmt-report-followup">"Create a board-ready dashboard description showing the best chart type for each metric and explain why."</div>
-                            <button onclick="copyToClipboard('mgmt-report-followup')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">28</span><span style="flex:1;">Catch It Out (Breaks the PACTS Formula)</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: A deliberate trap: this prompt breaks the PACTS formula and asks for a fiddly working-days calculation that depends on knowing the Bermuda public holidays in that period. The AI may miscount or miss a holiday while sounding completely confident. Run it, then check the answer against the official holiday dates — a reminder that confident-sounding output still needs verifying.
-                            </div>
-                            <div class="prompt-box" id="catch-it-out">"Term 1 begins 2 September 2026. How many working days are there between 2 September and 20 December 2026, excluding weekends and any Bermuda public holidays in that period?"</div>
-                            <button onclick="copyToClipboard('catch-it-out')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Check the answer against the official list: <a href="https://www.gov.bm/public-holidays" target="_blank" rel="noopener" style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Bermuda public holidays (gov.bm) &#8599;</a></em></p>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">29</span><span style="flex:1;">Bullets &rarr; Polished Letter</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Turn five scrappy bullet points into a ready-to-send parent letter in one step.
-                            </div>
-                            <div class="prompt-box" id="bullets-letter">"Act as a school administrator. Turn these bullet points into a parent letter, warm but concise, under 200 words. Structure it as a greeting, a short body, and a brief sign-off: [paste bullets]"</div>
-                            <button onclick="copyToClipboard('bullets-letter')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Then paste these sample bullets:</em></p>
-                            <div class="prompt-box" id="bullets-letter-sample">"- Sports Day moved to Sept 20, previously Sept 13
-    - reason: pitch resurfacing not finished in time
-    - same format, same times
-    - parents welcome from 1pm, usual field
-    - DofE bronze award presentations now happening same afternoon
-    - questions to the office as usual"</div>
-                            <button onclick="copyToClipboard('bullets-letter-sample')" class="btn-copy">Copy Sample Bullets</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">30</span><span style="flex:1;">Brand Guidelines from a Website</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Turn your school's public website into a working brand guidelines document — colours, tone of voice and imagery — grounded only in what is actually visible on the site.
-                            </div>
-                            <div class="prompt-box" id="brand-guidelines">"Act as a brand and communications consultant. Using the Warwick Academy website (https://www.warwick.bm/) as your source, create a set of branding guidelines covering colours, tone of voice, and imagery style. Base it on what's actually visible on the site — don't assume anything not shown there. Keep the tone clear and professional, written for staff who'll use it day to day. Structure it as a short document with headings: Colours, Tone of Voice, Imagery Style, and a Dos and Don'ts list."</div>
-                            <button onclick="copyToClipboard('brand-guidelines')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Sometimes a short prompt gets you what you want without the full framework — try this one and compare the results:</em></p>
-                            <div class="prompt-box" id="brand-guidelines-short">"using Warwick Academy - Home website https://www.warwick.bm/, create me a branding guidelines"</div>
-                            <button onclick="copyToClipboard('brand-guidelines-short')" class="btn-copy">Copy Short Prompt</button>
-                        </div>
-                    </details>
-
-    <h2 style="font-size:20px; font-weight:700; margin:26px 0 4px;">Additional Prompts</h2>
-                    <p style="font-size:14px; color:var(--apple-text-secondary); margin:0 0 14px;">Additional prompts to help you learn what Copilot can do — from remembering your preferences and reusing past chats to roleplay, formatting and self-evaluation techniques.</p>
-
-    <details>
-                        <summary><span class="ex-num">31</span><span style="flex:1;">Copilot Memory</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note" style="margin-bottom: 18px;">
-                                <strong>Set it once, use it everywhere:</strong> Copilot can hold your preferences across conversations. You set a rule a single time, and Copilot applies it to every chat that follows. No more re-typing the same setup whenever you open a fresh conversation.
-                            </div>
-
-                            <p style="font-size: 14px; line-height: 1.6; margin: 0 0 16px;">To store a rule, type an instruction that begins with <strong>"Remember and save to memory"</strong>. Copilot confirms it and keeps it.</p>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">To view your saved memories</p>
-                            <ol style="padding-left: 20px; line-height: 1.6; font-size: 14px; margin: 0 0 18px;">
-                                <li>Click the three dots in the top right corner</li>
-                                <li>Click Settings</li>
-                                <li>Click Personalisation, then manage your saved memories</li>
-                            </ol>
-
-                            <p style="font-weight: 600; font-size: 15px; margin: 0 0 12px; color: var(--apple-text-primary);">Three prompts worth saving</p>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Regional preferences</p>
-                            <div class="prompt-box" id="memory-regional">Remember and save to memory that I prefer UK spelling, Bermuda-relevant sources and UK naming conventions.</div>
-                            <button onclick="copyToClipboard('memory-regional')" class="btn-copy">Copy Prompt</button>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Honesty about gaps</p>
-                            <div class="prompt-box" id="memory-honesty">Remember and save to memory: No guessing. Acknowledge uncertainty and information gaps. State evidence limits.</div>
-                            <button onclick="copyToClipboard('memory-honesty')" class="btn-copy">Copy Prompt</button>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Challenge your thinking</p>
-                            <div class="prompt-box" id="memory-challenge">Remember and save to memory: Challenge my assumptions. Tell me when I am wrong and explain the reasoning. Give me the strongest counter-argument before you agree with me.</div>
-                            <button onclick="copyToClipboard('memory-challenge')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">32</span><span style="flex:1;">Save Your Preferences (Memory)</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note">
-                                Application: Tell Copilot your working preferences once and it applies them to every future chat: UK spelling and naming conventions, with sources and context relevant to Bermuda.
-                            </div>
-                            <div class="prompt-box" id="memory-preferences">"Remember and save to memory that I prefer UK spelling and UK naming conventions, and that I am based in Bermuda, so use Bermuda-relevant sources, dates and public holidays where applicable."</div>
-                            <button onclick="copyToClipboard('memory-preferences')" class="btn-copy">Copy Prompt</button>
-                        </div>
-                    </details>
-
-    <details>
-                        <summary><span class="ex-num">33</span><span style="flex:1;">Treat your chat history as a reusable resource</span></summary>
-                        <div class="details-content">
-                            <div class="exercise-note" style="margin-bottom: 18px;">
-                                <strong>Your past chats are data:</strong> Copilot can read back over your chat history, find the patterns you repeat, and hand back a reusable prompt or template. Your past chats become the starting point for the next task.
-                            </div>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 0 0 6px;">Find prompting habits you repeat</p>
-                            <div class="prompt-box" id="chat-history-habits">Search my chat history from the last 3 months. Find 3 prompting habits I repeat. For each, show the habit, one example from my chat history, and a sharper prompt I can reuse. One line each, no filler.</div>
-                            <button onclick="copyToClipboard('chat-history-habits')" class="btn-copy">Copy Prompt</button>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Spot tasks you keep redoing by hand</p>
-                            <div class="prompt-box" id="chat-history-tasks">Read across my chat history and tell me which tasks I keep redoing by hand.</div>
-                            <button onclick="copyToClipboard('chat-history-tasks')" class="btn-copy">Copy Prompt</button>
-
-                            <p style="font-weight: 600; font-size: 14px; margin: 18px 0 6px;">Capture your writing style</p>
-                            <div class="prompt-box" id="chat-history-style">From my chat history, draft a profile of my writing style, then remember and save it to memory.</div>
-                            <button onclick="copyToClipboard('chat-history-style')" class="btn-copy">Copy Prompt</button>
                         </div>
                     </details>
                     </div>

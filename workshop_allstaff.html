@@ -1428,14 +1428,40 @@
                         <summary><span class="ex-num">06</span><span style="flex:1;">Upload a Document and Ask</span></summary>
                         <div class="details-content">
                             <div class="exercise-note">
-                                Application: Upload a real document &mdash; a scheme of work, a curriculum guide, a long policy &mdash; and have Copilot summarise it or turn it into something else, live.
+                                Application: Upload a document that would normally take an hour to read, and get back something you can actually teach from. Here we use an exam board syllabus &mdash; the same approach works on a scheme of work, a policy or an inspection report.
                             </div>
-                            <div class="prompt-box" id="upload-ask-summary">"Act as a teacher. Using the attached [FILENAME], summarise the key points in a clear, neutral tone. Structure it as 5 bullet points."</div>
-                            <button onclick="copyToClipboard('upload-ask-summary')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Second version, same document:</em></p>
-                            <div class="prompt-box" id="upload-ask-parent">"Act as a teacher. Using the attached [FILENAME], turn this into a short, pupil-friendly explanation for [YEAR GROUP], warm and easy to read. Structure it as a single short paragraph, under 100 words."</div>
-                            <button onclick="copyToClipboard('upload-ask-parent')" class="btn-copy">Copy Prompt</button>
-                            <p style="margin-top:12px; font-size:13px; color:var(--apple-text-secondary);"><em>Need a document to upload? Download the sample bulletin: <a href="Warwick_Weekly_Bulletin_Draft.docx" download style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Warwick Weekly Bulletin Draft (Word) &#8595;</a></em></p>
+
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:16px 0 0;">Step 1 &mdash; Get the document</p>
+                            <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Open the syllabus below and save it, then attach it to Copilot. If you teach this subject, use your own syllabus instead &mdash; the prompt works with any of them.</p>
+                            <p style="margin:10px 0 0;"><a href="https://www.cambridgeinternational.org/Images/697203-2026-2028-syllabus.pdf" target="_blank" rel="noopener" style="display:inline-block; font-size:13px; font-weight:600; color:var(--apple-blue); text-decoration:none; background:rgba(0,113,227,0.1); padding:10px 20px; border-radius:var(--radius-button);">&#128196; Cambridge International syllabus 2026&ndash;2028 (PDF) &#8599;</a></p>
+
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:20px 0 0;">Step 2 &mdash; Turn it into a teaching checklist</p>
+                            <div class="prompt-box" id="upload-syllabus-checklist">"[P] Act as the Head of [SUBJECT] at Warwick Academy preparing a scheme of work.
+
+[A] Read the syllabus I have attached and turn it into a complete checklist of everything pupils must learn.
+
+[C] Work only from the attached document. Do not add topics from other exam boards, other years, or your own knowledge of the subject. Where the syllabus is vague, say so rather than filling the gap.
+
+[T] Precise and in plain English, written to be read aloud in a department meeting.
+
+[S] Give me a table with one row per topic: Topic | Sub-topic | What pupils must be able to do | Which paper assesses it | Weighting. Underneath the table, add two short lists: 'Assumed prior knowledge' and 'Points to confirm with the exam board'."</div>
+                            <button onclick="copyToClipboard('upload-syllabus-checklist')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="font-size:13px; font-weight:600; color:var(--apple-text-primary); margin:20px 0 0;">Step 3 &mdash; Same document, now for the pupils</p>
+                            <p style="font-size:13px; color:var(--apple-text-secondary); margin:6px 0 0;">Stay in the same chat so Copilot still has the syllabus.</p>
+                            <div class="prompt-box" id="upload-syllabus-organiser">"[P] Act as a [SUBJECT] teacher writing a knowledge organiser.
+
+[A] Using the same attached syllabus, turn the topic list into pupil-facing 'I can' statements.
+
+[C] For [YEAR GROUP]. Keep the exam board's meaning exactly, but use words the pupils themselves would use. Do not invent content that is not in the syllabus.
+
+[T] Direct and encouraging.
+
+[S] Group the statements under the syllabus topic headings, with no more than eight statements per topic."</div>
+                            <button onclick="copyToClipboard('upload-syllabus-organiser')" class="btn-copy">Copy Prompt</button>
+
+                            <p style="margin-top:16px; font-size:13px; color:var(--apple-text-secondary);"><em>Not a teacher? Try the same two-step idea on a document from your own role &mdash; here is a sample: <a href="Warwick_Weekly_Bulletin_Draft.docx" download style="color:var(--apple-blue); text-decoration:none; font-weight:600;">Warwick Weekly Bulletin Draft (Word) &#8595;</a></em></p>
+                            <p style="margin-top:10px; font-size:13px; color:var(--apple-text-secondary);"><strong>Always check the output against the document.</strong> Copilot is reading a long PDF and can miss or merge rows &mdash; the table is a starting point for the department, not a substitute for the syllabus.</p>
                         </div>
                     </details>
 
